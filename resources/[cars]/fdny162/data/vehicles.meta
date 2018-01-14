@@ -4,10 +4,10 @@
   <residentAnims />
   <InitDatas>
     <Item>
-      <modelName>tl162</modelName>
-      <txdName>tl162</txdName>
+      <modelName>fdny162</modelName>
+      <txdName>fdny162</txdName>
       <handlingId>FIRETRUK</handlingId>
-      <gameName>tl162</gameName>
+      <gameName>fdny162</gameName>
       <vehicleMakeName />
       <expressionDictName>null</expressionDictName>
       <expressionName>null</expressionName>
