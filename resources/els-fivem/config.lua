@@ -17,6 +17,13 @@ vcf_files = {
     "riot.xml",
     "towtruck.xml",
     "go4.xml",
+    "state1.xml",
+    "state2.xml",
+    "state3.xml",
+    "state4.xml",
+    "state5.xml",
+	"firetruk.xml",
+	"fire5.xml",
 }
 
 pattern_files = {
@@ -31,6 +38,7 @@ pattern_files = {
 modelsWithFireSiren =
 {
     "FIRETRUK",
+	"fire5",
 }
 
 
@@ -39,6 +47,7 @@ modelsWithAmbWarnSiren =
     "AMBULANCE",
     "FIRETRUK",
     "LGUARD",
+	"fire5",
 }
 
 stagethreewithsiren = true
@@ -60,7 +69,14 @@ vehicleStageThreeAdvisor = {
     "police4",
     "lgaurd",
     "ambulance",
+    "state1",
+    "state2",
+    "state3",
+    "state4",
+    "state5",
     "go4",
+	"firetruk",
+	"fire5",
 }
 
 
