@@ -23,7 +23,7 @@ vcf_files = {
     "state4.xml",
     "state5.xml",
 	"firetruk.xml",
-	"fire5.xml",
+	"tl162.xml",
 }
 
 pattern_files = {
@@ -38,7 +38,7 @@ pattern_files = {
 modelsWithFireSiren =
 {
     "FIRETRUK",
-	"fire5",
+	"tl162",
 }
 
 
@@ -47,7 +47,7 @@ modelsWithAmbWarnSiren =
     "AMBULANCE",
     "FIRETRUK",
     "LGUARD",
-	"fire5",
+	"tl162",
 }
 
 stagethreewithsiren = true
@@ -76,7 +76,7 @@ vehicleStageThreeAdvisor = {
     "state5",
     "go4",
 	"firetruk",
-	"fire5",
+	"tl162",
 }
 
 
