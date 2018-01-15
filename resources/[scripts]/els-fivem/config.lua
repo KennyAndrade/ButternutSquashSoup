@@ -24,7 +24,6 @@ vcf_files = {
     "state5.xml",
 	"firetruk.xml",
 	"fdny162.xml",
-	"fdny24.xml",
 }
 
 pattern_files = {
@@ -40,7 +39,6 @@ modelsWithFireSiren =
 {
     "FIRETRUK",
 	"fdny162",
-	"fdny24",
 }
 
 
@@ -50,7 +48,6 @@ modelsWithAmbWarnSiren =
     "FIRETRUK",
     "LGUARD",
 	"fdny162",
-	"fdny24",
 }
 
 stagethreewithsiren = true
@@ -80,7 +77,6 @@ vehicleStageThreeAdvisor = {
     "go4",
 	"firetruk",
 	"fdny162",
-	"fdny24",
 }
 
 
