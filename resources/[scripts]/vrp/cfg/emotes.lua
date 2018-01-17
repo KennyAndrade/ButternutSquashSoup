@@ -15,6 +15,9 @@ cfg.emotes = {
     },
     true
   },
+  ["Radio"] = {
+    true, {{"random@arrests","generic_radio_chatter",1}}, false
+	},
   ["No"] = {
     true, {{"gestures@f@standing@casual","gesture_head_no",1}}, false
   },
@@ -62,7 +65,8 @@ cfg.emotes = {
 --  ["Kneel"] = {false, {task="CODE_HUMAN_MEDIC_KNEEL"}, false},
 --  ["Crowdcontrol"] = {false, {task="CODE_HUMAN_POLICE_CROWD_CONTROL"}, false},
 --  ["Investigate"] = {false, {task="CODE_HUMAN_POLICE_INVESTIGATE"}, false},
-  ["Yoga"] = {false, {task="WORLD_HUMAN_YOGA"}, false}
+  ["Yoga"] = {false, {task="WORLD_HUMAN_YOGA"}, false},
+  ["Radio"] = {false, {task="GENERIC_RADIO_CHATTER"}, false}
 }
 
 return cfg
