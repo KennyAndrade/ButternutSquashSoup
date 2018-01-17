@@ -45,14 +45,6 @@ local blips = {
     --------- Helicopters ---------
     {name = blipNameFuelHeli, id=43,x=1770.241,y=3239.716,z=42.127},
     {name = blipNameFuelHeli, id=43,x=-1112.407,y=-2883.893,z=13.946},
-	{name = blipNameFuelHeli, id=43,x=-699.482,y=-1448.53,z=5.00052},
-	{name = blipNameFuelHeli, id=43,x=-723.738,y=-1471.86,z=5.00052},
-	{name = blipNameFuelHeli, id=43,x=481.356,y=-982.421,z=41.0081},
-	{name = blipNameFuelHeli, id=43,x=298.799,y=-1453.04,z=46.5095},
-	{name = blipNameFuelHeli, id=43,x=2510.07,y=-341.774,z=118.186},
-	{name = blipNameFuelHeli, id=43,x=2511.36,y=-426.995,z=118.189},
-	{name = blipNameFuelHeli, id=43,x=-469.088,y=5980.97,z=31.3367},
-	
 }
 
 
@@ -323,7 +315,7 @@ electric_stations = {
     {x=1696.633,y=4917.12,z=42.078},
     {x=1689.197,y=6435.085,z=32.559},
     {x=152.939,y=6629.043,z=31.717},
-    {-92.825,y=6393.375,z=31.452}
+    {x=-93.372,y=6394.018,z=31.452}
 }
 
 
@@ -349,13 +341,6 @@ avion_stations = {
 heli_stations = {
     {x=1770.241,y=3239.716,z=42.127,s=32},
     {x=-1112.407,y=-2883.893,z=13.946,s=33},
-	{x=-699.482,y=-1448.53,z=5.00052 s=34},
-	{x=-723.738,y=-1471.86,z=5.00052 s=35},
-	{x=481.356,y=-982.421,z=41.0081 s=36},
-	{x=298.799,y=-1453.04,z=46.5095 s=37},
-	{x=2510.07,y=-341.774,z=118.186 s=38},
-	{x=2511.36,y=-426.995,z=118.189 s=39},
-	{x=-469.088,y=5980.97,z=31.3367 s=40},
 }
 
 
@@ -401,13 +386,6 @@ stationsText[31] = {x=-1229.625,y=-2877.264,z=15.921}
 --- Helicopters stations
 stationsText[32] = {x=1770.241,y=3239.716,z=45.127}
 stationsText[33] = {x=-1112.407,y=-2883.893,z=15.921}
-stationsText[34] = {x=-699.482,y=-1448.53,z=5.00052},
-stationsText[35] = {x=-723.738,y=-1471.86,z=5.00052},
-stationsText[36] = {x=481.356,y=-982.421,z=41.0081},
-stationsText[37] = {x=298.799,y=-1453.04,z=46.5095},
-stationsText[38] = {x=2510.07,y=-341.774,z=118.186},
-stationsText[39] = {x=2511.36,y=-426.995,z=118.189},
-stationsText[40] = {x=-469.088,y=5980.97,z=31.3367},
 
 --[[
 ================================================= FUNCTIONS =================================================
@@ -431,14 +409,17 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         for _, item in pairs(station) do
-            if(isNearStationMarker(item)) then
+        	local near, dist = isNearStationMarker(item)
+            if(near) then
                 DrawMarker(1, item.x, item.y, item.z-1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 1.0,     132, 52, 0, 255      , 0, 0, 1, 0, 0, 0, 0)
-                local x = stationsText[item.s].x
-                local y = stationsText[item.s].y
-                local z = stationsText[item.s].z
-                local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
-                DrawText3D(x,y,z, "~g~ "..settings[lang].fuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
-                DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : "..StationsPrice[item.s].."$/L")
+                if(dist<10) then
+               	 	local x = stationsText[item.s].x
+               	 	local y = stationsText[item.s].y
+               	 	local z = stationsText[item.s].z
+              	  	local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
+               		DrawText3D(x,y,z, "~g~ "..settings[lang].fuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
+               		DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : "..StationsPrice[item.s].."$/L")
+               	end
             end
         end
 
@@ -450,40 +431,49 @@ Citizen.CreateThread(function()
 
 
         for _, item in pairs(boat_stations) do
-            if(isNearBoatStationMarker(item)) then
+            local near, dist = isNearBoatStationMarker(item)
+            if(near) then
                 DrawMarker(1, item.x, item.y, item.z-1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 1.0,     0, 0, 255, 75      , 0, 0, 1, 0, 0, 0, 0)
-                local x = stationsText[item.s].x
-                local y = stationsText[item.s].y
-                local z = stationsText[item.s].z
-                local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
-                DrawText3D(x,y,z, "~g~ "..settings[lang].boatFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
-                DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : "..StationsPrice[item.s].."$/L")
+                if(dist<10) then
+                	local x = stationsText[item.s].x
+                	local y = stationsText[item.s].y
+                	local z = stationsText[item.s].z
+                	local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
+                	DrawText3D(x,y,z, "~g~ "..settings[lang].boatFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
+                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : "..StationsPrice[item.s].."$/L")
+                end
             end
         end
 
 
         for _, item in pairs(avion_stations) do
-            if(isNearStationMarker(item)) then
+            local near, dist = isNearStationMarker(item)
+            if(near) then
                 DrawMarker(1, item.x, item.y, item.z-1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 1.0,     132, 52, 0, 255      , 0, 0, 1, 0, 0, 0, 0)
-                local x = stationsText[item.s].x
-                local y = stationsText[item.s].y
-                local z = stationsText[item.s].z
-                local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
-                DrawText3D(x,y,z, "~g~ "..settings[lang].avionFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
-                DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : "..StationsPrice[item.s].."$/L")
+                if(dist < 10) then
+                	local x = stationsText[item.s].x
+                	local y = stationsText[item.s].y
+                	local z = stationsText[item.s].z
+                	local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
+                	DrawText3D(x,y,z, "~g~ "..settings[lang].avionFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
+                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : "..StationsPrice[item.s].."$/L")
+                end
             end
         end
 
 
         for _, item in pairs(heli_stations) do
-            if(isNearStationMarker(item)) then
+            local near, dist = isNearStationMarker(item)
+            if(near) then
                 DrawMarker(1, item.x, item.y, item.z-1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 1.0,     132, 52, 0, 255      , 0, 0, 1, 0, 0, 0, 0)
-                local x = stationsText[item.s].x
-                local y = stationsText[item.s].y
-                local z = stationsText[item.s].z
-                local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
-                DrawText3D(x,y,z, "~g~ "..settings[lang].heliFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
-                DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : "..StationsPrice[item.s].."$/L")
+                if(dist<10) then
+                	local x = stationsText[item.s].x
+                	local y = stationsText[item.s].y
+                	local z = stationsText[item.s].z
+                	local streetA, streetB = Citizen.InvokeNative( 0x2EB41072B4C1E4C0, x, y, z, Citizen.PointerValueInt(), Citizen.PointerValueInt() )
+                	DrawText3D(x,y,z, "~g~ "..settings[lang].heliFuelStation.." "..GetStreetNameFromHashKey(streetA).." "..GetStreetNameFromHashKey(streetB))
+                	DrawText3D(x,y,z-0.2, "~b~"..settings[lang].price.." : "..StationsPrice[item.s].."$/L")
+                end
             end
         end
     end
@@ -497,7 +487,7 @@ function isNearStationMarker(items)
     local plyCoords = GetEntityCoords(GetPlayerPed(-1), 0)
 
     if(GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 250) then
-        return true
+        return true, GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true)
     end
 
     return false
@@ -509,7 +499,7 @@ function isNearBoatStationMarker(items)
     local plyCoords = GetEntityCoords(GetPlayerPed(-1), 0)
 
     if(GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 250) then
-        return true
+        return true, GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true)
     end
 
     return false
@@ -521,7 +511,7 @@ function isNearElectricStationMarker(items)
     local plyCoords = GetEntityCoords(GetPlayerPed(-1), 0)
 
     if(GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true) < 250) then
-        return true
+        return true, GetDistanceBetweenCoords(items.x, items.y, items.z, plyCoords["x"], plyCoords["y"], plyCoords["z"], true)
     end
 
     return false
@@ -531,6 +521,9 @@ end
 
 
 function DrawText3D(x,y,z, text) 
+
+
+
     local onScreen,_x,_y=World3dToScreen2d(x,y,z)
     local px,py,pz=table.unpack(GetGameplayCamCoords())
     local dist = GetDistanceBetweenCoords(px,py,pz, x,y,z, 1)
