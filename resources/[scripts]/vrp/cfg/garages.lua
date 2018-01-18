@@ -421,47 +421,91 @@ cfg.garage_types = {
     ["surano"] = {"Surano",95000, ""}
   },
   
-  ["police"] = {
-    _config = {vtype="car",blipid=56,blipcolor=38,permissions={"police.vehicle"}},
-    ["police"] = {"Police Cruiser",0, "police"},
-    ["police2"] = {"Dodge Sheriff",0, "police"},
-    ["police3"] = {"Police3",0, "police"},
-    ["police4"] = {"police4",0, "police"},
-    ["police5"] = {"Police SUV",0, "police"},
-    ["police6"] = {"Police K9",0, "police"},
-    ["police7"] = {"Police7",0, "police"},
-	["police8"] = {"Police8",0, "police"},
-    ["policet"] = {"policet",0, "police"},
-    ["sheriff3"] = {"Sheriff",0, "police"},
-    ["sheriff2"] = {"Sheriff SUV",0, "police"},
-    ["sheriff"] = {"2015 Sheriff",0, "police"},
-    ["riot"] = {"SWAT",0, "police"},
-	["fbi"] = {"Unmarked",0, "police"},
-	["hwaycar2"] = {"State Trooper",0, "police"},
-	["hwaycar3"] = {"Trooper SUV",0, "police"},
-	["hwaycar5"] = {"hwaycar5",0, "police"},
-	["hwaycar6"] = {"hwaycar6",0, "police"},
-	["hwaycar7"] = {"hwaycar7",0, "police"},
-	["hwaycar8"] = {"hwaycar8",0, "police"},
-	["hwaycar9"] = {"hwaycar9",0, "police"},
-	["hwaycar10"] = {"hwaycar10",0, "police"},
-	["hwaycar"] = {"hwaycar",0, "police"},
-    ["polf430"] = {"Police Ferarri",0, "police"},
-	["policeb"] = {"policeb",0, "police"}
-  },
-  ["Cadet"] = {
+
+  ["Recruit"] = {
     _config = {vtype="car",blipid=56,blipcolor=38,permissions={"Cadet.vehicle"}},
-    ["police7"] = {"police",0, "police"}
+    ["policeold2"] = {"NYPD Crown Victoria",0, "police"},
+    ["police"] = {"NYPD Impala",0, "police"},
+    ["go4"] = {"NYPD Go-4 Police Interceptor",0, "police"}
   },
+  ["Police Officer"] = {
+    _config = {vtype="car",blipid=56,blipcolor=38,permissions={"police.vehicle"}},
+    ["policeold2"] = {"NYPD Crown Victoria",0, "police"},
+    ["go4"] = {"NYPD Go-4 Police Interceptor",0, "police"},
+    ["police"] = {"NYPD Impala",0, "police"},
+    ["police2"] = {"NYPD Explorer",0, "police"},
+    ["police3"] = {"NYPD Taurus",0, "police"}
+  },
+["Detective"] = {
+    _config = {vtype="car",blipid=56,blipcolor=38,permissions={"det.vehicle"}},
+    ["det1"] = {"Unmarked Detective's Taurus",0, "police"},
+    ["det2"] = {"Unmarked Detective's Charger",0, "police"}
+  },
+  ["NYPD Sergeant"] = {
+    _config = {vtype="car",blipid=56,blipcolor=38,permissions={"pdsgt.vehicle"}},
+    ["lguard"] = {"Sgt. Explorer",0, "police"},
+    ["police3"] = {"NYPD Taurus",0, "police"},
+    ["police4"] = {"NYPD Taurus (Slicktop)",0, "police"},
+    ["policeold2"] = {"NYPD Crown Victoria",0, "police"},
+    ["unmarked6"] = {"Unmarked Crown Victoria",0, "police"}
+  },
+  ["ESU"] = {
+    _config = {vtype="car",blipid=56,blipcolor=38,permissions={"esu.vehicle"}},
+    ["policeold1"] = {"ESU Truck",0, "police"},
+    ["riot"] = {"Armored ESU Vehicle",0, "police"},
+    ["unmarked8"] = {"Unmarked Chevy Tahoe",0, "police"},
+    ["unmarked1"] = {"Unmarked Explorer",0, "police"}
+  },
+  ["Highway Patrol"] = {
+    _config = {vtype="car",blipid=56,blipcolor=38,permissions={"nyhp.vehicle"}},
+    ["pranger"] = {"NYPD Highway Patrol Charger",0, "police"},
+    ["sheriff"] = {"NYPD Highway Patrol Taurus",0, "police"},
+    ["sheriff2"] = {"NYPD Highway Patrol Explorer",0, "police"}
+  },
+    ["NYPD Command"] = {
+    _config = {vtype="car",blipid=56,blipcolor=38,permissions={"pdcmd.vehicle"}},
+    ["lguard"] = {"Sgt. Explorer",0, "police"},
+    ["police3"] = {"NYPD Taurus",0, "police"},
+    ["go4"] = {"NYPD Go-4 Police Interceptor",0, "police"},
+    ["police4"] = {"NYPD Taurus (Slicktop)",0, "police"},
+    ["policeold2"] = {"NYPD Crown Victoria",0, "police"},
+    ["unmarked6"] = {"Unmarked Crown Victoria",0, "police"},
+    ["unmarked9"] = {"Unmarked 2009 Dodge Charger",0, "police"},
+    ["unmarked8"] = {"Unmarked Chevy Tahoe",0, "police"},
+    ["unmarked5"] = {"Unmarked F350",0, "police"},
+    ["unmarked4"] = {"Unmarked Ford Mustang",0, "police"},
+    ["unmarked3"] = {"Unmarked Camry",0, "police"},
+    ["unmarked1"] = {"Unmarked Explorer",0, "police"},
+    ["fbi"] = {"Undercover Taxi",0, "police"},
+    ["fbi2"] = {"Unmarked Impala",0, "police"},
+    ["police"] = {"NYPD Impala",0, "police"},
+    ["police2"] = {"NYPD Explorer",0, "police"},
+    ["policeold1"] = {"ESU Truck",0, "police"},
+    ["pranger"] = {"NYPD Highway Patrol Charger",0, "police"},
+    ["riot"] = {"Armored ESU Vehicle",0, "police"},
+    ["sheriff"] = {"NYPD Highway Patrol Taurus",0, "police"},
+    ["sheriff2"] = {"NYPD Highway Patrol Explorer",0, "police"}
+  }, 
   ["Bounty"] = {
     _config = {vtype="car",blipid=56,blipcolor=38,permissions={"Bounty.vehicle"}},
     ["fbi"] = {"Unmarked",0, "police"}
   },
-  ["emergency"] = {
-    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"emergency.vehicle"}},
-    ["Ambulance"] = {"Ambulance",0, "emergency"},
-	["hwaycar4"] = {"Tahoe",0, "emergency"},
-	["firetruk"] = {"firetruk",0, "emergency"}
+  ["Davis Fire"] = {
+    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
+	["fdny162"] = {"Ladder Co. 162",0, "emergency"},
+	["firetruk"] = {"Engine Co. ",0, "emergency"}
+  },
+    ["Davis Hospital"] = {
+    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
+    ["ambulance"] = {"NYEMS Ambulance ",0, "emergency"}
+  },
+  ["ems"] = {
+    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"ems.vehicle"}},
+    ["Ambulance"] = {"NYEMS Amublance",0, "emergency"}
+  },
+    ["Davis Batallion"] = {
+    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"Batallion.vehicle"}},
+    ["batallion"] = {"Batallion Chief's F350",0, "emergency"}
   },
   ["Police Helicopters"] = {
     _config = {vtype="car",blipid=43,blipcolor=38,radius=5.1,permissions={"police.vehicle"}},
@@ -512,7 +556,7 @@ cfg.garage_types = {
     _config = {vtype="car",blipid=67,blipcolor=4,permissions={"bankdriver.vehicle"}},
     ["stockade"] = {"stockade",0, "stockade"}
   },
-  ["Medical Driver"] = {
+  ["Medical Marijuana Driver"] = {
     _config = {vtype="car",blipid=67,blipcolor=4,permissions={"medical.vehicle"}},
     ["pony2"] = {"Medical Weed Van",0, "pony2"}
   }
@@ -533,7 +577,16 @@ cfg.garages = {
   {"sportsclassics",112.275, 6619.83, 31.8154},
   {"Motorcycles",-205.789, -1308.02, 31.2916},
   {"police",451.2121887207,-1018.2822875977,28.495378494263},	-- jobs garage
-  {"Cadet",451.2121887207,-1018.2822875977,28.495378494263}, --- cadet garage
+  {"Recruit",431.32,-1013.95,28.8277}, --- Recruit garage
+  {"Police Officer",436.113,-1014.18,28.702}, --- Officer garage
+  {"Detective",447.321,-1014.59,28.5377}, --- Detective garage
+  {"NYPD Sergeant",452.417,-1014.29,28.4671}, --- Sergeants garage
+  {"Highway Patrol",453.033,-1024.74,28.5155}, --- Highway Patrol garage
+  {"ESU",455.186,-1014.74,28.4253}, --- ESU garage
+  {"NYPD Command",454.941,-1019.89,28.3359}, --- PD Command garage
+  {"Davis Fire",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
+  {"Davis Hospital",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
+  {"Davis Batallion",215.644,-1631.93,29.2493}, --- Davis Firehouse garage
   {"police",477.99038696289,-1020.9154663086,28.011201858521},
   {"Bounty",512.07818603516,-3052.1579589844,6.0687308311462},  
   {"police",1868.5435791016,3696.0295410156,33.5693359375},  -- sandy shores
@@ -572,7 +625,7 @@ cfg.garages = {
   {"EMS Helicopters",1770.2171630859,3239.5561523438,42.13171005249}, -- Sandy Shores
   {"EMS Helicopters",-475.24264526367,5988.7353515625,31.336685180664}, -- Paleto Bay  
   {"Fisher's Boat",1508.8854980469,3908.5732421875,30.031631469727},
-  {"Medical Driver",-319.82263183594,-942.8408203125,31.080617904663},
+  {"Medical Marijuana Driver",-319.82263183594,-942.8408203125,31.080617904663},
   {"Pilotsa",-901.70129394531,-3293.984375,13.944430351257},
   {"Pilotsa",2128.9069824219,4806.134765625,41.168750762939},
   {"Pilotsa",1734.9053955078,3297.9689941406,41.223503112793},
