@@ -6,7 +6,7 @@
     <Item>
       <modelName>fdnyladder</modelName>
       <txdName>fdnyladder</txdName>
-      <handlingId>FIRETRUK</handlingId>
+      <handlingId>HAULER</handlingId>
       <gameName>fdnyladder</gameName>
       <vehicleMakeName />
       <expressionDictName>null</expressionDictName>
