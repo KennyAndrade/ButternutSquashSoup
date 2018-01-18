@@ -9,7 +9,7 @@ cfg.db = {
 }
 
 cfg.save_interval = 30 -- seconds
-cfg.whitelist = false -- enable/disable whitelist
+cfg.whitelist = true -- enable/disable whitelist
 
 -- delay the tunnel at loading (for weak connections)
 cfg.load_duration = 5 -- seconds, player duration in loading mode at the first spawn
