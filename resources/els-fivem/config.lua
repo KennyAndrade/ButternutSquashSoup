@@ -25,6 +25,8 @@ vcf_files = {
 	"firetruk.xml",
 	"fdny162.xml",
     "simon2.xml",
+    "det1.xml",
+    "det2.xml",
 }
 
 pattern_files = {
@@ -79,6 +81,8 @@ vehicleStageThreeAdvisor = {
 	"firetruk",
 	"fdny162",
     "simon2",
+    "det1",
+    "det2",
 }
 
 
