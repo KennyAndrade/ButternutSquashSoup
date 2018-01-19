@@ -50,6 +50,35 @@ body {
   padding: 1em 1em 2em 1em;
   height: 30em;
 }
+.mike-block {
+  color:white;
+  width: 48%;
+  display: inline-block;
+  border-radius: 3px;
+  float: left;
+  padding: 0.2em;
+  -webkit-transform: rotateY(10deg);
+  transform: rotateY(10deg);
+  -ms-transform: rotateY(10deg);
+  -webkit-transition: transform 1s;
+  background-color:black;
+  opacity:.75;
+}
+.mike-block:nth-child(2) {
+  float: right;
+  -webkit-transform: rotateY(-10deg);
+  -moz-transform: rotateY(-10deg);
+  -ms-transform: rotateY(-10deg);
+  transform: rotateY(-10deg);
+}
+.mike-block:hover {
+  -webkit-transition: transform 1s;
+  behavior:url(-ms-transform.htc); 
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
 .block {
   width: 48%;
   display: inline-block;
@@ -79,7 +108,7 @@ body {
 .text {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  color: black;
+  color: white;
   position: relative;
   background-color: rgba(0, 0, 0,);
   box-shadow: 0 3px 8px rgba(0,0,0,0.14), 0 3px 8px rgba(0,0,0,0.27);

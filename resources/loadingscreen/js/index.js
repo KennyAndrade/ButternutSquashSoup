@@ -4,14 +4,14 @@ $( document ).ready(function() {
 
 function loadDatSkweenie() {
   var banner = ["&nbsp", "E" ,"m", "e", "r", "g", "e", "&nbsp", "N", "Y", "C", "R", "P"]
-  var rules = ["No FailRP/VDM/RDM.)", 
-               "Respect All Members Including Staff.", 
-               "Roleplay Is Expected To Be Legit.", 
-               "Join The Discord To Be Apart Of Our Community.", 
-               "If Any Of These Rules Are Broken It Will Result In A Kick/Ban",
-               "Join The Discord To Apply For Our 4 Main Departments|NYPD|FDNY|NYSP|Dispatch.",
-               "Use The K On Your Keyboard To Use The In Game Menu.",
-               "If You Need A Staff Member Use The Request Admin In The Menu."
+  var rules = ["No FailRP/VDM/RDM is tolerated.", 
+               "Respect ALL members including staff.", 
+               "All roleplay must be realistic.", 
+               "Join our Discord to be apart of our growing community ommunity.", 
+               "Failure to respect staff comamnds/rules will result in the appropriate disciplinary action",
+               "Some of our departments include, NYPD, and FDNY with numerous sub divisions",
+               "Press the `K` key on your keyboard to use the in-game menu.",
+               "To call a staff member, use the aforementioned menu."
               ]
   var fadeTime = 500
   var fadeTime2 = 500
@@ -27,8 +27,8 @@ function loadDatSkweenie() {
   $(rules).each(function( i ) {
     var rCount = Number(i) 
     fadeTime2 = fadeTime2 + 300
-    $(".block .text:nth-child("+rCount+")").hide()
-    $( ".block:nth-child(1)" ).append( "<p class='text'>"+rules[rCount]+"</p>" )
-    $(".block .text:nth-child("+rCount+")").show(fadeTime2)
+    $(".mike-block .text:nth-child("+rCount+")").hide()
+    $( ".mike-block:nth-child(1)" ).append( "<p class='text'>"+rules[rCount]+"</p>" )
+    $(".mike-block .text:nth-child("+rCount+")").show(fadeTime2)
   })
 }
