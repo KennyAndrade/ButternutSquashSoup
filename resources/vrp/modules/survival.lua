@@ -1,4 +1,4 @@
-local cfg = module("cfg/survival")
+--[[local cfg = module("cfg/survival")
 local lang = vRP.lang
 
 -- api

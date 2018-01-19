@@ -492,11 +492,11 @@ cfg.garage_types = {
   },
   ["Davis Fire"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
-	["fdny162"] = {"Ladder Co. 162",0, "emergency"},
-	["firetruk"] = {"Engine Co. ",0, "emergency"}
+	["fdny162"] = {"Tower Ladder Co. 162",0, "emergency"},
+	["firetruk"] = {"Engine Co. 1",0, "emergency"}
   },
     ["Davis Hospital"] = {
-    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
+    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"ems.vehicle"}},
     ["ambulance"] = {"NYEMS Ambulance ",0, "emergency"}
   },
   ["ems"] = {
@@ -512,7 +512,7 @@ cfg.garage_types = {
     ["polmav"] = {"Maverick",0, "emergency"}
   },
    ["EMS Helicopters"] = {
-    _config = {vtype="car",blipid=43,blipcolor=1,radius=5.1,permissions={"emergency.vehicle"}},
+    _config = {vtype="car",blipid=43,blipcolor=1,radius=5.1,permissions={"ems.pilot"}},
     ["supervolito2"] = {"EMS",0, "emergency"}
   },
   ["Pilotla"] = {
