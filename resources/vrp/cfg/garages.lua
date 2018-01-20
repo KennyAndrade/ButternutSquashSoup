@@ -490,10 +490,18 @@ cfg.garage_types = {
     _config = {vtype="car",blipid=56,blipcolor=38,permissions={"Bounty.vehicle"}},
     ["fbi"] = {"Unmarked",0, "police"}
   },
+  ["State Police"] = {
+    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"state.vehicle"}},
+	["state1"] = {"State Police Charger 2014",0, "emergency"},
+    ["state2"] = {"State Police Charger 2015 ",0, "emergency"},
+    ["state3"] = {"State Police Slicktop Explorer",0, "emergency"},
+    ["state4"] = {"State Police Crown Victoria ",0, "emergency"},
+	["state5"] = {"State Police Slicktop Crown Victoria",0, "emergency"}
+  },
   ["Fire"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
-	["fdny162"] = {"Tower Ladder Co. 162",0, "emergency"},
-	["firetruk"] = {"Engine Co. 1",0, "emergency"}
+    ["fdny162"] = {"Tower Ladder Co. 162",0, "emergency"},
+    ["firetruk"] = {"Engine Co. 1",0, "emergency"}
   },
   ["EMS"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"ems.vehicle"}},
@@ -609,6 +617,8 @@ cfg.garages = {
   {"Batallion",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
   {"Fire",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
   {"EMS",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
+  {"State Police",-471.597,6024.5,31.3405}, --- Paleto garage
+  {"State Police",1854.95,3675.58,33.7134}, --- Sandy Firehouse garage
   {"police",477.99038696289,-1020.9154663086,28.011201858521},
   {"Bounty",512.07818603516,-3052.1579589844,6.0687308311462},  
   {"police",1868.5435791016,3696.0295410156,33.5693359375},  -- sandy shores

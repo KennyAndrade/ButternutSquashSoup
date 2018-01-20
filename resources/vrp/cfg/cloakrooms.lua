@@ -72,11 +72,11 @@ cfg.cloakroom_types = {
     ["Santa Outfit"] = santa
     },
   ["EMT"] = {
-    _config = { permissions = {"emergency.cloakroom"} },
+    _config = { permissions = {"ems.cloakroom"} },
     ["Paramedic"] = emergency_male
     },
   ["Fireman"] = {
-    _config = { permissions = {"emergency.cloakroom"} },
+    _config = { permissions = {"fire.cloakroom"} },
     ["Fireman"] = fire_uni
     },
   ["Officer"] = {
