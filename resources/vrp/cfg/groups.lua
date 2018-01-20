@@ -63,7 +63,7 @@ cfg.groups = {
   "emergency.paycheck"
   },
   ["superadmin"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"You are superadmin."}) end},
+    _config = {onspawn = function(player) vRPclient.notify(player,{"You are a Super Administrator."}) end},
     "player.group.add",
     "player.group.remove",
     "player.givemoney",
@@ -156,7 +156,7 @@ cfg.groups = {
 	"air.vehicle",
 	"air.paycheck"
   },
-  ["Medical Transport"] = {
+  ["Medical Marijuana Transport"] = {
     _config = { gtype = "job",
 	onspawn = function(player) vRPclient.notify(player,{"You now transport Medical weed."}) end
 	},
