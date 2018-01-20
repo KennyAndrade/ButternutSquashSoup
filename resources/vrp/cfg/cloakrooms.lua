@@ -7,21 +7,24 @@ local cfg = {}
 local surgery_male = { model = "mp_m_freemode_01" }
 local surgery_female = { model = "mp_f_freemode_01" }
 local emergency_male = { model = "s_m_m_paramedic_01" }
+local fire_uni = { model = "s_m_y_fireman_01" }
 local emergency_female = { model = "s_f_y_paramedic_01" }
-local fbi_male = { model = "s_m_y_swat_01" }
 local sheriff_male = { model = "s_m_y_sheriff_01"}
 local sheriff_female = { model = "s_f_y_ranger_01"}
-local hway_male = { model = "s_m_y_hwaycop_01"}
+local hway_male = { model = "u_m_m_doa_01"}
 local cop_male = { model = "s_m_y_cop_01"}
 local cop_female = { model = "s_f_y_cop_01"}
-local detective_male = { model = "s_m_m_CIASec_01"}
+local esu_uni = { model = "s_m_m_snowcop_01"}
+local esu_tac = { model = "s_m_y_swat_01"}
+local esu_ct = { model = "s_m_y_pilot_01"}
+local hway_uni = { model = "s_m_y_sheriff_01"}
+local hway_unif = { model = "s_f_y_sheriff_01"}
+local detective_suit = { model = "s_m_m_CIASec_01"}
+local detective_vest = { model = "s_m_y_BlackOps_01"}
 local officer_male = { model = "s_m_y_cop_01"}
+local officer_malev = { model = "s_m_y_hwaycop_01"}
+local officer_fmale = { model = "s_f_y_cop_01"}
 local bounty_male = { model = "s_m_y_BlackOps_01"}
-local captain_male = { model = "s_m_y_fibcop_01"}
-local lieutenant_male = { model = "s_m_m_Armoured_02"}
-local sergeant_male = { model = "s_m_y_Ranger_01"}
-local deputy_male = { model = "s_m_y_ranger_01"}
-local chief_male = {model = "s_m_m_ciasec_01"}
 local santa = {model = "Santaclaus"}
 
 --s_m_m_paramedic_01
@@ -40,25 +43,6 @@ end
 ---- permissions (optional)
 ---- not_uniform (optional): if true, the cloakroom will take effect directly on the player, not as a uniform you can remove
 cfg.cloakroom_types = {
-  ["police"] = {
-    _config = { permissions = {"police.cloakroom"} },
-    ["Male uniform"] = {
-      [3] = {30,0},
-      [4] = {25,2},
-      [6] = {24,0},
-      [8] = {58,0},
-      [11] = {55,0},
-      ["p2"] = {2,0}
-    },
-    ["Female uniform"] = {
-      [3] = {35,0},
-      [4] = {30,0},
-      [6] = {24,0},
-      [8] = {6,0},
-      [11] = {48,0},
-      ["p2"] = {2,0}
-    }
-  },
   ["Lawyer"] = {
     _config = { permissions = {"Lawyer.cloakroom"} },
     ["Male uniform"] = {
@@ -87,80 +71,97 @@ cfg.cloakroom_types = {
     _config = { permissions = {"santa.cloakroom"} },
     ["Santa Outfit"] = santa
     },
-   ["emergency"] = {
+  ["EMT"] = {
     _config = { permissions = {"emergency.cloakroom"} },
-    ["Male"] = emergency_male,
-    ["Female"] = emergency_female
+    ["Paramedic"] = emergency_male
+    },
+  ["Fireman"] = {
+    _config = { permissions = {"emergency.cloakroom"} },
+    ["Fireman"] = fire_uni
     },
   ["Officer"] = {
-    _config = { permissions = {"Officer.cloakroom"} },
-    ["Officer"] = officer_male,
-	["Female"] = cop_female
+    _config = { permissions = {"officer.cloakroom"} },
+    ["Male (No Vest)"] = officer_male,
+    ["Male (Vest)"] = officer_malev,
+	  ["Female"] = officer_fmale
   },
-  ["Chief"] = {
-    _config = { permissions = {"Chief.cloakroom"} },
-    ["Chief"] = chief_male
+  ["Highway"] = {
+    _config = { permissions = {"Trooper.cloakroom"} },
+    ["NYPD Highway Patrol [Male]"] = hway_uni,
+    ["NYPD Highway Patrol [Female]"] = hway_unif
   },
   ["Trooper"] = {
-    _config = { permissions = {"Commander.cloakroom"} },
-    ["Trooper"] = hway_male
-  },
-  ["Lieutenant"] = {
-    _config = { permissions = {"Lieutenant.cloakroom"} },
-    ["Lieutenant"] = lieutenant_male
+    _config = { permissions = {"Trooper.cloakroom"} },
+    ["State Trooper"] = hway_male
   },
   ["Bounty"] = {
     _config = { permissions = {"Bounty.cloakroom"} },
     ["Bounty"] = bounty_male 
   },
-  ["Captain"] = {
-    _config = { permissions = {"Captain.cloakroom"} },
-    ["Captain"] = captain_male
-  },
   ["Detective"] = {
     _config = { permissions = {"Detective.cloakroom"} },
-    ["Detective"] = detective_male
+    ["Detective (Suit)"] = detective_suit,
+    ["Detective (Raid)"] = detective_vest
   },
-  ["Deputy"] = {
-    _config = { permissions = {"Deputy.cloakroom"} },
-    ["Deputy"] = deputy_male
+    ["ESU"] = {
+    _config = { permissions = {"ESU.cloakroom"} },
+    ["ESU Patrol Uniform"] = esu_uni,
+    ["ESU Tactical Uniform"] = esu_tac,
+    ["ESU Counterterrorism Uniform"] = esu_ct
   },
-  ["Sergeant"] = {
-    _config = { permissions = {"Sergeant.cloakroom"} },
-    ["Sergeant"] = sergeant_male
-  },
-  ["SWAT"] = {
-    _config = { permissions = {"SWAT.cloakroom"} },
-    ["Male"] = fbi_male,
-  },
-  ["sheriff"] = {
-    _config = { permissions = {"sheriff.cloakroom"} },
-    ["Male"] = sheriff_male,
-    ["Female"] = sheriff_female
+  ["Command"] = {
+    _config = { permissions = {"pdcmd.cloakroom"} },
+    ["Male (No Vest)"] = officer_male,
+    ["Male (Vest)"] = officer_malev,
+    ["Female"] = officer_fmale,
+    ["Detective (Suit)"] = detective_suit,
+    ["Detective (Raid)"] = detective_vest,
+    ["NYPD Highway Patrol [Male]"] = hway_uni,
+    ["NYPD Highway Patrol [Female]"] = hway_unif,
+    ["ESU Patrol Uniform"] = esu_uni,
+    ["ESU Tactical Uniform"] = esu_tac,
+    ["ESU Counterterrorism Uniform"] = esu_ct
   }
 }
 
 cfg.cloakrooms = {
-  {"police", 459.01037597656,-992.32800292969,30.689575195313},
   {"Officer", 459.01037597656,-992.32800292969,30.689575195313},
-  {"Chief", 459.01037597656,-992.32800292969,30.689575195313},
-  {"Bounty", 575.40698242188,-3121.94921875,18.768627166748},
-  {"Commander", 459.01037597656,-992.32800292969,30.689575195313},
+  {"ESU", 459.01037597656,-992.32800292969,30.689575195313},
+  {"Highway", 459.01037597656,-992.32800292969,30.689575195313},
+  {"Command", 459.01037597656,-992.32800292969,30.689575195313},
   {"Captain", 459.01037597656,-992.32800292969,30.689575195313},
   {"Lieutenant", 459.01037597656,-992.32800292969,30.689575195313},
   {"Detective", 459.01037597656,-992.32800292969,30.689575195313},
-  {"Sergeant", 459.01037597656,-992.32800292969,30.689575195313},
-  --{"police", 369.9228515625,-1607.12976074219,29.291934967041},
-  {"police", 1848.2177734375,3689.5593261719,34.267040252686}, -- sandy shores
-  {"police", -448.53857421875,6009.2690429688,31.716375350952}, -- paleto
-  {"SWAT", 459.01037597656,-992.32800292969,30.689575195313}, 
-  {"sheriff", 459.01037597656,-992.32800292969,30.689575195313},
-  {"Deputy", 459.01037597656,-992.32800292969,30.689575195313},
-  {"sheriff", 1849.7268066406,3689.9221191406,34.267040252686}, -- sandy shores
-  {"sheriff", -447.44305419922,6007.9516601563,31.716375350952}, -- paleto
-  {"Trooper", 459.01037597656,-992.32800292969,30.689575195313},
+  {"Sergeant", 459.01037597656,-992.32800292969,30.689575195313}, -- Mission Row Locker Room
+  {"Officer", -1057.4,-841.109,5.04226},
+  {"ESU", -1057.4,-841.109,5.04226},
+  {"Highway", -1057.4,-841.109,5.04226},
+  {"Command", -1057.4,-841.109,5.04226},
+  {"Captain", -1057.4,-841.109,5.04226},
+  {"Lieutenant", -1057.4,-841.109,5.04226},
+  {"Detective", -1057.4,-841.109,5.04226},
+  {"Sergeant", -1057.4,-841.109,5.04226}, -- Vespucci Parking Lot
+  {"Officer", 376.842,-1612.39,29.2919}, -- Davis Parking Lot
+  {"ESU", 376.842,-1612.39,29.2919},
+  {"Highway", 376.842,-1612.39,29.2919},
+  {"Command", 376.842,-1612.39,29.2919},
+  {"Captain", 376.842,-1612.39,29.2919},
+  {"Lieutenant", 376.842,-1612.39,29.2919},
+  {"Detective", 376.842,-1612.39,29.2919},
+  {"Sergeant", 376.842,-1612.39,29.2919},
+  {"Trooper", 1849.79,3686.52,34.267}, -- Sandy Shores Trooper's Office
+  {"Trooper", -448.615,6015.87,31.7164}, -- Paleto Trooper's Office
+  {"EMT", 295.257,-1447.66,29.9666}, -- Davis Hospital
+  {"Fireman", 199.206,-1650.3,29.8032}, -- Davis Firehouse
+  {"EMT", 199.206,-1650.3,29.8032}, -- Davis Firehouse
+  {"EMT", 353.374,-603.895,28.7787}, -- Pillbox Hill Hospital
+  {"EMT", 1690.22,3581.14,35.6208}, -- Sandy Shores Firehouse
+  {"Fireman", 1690.22,3581.14,35.6208}, -- Sandy Shores Firehouse
+  {"Fireman", -634.262,-121.715,39.0138}, -- Vinewood Firehouse
+  {"EMT", -634.262,-121.715,39.0138}, -- Vinewood Firehouse
   {"Lawyer",105.48087310791,-1088.82177734375,29.3024787902832},
-  {"surgery",1849.7425,3686.5759,34.2670},----first spawn change skin
+  {"Lawyer",303.299,-1640.35,32.531}, -- Davis Courthouse
+  {"surgery",-265.031,-964.696,31.2235},----first spawn change skin
   {"surgery",75.3451766967773,-1392.86596679688,29.3761329650879},---skinsshops
   {"surgery",-700.089477539063,-151.570571899414,37.4151458740234},
   {"surgery",-170.416717529297,-296.563873291016,39.7332878112793},

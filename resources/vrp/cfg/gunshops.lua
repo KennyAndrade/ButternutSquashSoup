@@ -19,7 +19,7 @@ cfg.gunshop_types = {
     ["WEAPON_SNSPISTOL"] = {"Pistol",2500,2,""},
     ["WEAPON_VINTAGEPISTOL"] = {"Vintage Pistol",2500,2,""},
     ["WEAPON_PISTOL"] = {"Pistol",2500,2,""},
-    ["WEAPON_COMBATPISTOL"] = {"Combat Pistol",5000,2,""},
+    ["WEAPON_COMBATPISTOL"] = {"Glock",5000,2,""},
     ["WEAPON_HEAVYPISTOL"] = {"Heavy Pistol",5000,2,""},
     ["WEAPON_APPISTOL"] = {"Ap Pistol",7500,2,""},
     ["WEAPON_DAGGER"] = {"Dagger",100,0,""},
@@ -73,7 +73,7 @@ cfg.gunshop_types = {
     ["WEAPON_SMOKEGRENADE"] = {"Smoke Grenade",50,0,""},
     ["WEAPON_PETROLCAN"] = {"Petrol",25000,0,""}
   },
-  ["eastlossantos1"] = {
+  ["East Los Santos"] = {
     _config = {blipid=110,blipcolor=1},
     ["WEAPON_BOTTLE"] = {"Bottle",10,0,""},
     ["WEAPON_BAT"] = {"Bat",50,0,""},
@@ -83,7 +83,7 @@ cfg.gunshop_types = {
     ["WEAPON_SNSPISTOL"] = {"Pistol",2500,2,""},
     ["WEAPON_VINTAGEPISTOL"] = {"Vintage Pistol",2500,2,""},
     ["WEAPON_PISTOL"] = {"Pistol",2500,2,""},
-    ["WEAPON_COMBATPISTOL"] = {"Combat Pistol",5000,2,""},
+    ["WEAPON_COMBATPISTOL"] = {"Glock",5000,2,""},
     ["WEAPON_HEAVYPISTOL"] = {"Heavy Pistol",5000,2,""},
     ["WEAPON_APPISTOL"] = {"Ap Pistol",7500,2,""},
     ["WEAPON_DAGGER"] = {"Dagger",100,0,""},
@@ -137,7 +137,7 @@ cfg.gunshop_types = {
     ["WEAPON_SMOKEGRENADE"] = {"Smoke Grenade",50,0,""},
     ["WEAPON_PETROLCAN"] = {"Petrol",25000,0,""}
   },
-  ["policeloadout"] = {
+  ["Police Armory"] = {
     _config = {blipid=110,blipcolor=74, permissions = {"police.loadshop"}},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
     ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
@@ -145,10 +145,10 @@ cfg.gunshop_types = {
 	["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-	["WEAPON_STUNGUN"] = {"Tazer",0,0,""},
-    ["WEAPON_COMBATPISTOL"] = {"Combat Pistol",0,0,""}
+	["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
+    ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
-  ["Cadet"] = {
+  ["Recruit"] = {
     _config = {blipid=110,blipcolor=74, permissions = {"Cadet.loadshop"}},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
     ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
@@ -156,9 +156,9 @@ cfg.gunshop_types = {
   ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-  ["WEAPON_STUNGUN"] = {"Tazer",0,0,""}
+  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""}
   },
-  ["SWAT"] = {
+  ["ESU"] = {
     _config = {blipid=110,blipcolor=74, permissions = {"SWAT.loadshop"}},
     ["WEAPON_SMOKEGRENADE"] = {"Smoke Grenade",0,0,""},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
@@ -167,10 +167,10 @@ cfg.gunshop_types = {
     ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-    ["WEAPON_STUNGUN"] = {"Tazer",0,0,""},
-    ["WEAPON_COMBATPISTOL"] = {"Combat Pistol",0,0,""}
+    ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
+    ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
-  ["Bounty_Hunter"] = {
+  ["Bounty Hunter"] = {
     _config = {blipid=150,blipcolor=1, permissions = {"Bounty.loadshop"}},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
     ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
@@ -178,19 +178,19 @@ cfg.gunshop_types = {
 	["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-	["WEAPON_STUNGUN"] = {"Tazer",0,0,""},
-    ["WEAPON_COMBATPISTOL"] = {"Combat Pistol",0,0,""}
+	["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
+    ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
-  ["emsloadout"] = {
+  ["EMS Weapons"] = {
     _config = {blipid=446,blipcolor=74, permissions = {"ems.loadshop"}},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
    	["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
 	["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-	["WEAPON_STUNGUN"] = {"Tazer",0,0,""}
+	["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""}
    },
-  ["bombsticky"] = {
+  ["Sticky Bombs"] = {
     _config = {blipid=110,blipcolor=1},
    ["WEAPON_STICKYBOMB"] = {"Sticky bomb",50000,50000,""} 
  }
@@ -198,17 +198,19 @@ cfg.gunshop_types = {
 -- list of gunshops positions
 
 cfg.gunshops = {
-  {"emsloadout", 232.89363098145,-1368.3338623047,39.534381866455}, -- spawn hospital
-  {"emsloadout", 1837.8341064453,3671.3837890625,34.276763916016}, -- sandy shores
-  {"emsloadout", -246.91954040527,6330.349609375,32.42618560791}, -- paleto
-  {"eastlossantos1", 844.299, -1033.26, 28.1949},
-  {"SWAT", 461.33551025391,-981.11071777344,30.689584732056},
-  {"Cadet", 461.33551025391,-981.11071777344,30.689584732056},
-  {"policeloadout", 461.33551025391,-981.11071777344,30.689584732056},--- main pd
-  {"Bounty_Hunter", 563.62060546875,-3126.9626464844,18.768604278564}, 
-  {"policeloadout", 1851.7342529297,3683.7416992188,34.267044067383}, -- sandy shores
-  {"policeloadout", -442.724609375,6012.6293945313,31.716390609741}, -- paleto
-  {"bombsticky", 708.847778320313,-959.231750488281,30.3953418731689},
+  {"EMS Weapons", 232.89363098145,-1368.3338623047,39.534381866455}, -- spawn hospital
+  {"EMS Weapons", 1837.8341064453,3671.3837890625,34.276763916016}, -- sandy shores
+  {"EMS Weapons", -246.91954040527,6330.349609375,32.42618560791}, -- paleto
+  {"East Los Santos", 844.299, -1033.26, 28.1949},
+  {"ESU", 461.33551025391,-981.11071777344,30.689584732056},
+  {"Recruit", 461.33551025391,-981.11071777344,30.689584732056},
+  {"Police Armory", 461.33551025391,-981.11071777344,30.689584732056},--- main pd
+  {"Police Armory", -1062.26,-884.776,5.04225},--- Vespucci PD
+  {"Police Armory", 390.955,-1610.33,29.2919},--- davis pd
+  {"Bounty Hunter", 563.62060546875,-3126.9626464844,18.768604278564}, 
+  {"Police Armory", 1851.7342529297,3683.7416992188,34.267044067383}, -- sandy shores
+  {"Police Armory", -442.724609375,6012.6293945313,31.716390609741}, -- paleto
+  {"Sticky Bombs", 708.847778320313,-959.231750488281,30.3953418731689},
   {"Paleto", -331.50210571289,6082.5063476563,31.454769134521} -- Paleto
 }
 

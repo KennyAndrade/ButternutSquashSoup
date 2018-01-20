@@ -3,7 +3,7 @@ $( document ).ready(function() {
 });
 
 function loadDatSkweenie() {
-  var banner = ["&nbsp", "E" ,"m", "e", "r", "g", "e", "&nbsp", "N", "Y", "C", "R", "P"]
+  var banner = ["&nbsp", "E" ,"m", "e", "r", "g", "e", "N", "Y", "C", "&nbsp", "R", "P"]
   var rules = ["No FailRP/VDM/RDM is tolerated.", 
                "Respect ALL members including staff.", 
                "All roleplay must be realistic.", 

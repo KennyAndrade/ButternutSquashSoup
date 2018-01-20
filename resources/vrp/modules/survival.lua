@@ -1,25 +1,25 @@
---[[local cfg = module("cfg/survival")
-local lang = vRP.lang
+--[[ [local cfg = module("cfg/survival")
+--local lang = vRP.lang
 
 -- api
 
-function vRP.getHunger(user_id)
-  local data = vRP.getUserDataTable(user_id)
-  if data then
-    return data.hunger
-  end
+--function vRP.getHunger(user_id)
+ -- local data = vRP.getUserDataTable(user_id)
+  --if data then
+    --return data.hunger
+  --end
 
-  return 0
-end
+  --return 0
+--end
 
-function vRP.getThirst(user_id)
-  local data = vRP.getUserDataTable(user_id)
-  if data then
-    return data.thirst
-  end
+--function vRP.getThirst(user_id)
+  --local data = vRP.getUserDataTable(user_id)
+  --if data then
+    --return data.thirst
+  --end
 
-  return 0
-end
+  --return 0
+--end
 
 function vRP.setHunger(user_id,value)
   local data = vRP.getUserDataTable(user_id)
@@ -169,7 +169,7 @@ AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
   vRP.setHunger(user_id, data.hunger)
   vRP.setThirst(user_id, data.thirst)
 end)
-
+ --]]
 -- EMERGENCY
 
 ---- revive

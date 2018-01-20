@@ -87,7 +87,7 @@ vehicleStageThreeAdvisor = {
 
 
 shared = {
-	horn = 86,
+	horn = 108,
 }
 
 keyboard = {

@@ -490,20 +490,16 @@ cfg.garage_types = {
     _config = {vtype="car",blipid=56,blipcolor=38,permissions={"Bounty.vehicle"}},
     ["fbi"] = {"Unmarked",0, "police"}
   },
-  ["Davis Fire"] = {
+  ["Fire"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
 	["fdny162"] = {"Tower Ladder Co. 162",0, "emergency"},
 	["firetruk"] = {"Engine Co. 1",0, "emergency"}
   },
-    ["Davis Hospital"] = {
-    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"ems.vehicle"}},
-    ["ambulance"] = {"NYEMS Ambulance ",0, "emergency"}
-  },
-  ["ems"] = {
+  ["EMS"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"ems.vehicle"}},
     ["Ambulance"] = {"NYEMS Amublance",0, "emergency"}
   },
-    ["Davis Batallion"] = {
+    ["Batallion"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"Batallion.vehicle"}},
     ["batallion"] = {"Batallion Chief's F350",0, "emergency"}
   },
@@ -577,16 +573,42 @@ cfg.garages = {
   {"sportsclassics",112.275, 6619.83, 31.8154},
   {"Motorcycles",-205.789, -1308.02, 31.2916},
   {"police",451.2121887207,-1018.2822875977,28.495378494263},	-- jobs garage
-  {"Recruit",431.32,-1013.95,28.8277}, --- Recruit garage
-  {"Police Officer",436.113,-1014.18,28.702}, --- Officer garage
-  {"Detective",447.321,-1014.59,28.5377}, --- Detective garage
-  {"NYPD Sergeant",452.417,-1014.29,28.4671}, --- Sergeants garage
-  {"Highway Patrol",453.033,-1024.74,28.5155}, --- Highway Patrol garage
-  {"ESU",455.186,-1014.74,28.4253}, --- ESU garage
+  {"Recruit",454.941,-1019.89,28.3359}, --- Recruit garage
+  {"Police Officer",454.941,-1019.89,28.3359}, --- Officer garage
+  {"Detective",454.941,-1019.89,28.3359}, --- Detective garage
+  {"NYPD Sergeant",454.941,-1019.89,28.3359}, --- Sergeants garage
+  {"Highway Patrol",454.941,-1019.89,28.3359}, --- Highway Patrol garage
+  {"ESU",454.941,-1019.89,28.3359}, --- ESU garage
   {"NYPD Command",454.941,-1019.89,28.3359}, --- PD Command garage
-  {"Davis Fire",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
-  {"Davis Hospital",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
-  {"Davis Batallion",215.644,-1631.93,29.2493}, --- Davis Firehouse garage
+  {"Recruit",-1068.8,-856.691,4.8674}, --- Vespucci Recruit garage
+  {"Police Officer",-1068.8,-856.691,4.8674}, --- Vespucci Officer garage
+  {"Detective",-1068.8,-856.691,4.8674}, --- Vespucci Detective garage
+  {"NYPD Sergeant",-1068.8,-856.691,4.8674}, --- Vespucci Sergeants garage
+  {"Highway Patrol",-1068.8,-856.691,4.8674}, --- Vespucci Highway Patrol garage
+  {"ESU",-1068.8,-856.691,4.8674}, --- Vespucci ESU garage
+  {"NYPD Command",-1068.8,-856.691,4.8674}, --- Vespucci PD Command garage
+  {"Recruit",384.058,-1622.41,29.2919}, --- Davis Recruit garage
+  {"Police Officer",384.058,-1622.41,29.2919}, --- Davis Officer garage
+  {"Detective",384.058,-1622.41,29.2919}, --- Davis Detective garage
+  {"NYPD Sergeant",384.058,-1622.41,29.2919}, --- Davis Sergeants garage
+  {"Highway Patrol",384.058,-1622.41,29.2919}, ---  Davis Highway Patrol garage
+  {"ESU",384.058,-1622.41,29.2919}, --- Davis ESU garage
+  {"NYPD Command",384.058,-1622.41,29.2919}, --- Davis PD Command garage
+  {"Fire",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
+  {"EMS",295.648,-1439.92,29.8038}, --- Davis Hospital garage
+  {"Batallion",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
+  {"Fire",-374.08,6128.01,31.4455}, --- Paleto Firehouse garage
+  {"EMS",-374.08,6128.01,31.4455}, --- Paleto Hospital garage
+  {"Batallion",-374.08,6128.01,31.4455}, --- Paleto Firehouse garage
+  {"EMS",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
+  {"EMS",1844.01,3665.01,33.9441}, --- Sandy Medical
+  {"EMS",364.723,-591.519,28.6884}, --- Pillbox Hill Medical
+  {"Batallion",-639.361,-105.763,38.0144}, --- Vinewood Firehouse garage
+  {"Fire",-639.361,-105.763,38.0144}, --- Vinewood Firehouse garage
+  {"EMS",-639.361,-105.763,38.0144}, --- Vinewood Firehouse garage
+  {"Batallion",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
+  {"Fire",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
+  {"EMS",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
   {"police",477.99038696289,-1020.9154663086,28.011201858521},
   {"Bounty",512.07818603516,-3052.1579589844,6.0687308311462},  
   {"police",1868.5435791016,3696.0295410156,33.5693359375},  -- sandy shores
