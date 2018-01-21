@@ -432,7 +432,6 @@ cfg.garage_types = {
     ["policeold2"] = {"NYPD Crown Victoria",0, "police"},
     ["go4"] = {"NYPD Go-4 Police Interceptor",0, "police"},
     ["police"] = {"NYPD Impala",0, "police"},
-    ["police2"] = {"NYPD Explorer",0, "police"},
     ["police3"] = {"NYPD Taurus",0, "police"}
   },
 ["Detective"] = {
@@ -442,7 +441,7 @@ cfg.garage_types = {
   },
   ["NYPD Sergeant"] = {
     _config = {vtype="car",blipid=56,blipcolor=38,permissions={"pdsgt.vehicle"}},
-    ["lguard"] = {"Sgt. Explorer",0, "police"},
+    ["police2"] = {"NYPD Explorer",0, "police"},
     ["police3"] = {"NYPD Taurus",0, "police"},
     ["police4"] = {"NYPD Taurus (Slicktop)",0, "police"},
     ["policeold2"] = {"NYPD Crown Victoria",0, "police"},
@@ -463,7 +462,6 @@ cfg.garage_types = {
   },
     ["NYPD Command"] = {
     _config = {vtype="car",blipid=56,blipcolor=38,permissions={"pdcmd.vehicle"}},
-    ["lguard"] = {"Sgt. Explorer",0, "police"},
     ["police3"] = {"NYPD Taurus",0, "police"},
     ["go4"] = {"NYPD Go-4 Police Interceptor",0, "police"},
     ["police4"] = {"NYPD Taurus (Slicktop)",0, "police"},
