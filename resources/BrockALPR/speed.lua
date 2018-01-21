@@ -37,7 +37,7 @@ Citizen.CreateThread( function()
 	
 	while true do
 		Wait(0)
-		if IsControlJustPressed(1, 128) and IsPedInAnyPoliceVehicle(GetPlayerPed(-1)) then
+		if IsControlJustPressed(1, 81) and IsPedInAnyPoliceVehicle(GetPlayerPed(-1)) then
 			
 			if radar.shown then 
 				radar.shown = false 
@@ -49,7 +49,7 @@ Citizen.CreateThread( function()
                 Wait(75)
 			
 		end
-		if IsControlJustPressed(1, 127) and IsPedInAnyPoliceVehicle(GetPlayerPed(-1)) then
+		if IsControlJustPressed(1, 82) and IsPedInAnyPoliceVehicle(GetPlayerPed(-1)) then
 		
 			if radar.freeze then radar.freeze = false else radar.freeze = true end
 	
