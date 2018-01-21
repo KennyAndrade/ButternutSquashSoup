@@ -1,8 +1,7 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Fjalla+One:300,400');
+﻿@import url('https://fonts.googleapis.com/css?family=Archivo+Black:300,400');
 @font-face {
-	font-family: 'Master';
-	src: url('https://fonts.googleapis.com/css?family=Fjalla+One'), 
-	     url('https://fonts.googleapis.com/css?family=Fjalla+One');
+	font-family: 'Archivo Black', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Archivo+Black');
 }
 body {
   margin: 0;

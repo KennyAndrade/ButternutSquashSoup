@@ -10189,7 +10189,7 @@
     <Item>
       <modelName>fbi2</modelName>
       <txdName>fbi2</txdName>
-      <handlingId>POLICE</handlingId>
+      <handlingId>fbi2</handlingId>
       <gameName>FBI2</gameName>
       <vehicleMakeName />
       <expressionDictName>null</expressionDictName>

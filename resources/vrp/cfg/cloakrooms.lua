@@ -13,6 +13,7 @@ local sheriff_male = { model = "s_m_y_sheriff_01"}
 local sheriff_female = { model = "s_f_y_ranger_01"}
 local hway_male = { model = "u_m_m_doa_01"}
 local cop_male = { model = "s_m_y_cop_01"}
+local sdet = { model = "s_m_y_ranger_01" }
 local cop_female = { model = "s_f_y_cop_01"}
 local esu_uni = { model = "s_m_m_snowcop_01"}
 local esu_tac = { model = "s_m_y_swat_01"}
@@ -86,13 +87,17 @@ cfg.cloakroom_types = {
 	  ["Female"] = officer_fmale
   },
   ["Highway"] = {
-    _config = { permissions = {"Trooper.cloakroom"} },
+    _config = { permissions = {"nyhp.cloakroom"} },
     ["NYPD Highway Patrol [Male]"] = hway_uni,
     ["NYPD Highway Patrol [Female]"] = hway_unif
   },
   ["Trooper"] = {
-    _config = { permissions = {"Trooper.cloakroom"} },
+    _config = { permissions = {"nysp.cloakroom"} },
     ["State Trooper"] = hway_male
+  },
+  ["Investigator"] = {
+    _config = { permissions = {"sdet.cloakroom"} },
+    ["State Investigator"] = sdet
   },
   ["Bounty"] = {
     _config = { permissions = {"Bounty.cloakroom"} },
@@ -150,7 +155,9 @@ cfg.cloakrooms = {
   {"Detective", 376.842,-1612.39,29.2919},
   {"Sergeant", 376.842,-1612.39,29.2919},
   {"Trooper", 1849.79,3686.52,34.267}, -- Sandy Shores Trooper's Office
+  {"Investigator", 1849.79,3686.52,34.267}, -- Sandy Shores Trooper's Office
   {"Trooper", -448.615,6015.87,31.7164}, -- Paleto Trooper's Office
+  {"Investigator", -448.615,6015.87,31.7164}, -- Paleto Trooper's Office
   {"EMT", 295.257,-1447.66,29.9666}, -- Davis Hospital
   {"Fireman", 199.206,-1650.3,29.8032}, -- Davis Firehouse
   {"EMT", 199.206,-1650.3,29.8032}, -- Davis Firehouse

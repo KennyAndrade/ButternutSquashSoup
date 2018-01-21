@@ -425,7 +425,6 @@ cfg.garage_types = {
   ["Recruit"] = {
     _config = {vtype="car",blipid=56,blipcolor=38,permissions={"Cadet.vehicle"}},
     ["policeold2"] = {"NYPD Crown Victoria",0, "police"},
-    ["police"] = {"NYPD Impala",0, "police"},
     ["go4"] = {"NYPD Go-4 Police Interceptor",0, "police"}
   },
   ["Police Officer"] = {
@@ -501,6 +500,7 @@ cfg.garage_types = {
   ["Fire"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
     ["fdny162"] = {"Tower Ladder Co. 162",0, "emergency"},
+    ["fdnyrescue"] = {"Rescue Co. 9",0, "emergency"},
     ["firetruk"] = {"Engine Co. 1",0, "emergency"}
   },
   ["EMS"] = {

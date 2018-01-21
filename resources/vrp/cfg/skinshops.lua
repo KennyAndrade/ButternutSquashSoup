@@ -5,10 +5,42 @@ local cfg = {}
 local parts = {
   ["Face"] = 0,
   ["Hair"] = 2,
-  ["Hand"] = 3,
+  ["Shirt"] = 3,
   ["Legs"] = 4,
-  ["Shirt"] = 8,
+  ["Accessories"] = 8,
   ["Shoes"] = 6,
+  ["Jacket"] = 11,
+  ["Hats"] = "p0",
+  ["Glasses"] = "p1",
+  ["Ears"] = "p2",
+  ["Watches"] = "p6"
+}
+
+local police = {
+  ["Face"] = 0,
+  ["Hair"] = 2,
+  ["Shirt"] = 3,
+  ["Legs"] = 4,
+  ["Accessories"] = 8,
+  ["Shoes"] = 6,
+  ["Ranks"] = 10,
+  ["Police Accessories"] = 9,
+  ["Jacket"] = 11,
+  ["Hats"] = "p0",
+  ["Glasses"] = "p1",
+  ["Ears"] = "p2",
+  ["Watches"] = "p6"
+}
+
+local emsfire = {
+  ["Face"] = 0,
+  ["Hair"] = 2,
+  ["Shirt"] = 3,
+  ["Legs"] = 4,
+  ["Accessories"] = 8,
+  ["Shoes"] = 6,
+  ["Ranks/Decals"] = 10,
+  ["Fire/EMS Accessories"] = 9,
   ["Jacket"] = 11,
   ["Hats"] = "p0",
   ["Glasses"] = "p1",
@@ -24,7 +56,15 @@ cfg.texture_change_price = 5
 -- skinshops list {parts,x,y,z}
 cfg.skinshops = {
   {parts,72.2545394897461,-1399.10229492188,29.3761386871338},
-  {parts,449.81854248047,-993.30865478516,30.689584732056},
+  {police,449.81854248047,-993.30865478516,30.689584732056}, -- Mission Row Skin Fixer
+  {police,371.503,-1609.36,29.2919}, -- Davis Station Skin Fixer
+  {police,-1052.51,-841.194,5.04205}, -- Vespucci Station Skin Fixer
+  {police,1848.65,3689.94,34.2671}, -- Sandy Station Skin Fixer
+  {police,-448.51,6008.09,31.7164}, -- Paleto Station Skin Fixer
+  {emsfire,195.476,-1654.2,29.8032}, -- Davis Fire Station Skin Fixer
+  {emsfire,302.873,-1452.42,29.9696}, -- Davis Hospital Skin Fixer
+  {emsfire,-637.256,-130.025,39.0138}, -- Vespucci Fire Skin Fixer
+  {emsfire,357.764,-608.078,28.8047}, -- Pillbox Hospital Skin Fixer
   {parts,-703.77685546875,-152.258544921875,37.4151458740234},
   {parts,-167.863754272461,-298.969482421875,39.7332878112793},
   {parts,428.694885253906,-800.1064453125,29.4911422729492},

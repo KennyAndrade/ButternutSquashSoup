@@ -302,7 +302,7 @@ cfg.groups = {
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
       onleave = function(player) vRPclient.setCop(player,{true}) end
     },
-    "Hway.cloakroom",
+    "nyhp.cloakroom",
     "police.pc",
     --"police.handcuff",
     "police.putinveh",
@@ -367,7 +367,7 @@ cfg.groups = {
     "police.announce",
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
-  "police.vehicle",
+  "cadet.vehicle",
   "police.loadshop",
   "nypd.whitelisted",
   "emergency.market",
@@ -820,7 +820,7 @@ cfg.groups = {
     "police.announce",
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
-  "police.vehicle",
+  "state.vehicle",
   "police.loadshop",
   "emergency.market",
   "emergency.revive",
@@ -835,7 +835,7 @@ cfg.groups = {
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
       onleave = function(player) vRPclient.setCop(player,{false}) end
   },
-  "invest.cloakroom",
+  "sdet.cloakroom",
     "police.pc",
     --"police.handcuff",
     "police.putinveh",
@@ -859,7 +859,7 @@ cfg.groups = {
     "police.announce",
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
-  "police.vehicle",
+  "state.vehicle",
   "police.loadshop",
   "emergency.market",
   "emergency.revive",
@@ -874,7 +874,7 @@ cfg.groups = {
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
       onleave = function(player) vRPclient.setCop(player,{false}) end
   },
-  "invest.cloakroom",
+  "sdet.cloakroom",
     "police.pc",
     --"police.handcuff",
     "police.putinveh",
@@ -898,7 +898,7 @@ cfg.groups = {
     "police.announce",
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
-  "police.vehicle",
+  "state.vehicle",
   "police.loadshop",
   "emergency.market",
   "emergency.revive",
@@ -937,16 +937,16 @@ cfg.groups = {
     "police.announce",
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
-  "police.vehicle",
+  "state.vehicle",
   "police.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "ssergeant.paycheck"
+  "sergeant.paycheck"
   },
-      ["Trooper"] = {
+      ["State Trooper"] = {
     _config = { gtype = "job",
     onjoin = function(player) vRPclient.setCop(player,{true}) end,
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
@@ -976,7 +976,7 @@ cfg.groups = {
     "police.announce",
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
-  "police.vehicle",
+  "state.vehicle",
   "police.loadshop",
   "emergency.market",
   "emergency.revive",
