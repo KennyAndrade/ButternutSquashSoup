@@ -474,7 +474,6 @@ cfg.garage_types = {
     ["unmarked3"] = {"Unmarked Camry",0, "police"},
     ["unmarked1"] = {"Unmarked Explorer",0, "police"},
     ["fbi"] = {"Undercover Taxi",0, "police"},
-    ["fbi2"] = {"Unmarked Impala",0, "police"},
     ["police"] = {"NYPD Impala",0, "police"},
     ["police2"] = {"NYPD Explorer",0, "police"},
     ["policeold1"] = {"ESU Truck",0, "police"},
