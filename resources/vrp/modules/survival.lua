@@ -1,7 +1,7 @@
- [local cfg = module("cfg/survival")
+local cfg = module("cfg/survival")
 local lang = vRP.lang
 
- api
+-- api
 
 function vRP.getHunger(user_id)
   local data = vRP.getUserDataTable(user_id)
@@ -113,7 +113,7 @@ function vRP.varyThirst(user_id, variation)
       vRPclient.setProgressBarText(source,{"vRP:thirst",lang.survival.thirsty()})
     end
   end
-end --]]
+end
 
 -- tunnel api (expose some functions to clients)
 
@@ -133,7 +133,7 @@ end
 
 -- tasks
 
-nger/thirst increase
+-- hunger/thirst increase
 function task_update()
   for k,v in pairs(vRP.users) do
     vRP.varyHunger(v,cfg.hunger_per_minute)
@@ -144,7 +144,7 @@ function task_update()
 end
 task_update()
 
--- handlers 
+-- handlers
 
 -- init values
 AddEventHandler("vRP:playerJoin",function(user_id,source,name,last_login)
@@ -168,8 +168,8 @@ AddEventHandler("vRP:playerSpawn",function(user_id, source, first_spawn)
   vRPclient.setProgressBar(source,{"vRP:thirst","minimap",ttxt,0,125,255,0})
   vRP.setHunger(user_id, data.hunger)
   vRP.setThirst(user_id, data.thirst)
-end) 
- 
+end)
+
 -- EMERGENCY
 
 ---- revive

@@ -1,7 +1,5 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Archivo+Black:300,400');
-@font-face {
-	font-family: 'Archivo Black', sans-serif;
-	src: url('https://fonts.googleapis.com/css?family=Archivo+Black');
+﻿@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+font-family: 'Archivo Black', sans-serif;
 }
 body {
   margin: 0;
