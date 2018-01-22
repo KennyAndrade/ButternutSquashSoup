@@ -50,7 +50,7 @@ html, body {
   box-shadow: inset -1px -1px 60px 0px rgba(0,0,0,1);
   box-shadow: -1px -1px 60px 0px rgba(0,0,0,1);
   background-color: rgba(0,0,0,0.5);
-  font-family: 'Unica One', cursive;
+  font-family: 'Roboto', sans-serif;
   color: white;
   float: left;
   position: absolute;
@@ -63,7 +63,7 @@ html, body {
 
 .menu h1{
   background-color: rgb(44, 189, 247);
-  font-family: 'Unica One', cursive;
+  font-family: 'Roboto', sans-serif;
   color: white;
   text-transform: uppercase;
   text-align: center;
