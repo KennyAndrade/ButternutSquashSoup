@@ -4,7 +4,7 @@ local cfg = {}
 -- mysql credentials
 cfg.db = {
   host = "127.0.0.1", -- database ip (default is local)
-  database = "gtavmm52103",   -- name of database
+  database = "fivem",   -- name of database
   user = "root",    --  database username
   password = ""   -- password of your database
 }
