@@ -388,7 +388,6 @@ function setExtraState(veh, extra, state)
             if(els_Vehicles[checkCarHash(veh)].extras[extra].enabled) then
                 if DoesExtraExist(veh, extra) then
                     SetVehicleExtra(veh, extra, state)
-                    SetVehicleBodyHealth(veh, vehicleHealthBefore)
                 end
             end
         end
