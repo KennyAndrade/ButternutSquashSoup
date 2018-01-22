@@ -11,8 +11,9 @@ html, body {
   cursor: pointer;
 }
 
-font-family: 'Concert One', cursive;
-@import url('https://fonts.googleapis.com/css?family=Concert+One');
+@font-face {
+  font-family: 'Pricedown';
+  src: url(fonts/Pdown.woff);
 }
 
 .console{
@@ -24,8 +25,8 @@ font-family: 'Concert One', cursive;
 /* EDIT TO WORK WITH DUNKO VRP EDIT*/
 
 .menu{ 
-  background-image: url(https://i.imgur.com/JvfTA0Y.png); /*Change the phone wallpaper here. You can use 'grey.jpg' 'red.jpg' 'code.jpg' 'blue.jpg' or add you own in gui/img/--> [Make sure to resize the pic so that the hight is 401px!] */
-  font-family: 'Concert One', cursive;
+  background-image: url(https://i.imgur.com/EBVNgLe.jpg); /*Change the phone wallpaper here. You can use 'grey.jpg' 'red.jpg' 'code.jpg' 'blue.jpg' or add you own in gui/img/--> [Make sure to resize the pic so that the hight is 401px!] */
+  font-family: 'Roboto', sans-serif; 
   background-size: cover;
   color: white;
   width: 200px;
@@ -62,7 +63,7 @@ font-family: 'Concert One', cursive;
 
 .menu h1{
   background-color: rgb(44, 189, 247);
-  font-family: 'Concert One', cursive;
+  font-family: 'Unica One', cursive;
   color: white;
   text-transform: uppercase;
   text-align: center;
@@ -116,7 +117,7 @@ font-family: 'Concert One', cursive;
 .wprompt{
   background-color: #3A3A3A;
   border: 1px solid white;
-  font-family: 'Concert One', cursive;
+  font-family: 'Roboto', sans-serif;
   box-shadow: 1px 1px 18px 1px #000000;
   color: white;  
   width: 300px;
@@ -130,13 +131,13 @@ font-family: 'Concert One', cursive;
 
 .wprompt h1{
   font-size: 12px;
-  font-family: 'Concert One', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 .wprompt textarea{
   outline: none !important;
-  background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/dark-background-with-star-like-dots_bkpaotdgh__F0000.png);
-  font-family: 'Concert One', cursive; 
+  background-image: url(https://i.imgur.com/EBVNgLe.jpg);
+  font-family: 'Roboto', sans-serif; 
   color: white;
   width: 400px;
   height: 200px;
@@ -158,7 +159,7 @@ font-family: 'Concert One', cursive;
 
 .wprompt .help{
   font-size: 12px;
-  font-family: 'Concert One', cursive;
+  font-family: 'Roboto', sans-serif;
   padding: 3px;
   text-transform: uppercase;
 }
@@ -178,7 +179,7 @@ font-family: 'Concert One', cursive;
 .request_manager div > span{
   background-color: #3A3A3A;
   border: 1px solid black;
-  font-family: 'Concert One', cursive;
+  font-family: 'Roboto', sans-serif;
   box-shadow: inset 1px 1px 18px 1px #000000;
   border-radius: 5px 5px 0px 0px;
   font-size: 25px;
@@ -190,7 +191,7 @@ font-family: 'Concert One', cursive;
 }
 
 .request_manager .yes{
-  font-family: 'Concert One', cursive;
+  font-family: 'Roboto', sans-serif;
   padding-left: 15px;
   color: rgb(0,255,0);
   font-size: 1em;
@@ -198,7 +199,7 @@ font-family: 'Concert One', cursive;
 }
 
 .request_manager .no{
-  font-family: 'Concert One', cursive;
+  font-family: 'Roboto', sans-serif;
   color: rgb(255,0,0);
   font-size: 1em;
   text-transform: uppercase;
