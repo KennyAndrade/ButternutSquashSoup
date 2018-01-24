@@ -87,6 +87,7 @@ AddEventHandler( 'KneelHU', function()
             TaskPlayAnim( ped, "random@arrests@busted", "enter", 8.0, 1.0, -1, 2, 0, 0, 0, 0 )
             Wait (1000)
             TaskPlayAnim( ped, "random@arrests@busted", "idle_a", 8.0, 1.0, -1, 9, 0, 0, 0, 0 )
+            TriggerEvent("chatMessage", "", {255, 0, 0}, "You are surrendering.")
         end    
     end
 end )

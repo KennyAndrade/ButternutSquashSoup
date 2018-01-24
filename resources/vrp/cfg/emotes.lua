@@ -31,11 +31,11 @@ cfg.emotes = {
   ["Rock"] = {true,{{"mp_player_introck","mp_player_int_rock",1}},false},
 
   ["Sit Chair"] = {false, {task="PROP_HUMAN_SEAT_CHAIR_MP_PLAYER"}, false},
---  ["Cop"] = {false, {task="WORLD_HUMAN_COP_IDLES"}, false},
+  ["Cop"] = {false, {task="WORLD_HUMAN_COP_IDLES"}, false},
   ["Binoculars"] = {false, {task="WORLD_HUMAN_BINOCULARS"}, false},
   ["Cheer"] = {false, {task="WORLD_HUMAN_CHEERING"}, false},
   ["Crink"] = {false, {task="WORLD_HUMAN_DRINKING"}, false},
-  --["Smoke"] = {false, {task="WORLD_HUMAN_SMOKING"}, false},
+  ["Smoke"] = {false, {task="WORLD_HUMAN_SMOKING"}, false},
 --  ["Film"] = {false, {task="WORLD_HUMAN_MOBILE_FILM_SHOCKING"}, false},
 --  ["Plant"] = {false, {task="WORLD_HUMAN_GARDENER_PLANT"}, false},
   ["Guard"] = {false, {task="WORLD_HUMAN_GUARD_STAND"}, false},
@@ -60,8 +60,8 @@ cfg.emotes = {
   ["Sunbath2"] = {false, {task="WORLD_HUMAN_SUNBATHE"}, false},
 --  ["Weld"] = {false, {task="WORLD_HUMAN_WELDING"}, false},
 --  ["Kneel"] = {false, {task="CODE_HUMAN_MEDIC_KNEEL"}, false},
---  ["Crowdcontrol"] = {false, {task="CODE_HUMAN_POLICE_CROWD_CONTROL"}, false},
---  ["Investigate"] = {false, {task="CODE_HUMAN_POLICE_INVESTIGATE"}, false},
+  ["Crowdcontrol"] = {false, {task="CODE_HUMAN_POLICE_CROWD_CONTROL"}, false},
+  ["Investigate"] = {false, {task="CODE_HUMAN_POLICE_INVESTIGATE"}, false},
   ["Yoga"] = {false, {task="WORLD_HUMAN_YOGA"}, false}
 }
 

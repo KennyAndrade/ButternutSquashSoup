@@ -23,16 +23,16 @@ cfg.gaptitudes = {
   },
   ["laboratory"] = {
     _title = "laboratory of drugs",
-	["cocaine"] = {"process you cocaine, need benzoilmetilecgonina, find in Plantation .", 0, -1},
-	["weed"] = {"process you weed, need seeds, find in Plantation .", 0, -1},
-	["lsd"] = {"process you lsd, need Harness, find in Plantation .", 0, -1}
+	["cocaine"] = {"process your cocaine, you need benzoilmetilecgonina, find it in the Plantation .", 0, -1},
+	["weed"] = {"Process your weed, you need seeds, find them in the Plantation .", 0, -1},
+	["lsd"] = {"Process your LSD, you need Harness, find  it in the Plantation .", 0, -1}
   },
   ["hacker"] = {
-    _title = "Study of hacker",
+    _title = "Study of Computer Science",
 	["logic"] = {"Study of logic.", 0, -1},
 	["c++"] = {"Study of C++ language.", 0, -1},
 	["lua"] = {"Study of lua language.", 0, -1},
-	["hacking"] = {"Study of hackers.", 0, -1}
+	["hacking"] = {"Study of computer science.", 0, -1}
   }
 }
 
