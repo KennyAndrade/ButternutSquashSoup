@@ -1,18 +1,15 @@
 AddEventHandler("chatMessage", function(source, name, message)
   cm = stringsplit(message, " ")
 
-  if cm[1] == "/hu" then
+  if cm[1] == "/huk" then
+    CancelEvent()
+    TriggerClientEvent("KneelHU", source)
+    elseif
+
+   cm[1] == "/hu" then
     CancelEvent()
     TriggerClientEvent("Handsup", source)
   end
-end)
-  AddEventHandler("chatMessage", function(source, name, message)
-  cm = stringsplit(message, " ")
-
-    if cm[1] == "/huk" then
-          TriggerClientEvent("KneelHU", source)
-          CancelEvent()
-    end
 end)
 
 function stringSplit(inputstr, sep)

@@ -302,24 +302,3 @@ AddEventHandler("onPlayerKilled",function(player,killer,reason)
   TriggerServerEvent("vRPcli:playerDied")
 end)
 
--- voice proximity computation
-Citizen.CreateThread(function()
-  while true do
-    Citizen.Wait(500)
-    local ped = GetPlayerPed(-1)
-    local proximity = cfg.voice_proximity
-
-    if IsPedSittingInAnyVehicle(ped) then
-      local veh = GetVehiclePedIsIn(ped,false)
-      local hash = GetEntityModel(veh)
-      -- make open vehicles (bike,etc) use the default proximity
-      if IsThisModelACar(hash) or IsThisModelAHeli(hash) or IsThisModelAPlane(hash) then
-        proximity = cfg.voice_proximity_vehicle
-      end
-    elseif tvRP.isInside() then
-      proximity = cfg.voice_proximity_inside
-    end
-
-    NetworkSetTalkerProximity(proximity+0.0001)
-  end
-end)
