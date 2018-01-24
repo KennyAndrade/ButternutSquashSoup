@@ -15,11 +15,16 @@ AddEventHandler("chatMessage", function(source, name, message)
   end
 end
 
-    if cmd == "/huk" then
-        	TriggerClientEvent("KneelHU", p)
-        	CancelEvent()
+AddEventHandler("chatMessage", function(p, color, msg)
+    if msg:sub(1, 1) == "/" then
+        fullcmd = stringSplit(msg, " ")
+        cmd = fullcmd[1]
+
+      if cmd == "/huk" then
+          TriggerClientEvent("KneelHU", p)
+          CancelEvent()
         end
-	end
+  end
 end)
 
 function stringSplit(inputstr, sep)
