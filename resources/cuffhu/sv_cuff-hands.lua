@@ -5,7 +5,9 @@ AddEventHandler("chatMessage", function(source, name, message)
     CancelEvent()
     TriggerClientEvent("Handsup", source)
   end
-end
+end)
+  AddEventHandler("chatMessage", function(source, name, message)
+  cm = stringsplit(message, " ")
 
     if cm[1] == "/huk" then
           TriggerClientEvent("KneelHU", source)
