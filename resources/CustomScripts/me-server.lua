@@ -2,7 +2,7 @@ AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
 	if sm[1] == "/me" then
 		CancelEvent()
-		TriggerClientEvent('chatMessage', -1, "me | " .. name, { 255, 0, 0 }, string.sub(msg,5))
+		TriggerClientEvent('chatMessage', -1, " " .. name, { 255, 0, 0 }, string.sub(msg,5))
 	end
 end)
 

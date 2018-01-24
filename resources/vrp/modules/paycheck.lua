@@ -94,7 +94,7 @@ AddEventHandler('paycheck:bonus', function()
   	local user_id = vRP.getUserId(source)
 	if vRP.hasPermission(user_id,"user.paycheck") then
 		vRP.giveMoney(user_id,100)
-		vRPclient.notify(source,{"Gift for play: $100"})
+		vRPclient.notify(source,{"Pay Bonus: $100"})
 	end
 	if vRP.hasPermission(user_id,"user.paycheck") then
 		vRP.getMoney(user_id,150)

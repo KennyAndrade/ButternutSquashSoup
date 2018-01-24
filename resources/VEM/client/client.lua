@@ -35,7 +35,7 @@ Citizen.CreateThread(function()
 		local text
 		local vehicle
 
-		if IsControlJustPressed(1, 168) or IsDisabledControlJustPressed(1, 168) then
+		if IsControlJustPressed(1, 166) or IsDisabledControlJustPressed(1, 166) then
 			if not menu then
 				if IsPedInAnyVehicle(GetPlayerPed(-1), 0) and (GetPedInVehicleSeat(GetVehiclePedIsIn(GetPlayerPed(-1), 0), -1) == GetPlayerPed(-1)) then
 					menu = true
