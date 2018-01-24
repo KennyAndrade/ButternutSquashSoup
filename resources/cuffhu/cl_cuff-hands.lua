@@ -53,6 +53,7 @@ AddEventHandler("Handsup", function()
 			TriggerEvent("chatMessage", "You are handcuffed..")
 		end
 	end
+end)
 
 function loadAnimDict( dict )
     while ( not HasAnimDictLoaded( dict ) ) do
