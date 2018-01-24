@@ -1,6 +1,6 @@
 AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
-	if sm[1] == "/cuffy" then
+	if sm[1] == "/cuffc" then
 	TriggerClientEvent("Cuff_close:getcuff", source)
     CancelEvent()
     end
@@ -8,7 +8,7 @@ end)
 
 AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
-	if sm[1] == "/dragy" then
+	if sm[1] == "/drag" then
 	TriggerClientEvent("Cuff_close:getDrag", source)
     CancelEvent()
     end
@@ -16,7 +16,7 @@ end)
 
 AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
-	if sm[1] == "/puti" then
+	if sm[1] == "/put" then
 	TriggerClientEvent("Cuff_close:getSeatedVehicle", source)
     CancelEvent()
     end
@@ -24,7 +24,7 @@ end)
 
 AddEventHandler('chatMessage', function(source, name, msg)
 	sm = stringsplit(msg, " ");
-	if sm[1] == "/puto" then
+	if sm[1] == "/out" then
 	TriggerClientEvent("Cuff_close:getUnseatVehicle", source)
     CancelEvent()
     end
