@@ -1,19 +1,4 @@
-AddEventHandler("chatMessage", function(source, name, message)
-	cm = stringsplit(message, " ")
 
-	if cm[1] == "/cuff" then
-		CancelEvent()
-		if tablelength(cm) > 1 then
-			local tPID = tonumber(cm[2])
-			TriggerClientEvent("Handcuff", tPID)
-		end
-	end
-
-    if cm[1] == "/hu" then
-    CancelEvent()
-    TriggerClientEvent("Handsup", source)
-  end
-end
 
 AddEventHandler("chatMessage", function(p, color, msg)
     if msg:sub(1, 1) == "/" then
