@@ -3,7 +3,7 @@ mode = 'whitelist'
 -- Remember, the last ID must have NO COMMA at the end
 
 steamIdsList = {
-  'xxa', -- Dunko's
+  '76561198056313973', -- Dunko's
   'STEAM 64 ID'
   }
 
