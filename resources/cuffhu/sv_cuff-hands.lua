@@ -7,8 +7,8 @@ AddEventHandler("chatMessage", function(source, name, message)
   end
 end
 
-    if cmd == "/huk" then
-          TriggerClientEvent("KneelHU", p)
+    if cm[1] == "/huk" then
+          TriggerClientEvent("KneelHU", source)
           CancelEvent()
     end
 end)

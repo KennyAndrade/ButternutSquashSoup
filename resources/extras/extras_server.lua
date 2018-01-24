@@ -1,71 +1,80 @@
 
 
-AddEventHandler("chatMessage", function(p, color, msg)
-    if msg:sub(1, 1) == "/" then
-        fullcmd = stringSplit(msg, " ")
-        cmd = fullcmd[1]
+AddEventHandler("chatMessage", function(source, name, message)
+    cm = stringsplit(message, " ")
 
-      if cmd == "/e1" then
-          TriggerClientEvent("e1", p)
+      if cm[1] == "/e1" then
+          TriggerClientEvent("e1", source)
           CancelEvent()
         end
   end
-      if cmd == "/e2" then
-          TriggerClientEvent("e2", p)
+
+      if cm[1] == "/e2" then
+          TriggerClientEvent("e2", source)
           CancelEvent()
         end
   end
-      if cmd == "/e3" then
-          TriggerClientEvent("e3", p)
+
+      if cm[1] == "/e3" then
+          TriggerClientEvent("e3", source)
           CancelEvent()
         end
   end
-      if cmd == "/e4" then
-          TriggerClientEvent("e4", p)
+
+      if cm[1] == "/e4" then
+          TriggerClientEvent("e4", source)
           CancelEvent()
         end
   end
-      if cmd == "/e5" then
-          TriggerClientEvent("e5", p)
+
+      if cm[1] == "/e5" then
+          TriggerClientEvent("e5", source)
           CancelEvent()
         end
   end
-      if cmd == "/e6" then
-          TriggerClientEvent("e6", p)
+
+      if cm[1] == "/e6" then
+          TriggerClientEvent("e6", source)
           CancelEvent()
         end
   end
-      if cmd == "/e7" then
-          TriggerClientEvent("e7", p)
+
+      if cm[1] == "/e7" then
+          TriggerClientEvent("e7", source)
           CancelEvent()
         end
   end
-      if cmd == "/e8" then
-          TriggerClientEvent("e8", p)
+
+      if cm[1] == "/e8" then
+          TriggerClientEvent("e8", source)
           CancelEvent()
         end
   end
-      if cmd == "/e9" then
-          TriggerClientEvent("e9", p)
+
+      if cm[1] == "/e9" then
+          TriggerClientEvent("e9", source)
           CancelEvent()
         end
   end
-      if cmd == "/e10" then
-          TriggerClientEvent("e10", p)
+
+      if cm[1] == "/e10" then
+          TriggerClientEvent("e10", source)
           CancelEvent()
         end
   end
-      if cmd == "/e11" then
-          TriggerClientEvent("e11", p)
+
+      if cm[1] == "/e11" then
+          TriggerClientEvent("e11", source)
           CancelEvent()
         end
   end
-      if cmd == "/e12" then
-          TriggerClientEvent("e12", p)
+
+      if cm[1] == "/e12" then
+          TriggerClientEvent("e12", source)
           CancelEvent()
         end
-  end
-end)
+  end)
+
 
 function stringSplit(inputstr, sep)
     if sep == nil then
