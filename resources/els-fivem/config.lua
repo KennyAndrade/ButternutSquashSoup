@@ -13,7 +13,7 @@ vcf_files = {
     "lguard.xml",
     "ambulance.xml",
     "pbus.xml",
-    "police6.xml",
+    "policeb.xml",
     "riot.xml",
     "towtruck.xml",
     "go4.xml",
@@ -27,12 +27,16 @@ vcf_files = {
     "simon2.xml",
     "det1.xml",
     "det2.xml",
+    "flatbed.xml",
+    "exmsexp.xml",
 }
 
 pattern_files = {
 	"WIGWAG.xml",
 	"WIGWAG2.xml",
 	"WIGWAG3.xml",
+	"WIGWAG4.xml",
+	"NORWEGIAN.xml",
 	"LEFTRIGHT.xml",
 	"LEFTSWEEP.xml",
 	"RIGHTSWEEP.xml",
@@ -77,12 +81,15 @@ vehicleStageThreeAdvisor = {
     "state3",
     "state4",
     "state5",
+    "policeb",
     "go4",
 	"firetruk",
 	"fdny162",
     "simon2",
     "det1",
     "det2",
+    "flatbed",
+    "exmsexp",
 }
 
 

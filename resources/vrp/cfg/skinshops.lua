@@ -60,6 +60,7 @@ cfg.skinshops = {
   {police,371.503,-1609.36,29.2919}, -- Davis Station Skin Fixer
   {police,-1052.51,-841.194,5.04205}, -- Vespucci Station Skin Fixer
   {police,1848.65,3689.94,34.2671}, -- Sandy Station Skin Fixer
+  {police,826.57720947266,-1292.6020507813,28.240655899048}, -- La Mesa Station Fixer
   {police,-448.51,6008.09,31.7164}, -- Paleto Station Skin Fixer
   {emsfire,195.476,-1654.2,29.8032}, -- Davis Fire Station Skin Fixer
   {emsfire,302.873,-1452.42,29.9696}, -- Davis Hospital Skin Fixer

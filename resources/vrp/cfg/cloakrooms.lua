@@ -155,6 +155,8 @@ cfg.cloakrooms = {
   {"Detective", 376.842,-1612.39,29.2919},
   {"Sergeant", 376.842,-1612.39,29.2919},
   {"Trooper", 1849.79,3686.52,34.267}, -- Sandy Shores Trooper's Office
+  {"Trooper",826.70916748047,-1290.1206054688,28.240655899048}, --- La Mesa Trooper's Outpost
+  {"Investigator",826.70916748047,-1290.1206054688,28.240655899048}, --- La Mesa State Investigator's Outpost
   {"Investigator", 1849.79,3686.52,34.267}, -- Sandy Shores Trooper's Office
   {"Trooper", -448.615,6015.87,31.7164}, -- Paleto Trooper's Office
   {"Investigator", -448.615,6015.87,31.7164}, -- Paleto Trooper's Office

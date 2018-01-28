@@ -492,17 +492,21 @@ cfg.garage_types = {
     ["state2"] = {"State Police Charger 2015 ",0, "emergency"},
     ["state3"] = {"State Police Slicktop Explorer",0, "emergency"},
     ["state4"] = {"State Police Crown Victoria ",0, "emergency"},
-	["state5"] = {"State Police Slicktop Crown Victoria",0, "emergency"}
+	["state5"] = {"State Police Slicktop Crown Victoria",0, "emergency"},
+    ["state6"] = {"State Police Explorer",0, "emergency"}
   },
   ["Fire"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
     ["fdny162"] = {"Tower Ladder Co. 162",0, "emergency"},
-    ["fdnyrescue"] = {"Rescue Co. 9",0, "emergency"},
     ["firetruk"] = {"Engine Co. 1",0, "emergency"}
   },
   ["EMS"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"ems.vehicle"}},
     ["Ambulance"] = {"NYEMS Amublance",0, "emergency"}
+  },
+  ["EMSCmd"] = {
+    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"ems.vehicle"}},
+    ["emsexp"] = {"NYEMS Explorer",0, "emergency"}
   },
     ["Batallion"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"Batallion.vehicle"}},
@@ -514,7 +518,7 @@ cfg.garage_types = {
   },
    ["EMS Helicopters"] = {
     _config = {vtype="car",blipid=43,blipcolor=1,radius=5.1,permissions={"ems.pilot"}},
-    ["supervolito2"] = {"EMS",0, "emergency"}
+    ["supervolito2"] = {"EMS Helicopter",0, "emergency"}
   },
   ["Pilotla"] = {
     _config = {vtype="plane",blipid=16,blipcolor=30,permissions={"pilot.vehicle"}},
@@ -550,7 +554,7 @@ cfg.garage_types = {
   },  
   ["repair"] = {
     _config = {vtype="car",blipid=50,blipcolor=31,permissions={"repair.vehicle"}},
-    ["towtruck2"] = {"towtruck2",0, "towtruck2"},
+    ["towtruck"] = {"FastLane Towing",0, "FastLane Towing"},
 	["utillitruck3"] = {"Utility Truck",0, "utillitruck3"}
   },
   ["bankdriver"] = {
@@ -601,19 +605,27 @@ cfg.garages = {
   {"NYPD Command",384.058,-1622.41,29.2919}, --- Davis PD Command garage
   {"Fire",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
   {"EMS",295.648,-1439.92,29.8038}, --- Davis Hospital garage
+  {"EMSCmd",295.648,-1439.92,29.8038}, --- Davis Hospital garage
   {"Batallion",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
   {"Fire",-374.08,6128.01,31.4455}, --- Paleto Firehouse garage
   {"EMS",-374.08,6128.01,31.4455}, --- Paleto Hospital garage
   {"Batallion",-374.08,6128.01,31.4455}, --- Paleto Firehouse garage
+  {"EMSCmd",-374.08,6128.01,31.4455}, --- Paleto Firehouse garage
+  {"Fire",1196.6220703125,-1457.9107666016,34.905372619629}, -- El Burro Heights Fire Station
+  {"EMS",1196.6220703125,-1457.9107666016,34.905372619629}, -- El Burro Heights Fire Station
+  {"EMSCmd",1196.6220703125,-1457.9107666016,34.905372619629}, -- El Burro Heights Fire Station
   {"EMS",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
+  {"EMSCmd",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
   {"EMS",1844.01,3665.01,33.9441}, --- Sandy Medical
-  {"EMS",364.723,-591.519,28.6884}, --- Pillbox Hill Medical
+  {"EMS",381.7917175293,-577.49566650391,28.663213729858}, --- Pillbox Hill Medical
+  {"EMSCmd",295.648,-1439.92,29.8038}, --- Davis Hospital garage
   {"Batallion",-639.361,-105.763,38.0144}, --- Vinewood Firehouse garage
   {"Fire",-639.361,-105.763,38.0144}, --- Vinewood Firehouse garage
   {"EMS",-639.361,-105.763,38.0144}, --- Vinewood Firehouse garage
   {"Batallion",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
   {"Fire",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
   {"EMS",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
+  {"State Police",855.56945800781,-1279.6564941406,26.522792816162}, --- La Mesa State Police Outpost 
   {"State Police",-471.597,6024.5,31.3405}, --- Paleto garage
   {"State Police",1854.95,3675.58,33.7134}, --- Sandy Firehouse garage
   {"police",477.99038696289,-1020.9154663086,28.011201858521},
