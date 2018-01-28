@@ -33,9 +33,7 @@ local spawnLoadoutList = {
 -- {weaponHashToApplyComponentTo, weaponComponentHash} Any extras/components that need to be attached to certain weapons? Enter them below
 local spawnLoadoutExtrasList = {   
     {0x5EF9FEC4, 0x359B7AAE},   -- Combat Pistol Flashlight
-    {0x5EF9FEC4, 0xD67B4F2D},   -- Combat Pistol Extended Clip
     {0x83BF0278, 0x7BC4CDDC},   -- Carbine Rifle Flashlight
-    {0x83BF0278, 0x91109691},   -- Carbine Rifle Extended Clip
     {0x83BF0278, 0xC164F53},    -- Carbine Rifle Grip
 }
 
