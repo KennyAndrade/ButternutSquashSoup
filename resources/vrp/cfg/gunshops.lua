@@ -80,6 +80,7 @@ cfg.gunshop_types = {
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
 	["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
     ["WEAPON_ADVANCEDRIFLE"] = {"Tactical Carbine",0,0,""},
+    ["WEAPON_PISTOL"] = {"USP .45",0,0,""},
     ["WEAPON_CARBINERIFLE"] = {"Carbine Rifle",0,0,""},
     ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },

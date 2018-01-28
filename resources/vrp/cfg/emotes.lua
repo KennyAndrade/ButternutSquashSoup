@@ -3,7 +3,10 @@
 -- use the custom emotes admin action to test emotes on-the-fly
 -- animation list: http://docs.ragepluginhook.net/html/62951c37-a440-478c-b389-c471230ddfc5.htm
 
-local cfg = {}
+
+3214120
+.0
+--[[.local cfg = {}
 
 -- map of emote_name => {upper,seq,looping}
 -- seq can also be a task definition, check the examples below

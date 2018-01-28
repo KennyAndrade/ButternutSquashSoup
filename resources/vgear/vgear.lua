@@ -21,12 +21,6 @@ local EnableCommand = true             -- Should the command be enabled? (true =
 -- https://wiki.fivem.net/wiki/Weapons
 -- {weaponHash, amountOfAmmoToGive} Too much ammo might crash the game, be careful!
 local spawnLoadoutList = {  
-    {0x8BB05FD7, 1},    -- Flashlight
-    {0x678B81B1, 1},    -- Nightstick
-    {0x060EC506, 1},    -- Fire Extinguisher
-    {0x3656C8C1, 1},    -- Stun Gun
-    {0x5EF9FEC4, 200},  -- Combat Pistol
-    {0x83BF0278, 200},  -- Carbine Rifle
 }
 
 -- https://wiki.fivem.net/wiki/Weapon_Components
@@ -34,7 +28,9 @@ local spawnLoadoutList = {
 local spawnLoadoutExtrasList = {   
     {0x5EF9FEC4, 0x359B7AAE},   -- Combat Pistol Flashlight
     {0x83BF0278, 0x7BC4CDDC},   -- Carbine Rifle Flashlight
-    {0x83BF0278, 0xC164F53},    -- Carbine Rifle Grip
+    {0xAF113F99, 0x7BC4CDDC},    -- Carbine Rifle Grip
+    {0x1B06D571, 0x359B7AAE},   -- Combat Pistol Flashlight
+    {0x1D073A89, 0x7BC4CDDC},   -- Carbine Rifle Flashlight
 }
 
 
