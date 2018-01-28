@@ -5,7 +5,6 @@ server_scripts{
   "ooc-server.lua",
   "deathmessages-server.lua",
   "weathersync-server.lua",
-  "fix-server.lua",
   "dispatch-server.lua"
 }
 
@@ -17,10 +16,8 @@ client_scripts{
   "stopwanted-client.lua",
   "deletepoliceweapons-client.lua",
   "deathmessages-client.lua",
-  "gameui-client.lua",
   --"names-client.lua",
   "weathersync-client.lua",
-  "fix-client.lua",
   "missiontext-client.lua",
   "noweapondrops-client.lua"
  }

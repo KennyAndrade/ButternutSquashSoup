@@ -31,11 +31,49 @@ local policeSkins = {
 	"s_f_y_sheriff_01",
 	"s_m_y_ranger_01",
 	"s_f_y_ranger_01",
+	"u_m_m_doa_01",
+	"s_m_y_swat_01",
+	"s_m_y_pilot_01",
+	"s_m_y_blackops_01",
+	"s_m_y_snowcop_01",
+	"s_m_m_ciasec_01",
 }
 
 local policeVehicles = {
-	"example_model1",
-	"example_model2"
+	"police",
+	"police2",
+	"polic3",
+	"police4",
+	"policeb",
+	"sheriff",
+	"sheriff2",
+	"lguard",
+	"policeold",
+	"policeold2",
+	"pranger",
+	"fbi",
+	"fbi2",
+	"state1",
+	"state2",
+	"state3",
+	"state4",
+	"state5",
+	"state6",
+	"det2",
+	"det1",
+	"go4",
+	"pbus",
+	"riot",
+	"unmarked1",
+	"unmarked2",
+	"unmarked3",
+	"unmarked4",
+	"unmarked5",
+	"unmarked6",
+	"unmarked7",
+	"unmarked8",
+	"unmarked9"
+
 }
 
 -- [[ You shouldn't have to touch below here ]] --

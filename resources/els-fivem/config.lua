@@ -28,7 +28,7 @@ vcf_files = {
     "det1.xml",
     "det2.xml",
     "flatbed.xml",
-    "exmsexp.xml",
+    "emsexp.xml",
 }
 
 pattern_files = {
@@ -89,7 +89,7 @@ vehicleStageThreeAdvisor = {
     "det1",
     "det2",
     "flatbed",
-    "exmsexp",
+    "emsexp",
 }
 
 

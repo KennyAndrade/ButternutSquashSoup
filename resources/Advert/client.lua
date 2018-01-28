@@ -6,7 +6,7 @@
 
 RegisterNetEvent("Advert")
 AddEventHandler("Advert",function()
-		DisplayOnscreenKeyboard(false, "FMMC_KEY_TIP8", "", "", "", "", "", 20)
+		DisplayOnscreenKeyboard(false, "FMMC_KEY_TIP8", "", "", "", "", "", 200)
 		local input = true
 		Citizen.CreateThread(function()
 		while input do
@@ -20,7 +20,7 @@ AddEventHandler("Advert",function()
 		TriggerServerEvent('SyncAdvert', inputText)
 		input = false
 		else
-			DisplayOnscreenKeyboard(false, "FMMC_KEY_TIP8", "", "", "", "", "", 20)
+			DisplayOnscreenKeyboard(false, "FMMC_KEY_TIP8", "", "", "", "", "", 200)
 		end
 		elseif UpdateOnscreenKeyboard() == 2 then
 		input = false

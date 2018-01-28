@@ -5,7 +5,7 @@
 
 RegisterNetEvent("TrafficAlert")
 AddEventHandler("TrafficAlert",function()
-		DisplayOnscreenKeyboard(false, "FMMC_KEY_TIP8", "", "", "", "", "", 20)
+		DisplayOnscreenKeyboard(false, "FMMC_KEY_TIP8", "", "", "", "", "", 200)
 		local input = true
 		Citizen.CreateThread(function()
 		while input do
@@ -19,7 +19,7 @@ AddEventHandler("TrafficAlert",function()
 		TriggerServerEvent('SyncTrafficAlert', inputText)
 		input = false
 		else
-			DisplayOnscreenKeyboard(false, "FMMC_KEY_TIP8", "", "", "", "", "", 20)
+			DisplayOnscreenKeyboard(false, "FMMC_KEY_TIP8", "", "", "", "", "", 200)
 		end
 		elseif UpdateOnscreenKeyboard() == 2 then
 		input = false
