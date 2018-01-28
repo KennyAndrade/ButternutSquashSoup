@@ -1348,7 +1348,7 @@ cfg.groups = {
   "emergency.cloakroom",
   "ems.cloakroom",
   "emergency.market",
-  "ems.vehicle",
+  "emsc.vehicle",
   "ems.whitelisted",
   "ems.loadshop",
   "player.list",
@@ -1365,7 +1365,7 @@ cfg.groups = {
     "emergency.shop",
     "emergency.service",
   "ems.cloakroom",
-  "ems.vehicle",
+  "emsc.vehicle",
   "emergency.market",
   "ems.whitelisted",
   "ems.loadshop",
@@ -1383,7 +1383,7 @@ cfg.groups = {
     "emergency.shop",
     "emergency.service",
   "ems.cloakroom",
-  "ems.vehicle",
+  "emsc.vehicle",
   "emergency.market",
   "ems.whitelisted",
   "ems.loadshop",
@@ -1401,7 +1401,7 @@ cfg.groups = {
     "emergency.shop",
     "emergency.service",
   "ems.cloakroom",
-  "ems.vehicle",
+  "emsc.vehicle",
   "Batallion.vehicle",
   "emergency.market",
   "ems.whitelisted",
@@ -1413,7 +1413,7 @@ cfg.groups = {
   -- END FDNY / NY EMS -----------------------------------------------------------------------------------------------------------------------------------------------------------
   ["Mechanic"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are Mechanic, salary : $900."}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are a Mechanic, salary : $900."}) end
 	},
     "vehicle.repair",
     "vehicle.replace",
@@ -1424,9 +1424,9 @@ cfg.groups = {
 	"repair.market",
 	"repair.paycheck"
   },
-  ["UBER"] = {
+  ["Uber"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are UBER, salary : $600."}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are an Uber driver, salary : $600."}) end
 	},
     "uber.service",
 	"uber.vehicle",
@@ -1445,7 +1445,7 @@ cfg.groups = {
   },
   ["Delivery"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are Delivery Driver, Salary : $500."}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are a Delivery Driver, Salary : $500."}) end
 	},
 	"mission.delivery.food",
 	"delivery.vehicle",

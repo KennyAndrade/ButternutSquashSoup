@@ -505,8 +505,9 @@ cfg.garage_types = {
     ["Ambulance"] = {"NYEMS Amublance",0, "emergency"}
   },
   ["EMSCmd"] = {
-    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"ems.vehicle"}},
-    ["emsexp"] = {"NYEMS Explorer",0, "emergency"}
+    _config = {vtype="car",blipid=50,blipcolor=3,permissions={"emsc.vehicle"}},
+    ["emsexp"] = {"NYEMS Explorer",0, "emergency"},
+    ["Ambulance"] = {"NYEMS Amublance",0, "emergency"}
   },
     ["Batallion"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"Batallion.vehicle"}},

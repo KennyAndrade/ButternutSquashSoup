@@ -1,8 +1,8 @@
 local voiceChatProximity = "veryclose" -- default: veryclose
 -- valid options are: veryclose, close, nearby, distant, far, veryfar, global.
 local voiceEnabled = true
-local allowProximityChange = true -- Allow people to change the chat proximity using /voice distance <proximity>
-local allowVoiceToggle = true -- Allow people to disable voice chat for themseleves using /voice toggle
+local allowProximityChange = false -- Allow people to change the chat proximity using /voice distance <proximity>
+local allowVoiceToggle = false -- Allow people to disable voice chat for themseleves using /voice toggle
 
 
 
@@ -139,10 +139,10 @@ Citizen.CreateThread(function()
                 end
             end
             if playersTalking[1] ~= "empty" then
-                displayText("Currently talking:", 0, 255, 255, 255, 255, 0.5, 0.0)
+                --displayText("Currently talking:", 0, 255, 255, 255, 255, 0.5, 0.0)
                 count = 0
                 for k,v in pairs(playersTalking) do
-                    displayText("~f~" .. v, 0, 255, 255, 255, 255, 0.5, 0.025 + (0.025*(count)))
+                    --displayText("~f~" .. v, 0, 255, 255, 255, 255, 0.5, 0.025 + (0.025*(count)))
                     count = count + 1
                 end
             end
