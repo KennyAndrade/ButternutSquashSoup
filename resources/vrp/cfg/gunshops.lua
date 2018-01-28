@@ -35,7 +35,6 @@ cfg.gunshop_types = {
     ["WEAPON_SAWNOFFSHOTGUN"] = {"Sawed-Off Shotgun",30000,65,""},
     ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",7000,20,""},
     ["WEAPON_FLASHLIGHT"] = {"Flashlight",20,0,""},
-    ["WEAPON_MUSKET"] = {"Musket",50000,0,""},
     ["WEAPON_FLAREGUN"] = {"Flaregun",35,0,""},
     ["WEAPON_SMOKEGRENADE"] = {"Smoke Grenade",50,0,""},
     ["WEAPON_PETROLCAN"] = {"Petrol",25000,0,""}
@@ -77,9 +76,10 @@ cfg.gunshop_types = {
 	  ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
 	  ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
-    ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
+    ["WEAPON_NIGHTSTICK"] = {"ASP Baton",0,0,""},
 	  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
     ["WEAPON_CARBINERIFLE"] = {"Carbine Rifle",0,0,""},
+    ["WEAPON_PISTOL"] = {"USP .45",0,0,""},
     ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
   ["State Police Armory"] = {
@@ -89,10 +89,11 @@ cfg.gunshop_types = {
     ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
     ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
-    ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
+    ["WEAPON_NIGHTSTICK"] = {"ASP Baton",0,0,""},
     ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
     ["WEAPON_CARBINERIFLE"] = {"Carbine Rifle",0,0,""},
     ["WEAPON_ADVANCEDRIFLE"] = {"Tactical Carbine",0,0""},
+    ["WEAPON_PISTOL"] = {"USP .45",0,0,""},
     ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
   ["Recruit"] = {
@@ -102,7 +103,8 @@ cfg.gunshop_types = {
     ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
     ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
-    ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
+    ["WEAPON_NIGHTSTICK"] = {"ASP Baton",0,0,""},
+    ["WEAPON_PISTOL"] = {"USP .45",0,0,""},
     ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""}
   },
   ["ESU"] = {
@@ -110,13 +112,15 @@ cfg.gunshop_types = {
     ["WEAPON_SMOKEGRENADE"] = {"Smoke Grenade",0,0,""},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
     ["WEAPON_CARBINERIFLE"] = {"Carbine Rifle",0,0,""},
+    ["WEAPON_ADVANCEDRIFLE"] = {"Tactical Carbine",0,0""},
     ["WEAPON_SMOKEGRENADE"] = {"Smoke Grenade",50,0,""},
     ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
     ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
     ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
-    ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
+    ["WEAPON_NIGHTSTICK"] = {"ASP Baton",0,0,""},
     ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
+    ["WEAPON_PISTOL"] = {"USP .45",0,0,""},
     ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
   ["Bounty Hunter"] = {
@@ -126,7 +130,7 @@ cfg.gunshop_types = {
 	  ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
 	  ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
-    ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
+    ["WEAPON_NIGHTSTICK"] = {"ASP Baton",0,0,""},
 	  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
     ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
@@ -136,7 +140,7 @@ cfg.gunshop_types = {
    	["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
 	  ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
-    ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
+    ["WEAPON_NIGHTSTICK"] = {"ASP Baton",0,0,""},
 	  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""}
    }
 }

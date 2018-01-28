@@ -846,7 +846,7 @@ cfg.groups = {
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
   "state.vehicle",
-  "police.loadshop",
+  "spolice.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
@@ -885,7 +885,7 @@ cfg.groups = {
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
   "state.vehicle",
-  "police.loadshop",
+  "spolice.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
@@ -924,7 +924,7 @@ cfg.groups = {
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
   "state.vehicle",
-  "police.loadshop",
+  "spolice.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
@@ -963,7 +963,7 @@ cfg.groups = {
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
   "state.vehicle",
-  "police.loadshop",
+  "spolice.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
@@ -1002,7 +1002,7 @@ cfg.groups = {
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
   "state.vehicle",
-  "police.loadshop",
+  "spolice.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
@@ -1041,7 +1041,7 @@ cfg.groups = {
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
   "state.vehicle",
-  "police.loadshop",
+  "spolice.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
@@ -1056,6 +1056,7 @@ cfg.groups = {
       onleave = function(player) vRPclient.setCop(player,{false}) end
   },
   "sdet.cloakroom",
+  "nysp.cloakroom",
     "police.pc",
     --"police.handcuff",
     "police.putinveh",
@@ -1080,7 +1081,7 @@ cfg.groups = {
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
   "state.vehicle",
-  "police.loadshop",
+  "spolice.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
@@ -1119,7 +1120,7 @@ cfg.groups = {
    -- "-police.store_weapons",
     "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
   "state.vehicle",
-  "police.loadshop",
+  "spolice.loadshop",
   "emergency.market",
   "emergency.revive",
   "emergency.shop",
