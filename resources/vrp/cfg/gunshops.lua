@@ -74,23 +74,36 @@ cfg.gunshop_types = {
     _config = {blipid=110,blipcolor=74, permissions = {"police.loadshop"}},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
     ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
-	["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
-	["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
+	  ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
+	  ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-	["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
+	  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
     ["WEAPON_CARBINERIFLE"] = {"Carbine Rifle",0,0,""},
+    ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
+  },
+  ["State Police Armory"] = {
+    _config = {blipid=110,blipcolor=74, permissions = {"spolice.loadshop"}},
+    ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
+    ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
+    ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
+    ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
+    ["WEAPON_FLARE"] = {"Flare",0,0,""},
+    ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
+    ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
+    ["WEAPON_CARBINERIFLE"] = {"Carbine Rifle",0,0,""},
+    ["WEAPON_ADVANCEDRIFLE"] = {"Tactical Carbine",0,0""},
     ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
   ["Recruit"] = {
     _config = {blipid=110,blipcolor=74, permissions = {"Cadet.loadshop"}},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
     ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
-  ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
-  ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
+    ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
+    ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""}
+    ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""}
   },
   ["ESU"] = {
     _config = {blipid=110,blipcolor=74, permissions = {"SWAT.loadshop"}},
@@ -110,21 +123,21 @@ cfg.gunshop_types = {
     _config = {blipid=150,blipcolor=1, permissions = {"Bounty.loadshop"}},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
     ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
-	["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
-	["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
+	  ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
+	  ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-	["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
+	  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
     ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
   },
   ["EMS Weapons"] = {
     _config = {blipid=446,blipcolor=74, permissions = {"ems.loadshop"}},
     ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
    	["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
-	["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
+	  ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
     ["WEAPON_FLARE"] = {"Flare",0,0,""},
     ["WEAPON_NIGHTSTICK"] = {"Nighstick",0,0,""},
-	["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""}
+	  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""}
    }
 }
 -- list of gunshops positions
@@ -138,7 +151,7 @@ cfg.gunshops = {
   {"ESU", 461.33551025391,-981.11071777344,30.689584732056},
   {"Recruit", 461.33551025391,-981.11071777344,30.689584732056},
   {"Police Armory", 461.33551025391,-981.11071777344,30.689584732056},--- main pd
-  {"Police Armory", 832.67236328125,-1276.5590820313,26.422773361206}, --- La Mesa
+  {"State Police Armory", 832.67236328125,-1276.5590820313,26.422773361206}, --- La Mesa
   {"Police Armory", -1062.26,-884.776,5.04225},--- Vespucci PD
   {"Police Armory", 390.955,-1610.33,29.2919},--- davis pd
   {"Bounty Hunter", 563.62060546875,-3126.9626464844,18.768604278564}, 
