@@ -154,6 +154,8 @@ cfg.cloakrooms = {
   {"Lieutenant", 376.842,-1612.39,29.2919},
   {"Detective", 376.842,-1612.39,29.2919},
   {"Sergeant", 376.842,-1612.39,29.2919},
+  {"EMT", 1195.302734375,-1476.5642089844,34.859527587891}, -- El Burro Heights
+  {"Fireman", 1195.302734375,-1476.5642089844,34.859527587891}, -- El Burro Heights
   {"Trooper", 1849.79,3686.52,34.267}, -- Sandy Shores Trooper's Office
   {"Trooper",826.70916748047,-1290.1206054688,28.240655899048}, --- La Mesa Trooper's Outpost
   {"Investigator",826.70916748047,-1290.1206054688,28.240655899048}, --- La Mesa State Investigator's Outpost

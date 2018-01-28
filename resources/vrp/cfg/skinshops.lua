@@ -66,6 +66,7 @@ cfg.skinshops = {
   {emsfire,302.873,-1452.42,29.9696}, -- Davis Hospital Skin Fixer
   {emsfire,-637.256,-130.025,39.0138}, -- Vespucci Fire Skin Fixer
   {emsfire,357.764,-608.078,28.8047}, -- Pillbox Hospital Skin Fixer
+  {emsfire,1195.2052001953,-1481.966796875,34.859527587891}, -- El Burro Heights Skin fixer
   {parts,-703.77685546875,-152.258544921875,37.4151458740234},
   {parts,-167.863754272461,-298.969482421875,39.7332878112793},
   {parts,428.694885253906,-800.1064453125,29.4911422729492},
