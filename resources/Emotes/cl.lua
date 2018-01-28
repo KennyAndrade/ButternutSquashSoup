@@ -95,7 +95,7 @@ end
 AddEventHandler("emote:invoke", function(name)
     if emotes[name] ~= nil then -- Checking if the name is in the dictionary
         if playEmote(emotes[name]) then -- Playing the emote from the dictionary
-            drawNotification("\"""\"")
+            drawNotification("Playing the emote \""..name.."\"")
         end
     else
         TriggerEvent("chatMessage", "ERROR", {255,0,0}, "Invalid emote name") -- Saying if the name wasn't in the dictionary
