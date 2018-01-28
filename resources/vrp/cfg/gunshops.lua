@@ -79,19 +79,6 @@ cfg.gunshop_types = {
     ["WEAPON_NIGHTSTICK"] = {"ASP Baton",0,0,""},
 	  ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
     ["WEAPON_CARBINERIFLE"] = {"Carbine Rifle",0,0,""},
-    ["WEAPON_PISTOL"] = {"USP .45",0,0,""},
-    ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
-  },
-  ["State Police Armory"] = {
-    _config = {blipid=110,blipcolor=74, permissions = {"spolice.loadshop"}},
-    ["WEAPON_PETROLCAN"] = {"Petrol",0,0,""},
-    ["WEAPON_PUMPSHOTGUN"] = {"Pump Shotgun",0,0,""},
-    ["WEAPON_FLAREGUN"] = {"Flare Gun",0,0,""},
-    ["WEAPON_FLASHLIGHT"] = {"Flashlight",0,0,""},
-    ["WEAPON_FLARE"] = {"Flare",0,0,""},
-    ["WEAPON_NIGHTSTICK"] = {"ASP Baton",0,0,""},
-    ["WEAPON_STUNGUN"] = {"X26 Taser",0,0,""},
-    ["WEAPON_CARBINERIFLE"] = {"Carbine Rifle",0,0,""},
     ["WEAPON_ADVANCEDRIFLE"] = {"Tactical Carbine",0,0""},
     ["WEAPON_PISTOL"] = {"USP .45",0,0,""},
     ["WEAPON_COMBATPISTOL"] = {"Glock",0,0,""}
@@ -154,8 +141,8 @@ cfg.gunshops = {
   {"East Los Santos", 844.299,-1033.26, 28.1949},
   {"ESU", 461.33551025391,-981.11071777344,30.689584732056},
   {"Recruit", 461.33551025391,-981.11071777344,30.689584732056},
-  {"Police Armory", 461.33551025391,-981.11071777344,30.689584732056},--- main pd
-  {"State Police Armory", 832.67236328125,-1276.5590820313,26.422773361206}, --- La Mesa
+  {"Police Armory", 461.33551025391,-981.11071777344,30.689584732056}, --- main pd
+  {"Police Armory", 832.67236328125,-1276.5590820313,26.422773361206}, --- La Mesa
   {"Police Armory", -1062.26,-884.776,5.04225},--- Vespucci PD
   {"Police Armory", 390.955,-1610.33,29.2919},--- davis pd
   {"Bounty Hunter", 563.62060546875,-3126.9626464844,18.768604278564}, 
