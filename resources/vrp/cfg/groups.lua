@@ -1419,7 +1419,7 @@ cfg.groups = {
     "repair.service",
 	"mission.repair.satellite_dishes",
 	"mission.repair.wind_turbines",
-  "mech.cloakroom"
+  "mech.cloakroom",
 	"repair.vehicle",
 	"repair.market",
 	"repair.paycheck"

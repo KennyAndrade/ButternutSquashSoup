@@ -218,6 +218,7 @@
 <sirenSettings value="1" />
 </Item>
     <Item> 
+<modelName>towtruck2</modelName> 
 <colors> 
 <Item> 
 <indices content="char_array"> 
