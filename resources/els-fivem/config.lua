@@ -15,7 +15,6 @@ vcf_files = {
     "pbus.xml",
     "policeb.xml",
     "riot.xml",
-    "towtruck.xml",
     "go4.xml",
     "state1.xml",
     "state2.xml",
@@ -29,7 +28,6 @@ vcf_files = {
     "simon2.xml",
     "det1.xml",
     "det2.xml",
-    "flatbed.xml",
     "emsexp.xml",
 }
 
@@ -74,7 +72,6 @@ vehicleStageThreeAdvisor = {
     "policeold1",
     "policeold2",
     "riot",
-    "towtruck",
     "police4",
     "lgaurd",
     "ambulance",
@@ -92,7 +89,6 @@ vehicleStageThreeAdvisor = {
     "simon2",
     "det1",
     "det2",
-    "flatbed",
     "emsexp",
 }
 
