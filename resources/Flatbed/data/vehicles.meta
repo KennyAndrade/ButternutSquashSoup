@@ -10530,7 +10530,7 @@
     <Item>
       <modelName>utillitruck3</modelName>
       <txdName>utillitruck3</txdName>
-      <handlingId>SADLER</handlingId>
+      <handlingId>bison</handlingId>
       <gameName>DOT F350</gameName>
       <vehicleMakeName />
       <expressionDictName>null</expressionDictName>
@@ -10539,7 +10539,7 @@
       <animConvRoofName>null</animConvRoofName>
       <animConvRoofWindowsAffected />
       <ptfxAssetName>null</ptfxAssetName>
-      <audioNameHash />
+      <audioNameHash>bison</audioNameHash>
       <layout>LAYOUT_RANGER</layout>
       <coverBoundOffsets>SHERIFF2_COVER_OFFSET_INFO</coverBoundOffsets>
       <explosionInfo>EXPLOSION_INFO_DEFAULT</explosionInfo>
