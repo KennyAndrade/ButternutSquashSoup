@@ -493,7 +493,8 @@ cfg.garage_types = {
     ["state3"] = {"State Police Slicktop Explorer",0, "emergency"},
     ["state4"] = {"State Police Crown Victoria ",0, "emergency"},
 	["state5"] = {"State Police Slicktop Crown Victoria",0, "emergency"},
-    ["state6"] = {"State Police Explorer",0, "emergency"}
+    ["state6"] = {"State Police Explorer",0, "emergency"},
+    ["state7"] = {"State Police Explorer Slicktop Marked",0, "emergency"}
   },
   ["Fire"] = {
     _config = {vtype="car",blipid=50,blipcolor=3,permissions={"fire.vehicle"}},
