@@ -467,6 +467,8 @@ cfg.garage_types = {
     ["police4"] = {"NYPD Taurus (Slicktop)",0, "police"},
     ["policeold2"] = {"NYPD Crown Victoria",0, "police"},
     ["unmarked6"] = {"Unmarked Crown Victoria",0, "police"},
+    ["det1"] = {"Unmarked Detective's Taurus",0, "police"},
+    ["det2"] = {"Unmarked Detective's Charger",0, "police"},
     ["unmarked9"] = {"Unmarked 2009 Dodge Charger",0, "police"},
     ["unmarked8"] = {"Unmarked Chevy Tahoe",0, "police"},
     ["unmarked5"] = {"Unmarked F350",0, "police"},
@@ -548,7 +550,7 @@ cfg.garage_types = {
   },
   ["delivery"] = {
     _config = {vtype="bike",blipid=85,blipcolor=31,permissions={"delivery.vehicle"}},
-    ["faggio3"] = {"faggio3",0, "faggio3"}
+    ["faggio3"] = {"Delivery Scooter",0, "faggio3"}
   },
   ["santa"] = {
     _config = {vtype="bike",blipid=85,blipcolor=31,permissions={"santa.vehicle"}},
@@ -556,12 +558,12 @@ cfg.garage_types = {
   },  
   ["repair"] = {
     _config = {vtype="car",blipid=50,blipcolor=31,permissions={"repair.vehicle"}},
-    ["towtruck"] = {"FastLane Towing",0, "FastLane Towing"},
-	["utillitruck3"] = {"Utility Truck",0, "utillitruck3"}
+    ["towtruck2"] = {"AAA Towing Service",0, "AAA Towing Service"},
+	["flatbed"] = {"Kenworth Flatbed Towtruck",0, "utillitruck3"}
   },
   ["bankdriver"] = {
     _config = {vtype="car",blipid=67,blipcolor=4,permissions={"bankdriver.vehicle"}},
-    ["stockade"] = {"stockade",0, "stockade"}
+    ["stockade"] = {"Armored Bank Truck",0, "stockade"}
   },
   ["Medical Marijuana Driver"] = {
     _config = {vtype="car",blipid=67,blipcolor=4,permissions={"medical.vehicle"}},

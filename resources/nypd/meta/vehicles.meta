@@ -26582,10 +26582,10 @@
       </firstPersonDrivebyData>
     </Item>
     <Item>
-      <modelName>towtruck</modelName>
-      <txdName>towtruck</txdName>
-      <handlingId>TOWTRUCK</handlingId>
-      <gameName>TOWTRUCK</gameName>
+      <modelName>towtruck2</modelName>
+      <txdName>towtruck2</txdName>
+      <handlingId>TOWTRUCK2</handlingId>
+      <gameName>TOWTRUCK2</gameName>
       <vehicleMakeName />
       <expressionDictName>null</expressionDictName>
       <expressionName>null</expressionName>

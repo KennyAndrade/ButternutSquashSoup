@@ -27,6 +27,8 @@ local officer_malev = { model = "s_m_y_hwaycop_01"}
 local officer_fmale = { model = "s_f_y_cop_01"}
 local bounty_male = { model = "s_m_y_BlackOps_01"}
 local santa = {model = "Santaclaus"}
+local mech = {model = "s_m_y_xmech_01"}
+local mechi = {model = "s_m_y_construct_02"}
 
 --s_m_m_paramedic_01
 --s_f_y_scrubs_01
@@ -103,6 +105,11 @@ cfg.cloakroom_types = {
     _config = { permissions = {"Bounty.cloakroom"} },
     ["Bounty"] = bounty_male 
   },
+  ["Mechanic"] = {
+    _config = { permissions = {"mech.cloakroom"} },
+    ["Mechanic"] = mech,
+    ["Mechanic (Hi-Vis)"] = mechi
+  },
   ["Detective"] = {
     _config = { permissions = {"Detective.cloakroom"} },
     ["Detective (Suit)"] = detective_suit,
@@ -148,6 +155,7 @@ cfg.cloakrooms = {
   {"Sergeant", -1057.4,-841.109,5.04226}, -- Vespucci Parking Lot
   {"Officer", 376.842,-1612.39,29.2919}, -- Davis Parking Lot
   {"ESU", 376.842,-1612.39,29.2919},
+  {"Mechanic", 404.45422363281,-1627.3627929688,29.291933059692},
   {"Highway", 376.842,-1612.39,29.2919},
   {"Command", 376.842,-1612.39,29.2919},
   {"Captain", 376.842,-1612.39,29.2919},
