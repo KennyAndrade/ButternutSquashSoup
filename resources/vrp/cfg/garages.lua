@@ -626,6 +626,7 @@ cfg.garages = {
   {"Batallion",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
   {"Fire",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
   {"EMS",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
+  {"EMSCmd",1711.86,3594.52,35.4121}, --- Sandy Firehouse garage
   {"State Police",855.56945800781,-1279.6564941406,26.522792816162}, --- La Mesa State Police Outpost 
   {"State Police",-471.597,6024.5,31.3405}, --- Paleto garage
   {"State Police",1854.95,3675.58,33.7134}, --- Sandy Firehouse garage

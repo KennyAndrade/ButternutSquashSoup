@@ -1402,7 +1402,6 @@ cfg.groups = {
     "emergency.service",
   "ems.cloakroom",
   "emsc.vehicle",
-  "Batallion.vehicle",
   "emergency.market",
   "ems.whitelisted",
   "ems.loadshop",
