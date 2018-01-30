@@ -18,7 +18,7 @@ alpha = 215
 -- Text scale
 -- Default: 0.4
 -- NOTE: Number needs to be a float (so instead of 1 do 1.0)
-scale = 0.75
+scale = 0.57
 
 -- Text Font --
 -- 0 - 5 possible
