@@ -623,6 +623,7 @@ cfg.garages = {
   {"EMSCmd",212.793,-1636.52,29.5638}, --- Davis Firehouse garage
   {"EMS",1844.01,3665.01,33.9441}, --- Sandy Medical
   {"EMS",381.7917175293,-577.49566650391,28.663213729858}, --- Pillbox Hill Medical
+  {"EMSCmd",381.7917175293,-577.49566650391,28.663213729858}, --- Pillbox Hill Medical
   {"EMSCmd",295.648,-1439.92,29.8038}, --- Davis Hospital garage
   {"Batallion",-639.361,-105.763,38.0144}, --- Vinewood Firehouse garage
   {"Fire",-639.361,-105.763,38.0144}, --- Vinewood Firehouse garage
