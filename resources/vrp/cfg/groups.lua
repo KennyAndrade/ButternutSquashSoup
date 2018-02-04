@@ -318,11 +318,6 @@ cfg.groups = {
   "po.paycheck"
   },
   ["Highway Patrol"] = {
-    _config = { 
-      onjoin = function(player) vRPclient.setCop(player,{true}) end,
-      onspawn = function(player) vRPclient.setCop(player,{true}) end,
-      onleave = function(player) vRPclient.setCop(player,{true}) end
-    },
     "nyhp.cloakroom",
     "police.pc",
     --"police.handcuff",
@@ -454,10 +449,6 @@ cfg.groups = {
   "rct.paycheck"
   },
   ["ESU"] = {
-    onjoin = function(player) vRPclient.setCop(player,{true}) end,
-      onspawn = function(player) vRPclient.setCop(player,{true}) end,
-      onleave = function(player) vRPclient.setCop(player,{false}) end
-  },
   "esu.cloakroom",
     "police.pc",
     --"police.handcuff",
@@ -586,7 +577,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-
   "police.menu",
     "police.check",
   "toggle.service",
