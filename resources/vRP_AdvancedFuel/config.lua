@@ -1,4 +1,4 @@
-petrolCanPrice = 1
+petrolCanPrice = 50
 
 lang = "en"
 -- lang = "en"
@@ -7,20 +7,20 @@ settings = {}
 settings["en"] = {
 	openMenu = "Press ~g~E~w~ to open the menu.",
 	electricError = "~r~You have an electric vehicle.",
-	fuelError = "~r~You're not in the good place.",
-	buyFuel = "buy fuel",
-	liters = "liters",
+	fuelError = "~r~You're not in the correct spot.",
+	buyFuel = "Buy fuel",
+	liters = "Liters",
 	percent = "percent",
 	confirm = "Confirm",
-	fuelStation = "Fuel station",
-	boatFuelStation = "Fuel station | Boat",
-	avionFuelStation = "Fuel station | Plane ",
-	heliFuelStation = "Fuel station | Helicopter",
-	getJerryCan = "Press ~g~E~w~ to buy a Petrol can ("..petrolCanPrice.."$)",
-	refeel = "Press ~g~E~w~ to refeel the car.",
+	fuelStation = "Gas station",
+	boatFuelStation = "Gas station | Boat",
+	avionFuelStation = "Gas station | Plane ",
+	heliFuelStation = "Gas station | Helicopter",
+	getJerryCan = "Press ~g~E~w~ to buy a gas can ("..petrolCanPrice.."$)",
+	refeel = "Press ~g~E~w~ to refuel the car.",
 	YouHaveBought = "You have bought ",
-	fuel = " liters of fuel",
-	price = "price"
+	fuel = " liters of gas",
+	price = "Price"
 }
 
 settings["fr"] = {

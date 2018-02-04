@@ -29,6 +29,7 @@ local bounty_male = { model = "s_m_y_BlackOps_01"}
 local santa = {model = "Santaclaus"}
 local mech = {model = "s_m_y_xmech_01"}
 local mechi = {model = "s_m_y_construct_02"}
+local statetac = {model = "s_m_m_highsec_01"}
 
 --s_m_m_paramedic_01
 --s_f_y_scrubs_01
@@ -95,11 +96,14 @@ cfg.cloakroom_types = {
   },
   ["Trooper"] = {
     _config = { permissions = {"nysp.cloakroom"} },
-    ["State Trooper"] = hway_male
+    ["State Trooper"] = hway_male,
+    ["State Trooper (Vest)"] = statetac
   },
   ["Investigator"] = {
     _config = { permissions = {"sdet.cloakroom"} },
-    ["State Investigator"] = sdet
+    ["State Investigator"] = sdet,
+    ["State Trooper"] = hway_male,
+    ["State Trooper (Vest)"] = statetac
   },
   ["Bounty"] = {
     _config = { permissions = {"Bounty.cloakroom"} },
