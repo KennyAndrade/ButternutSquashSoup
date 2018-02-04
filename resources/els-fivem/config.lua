@@ -43,7 +43,6 @@ vcf_files = {
 
 pattern_files = {
 	"WIGWAG4.xml",
-	"LEFTRIGHT.xml",
 	"LEFTSWEEP.xml",
 	"RIGHTSWEEP.xml",
 }
