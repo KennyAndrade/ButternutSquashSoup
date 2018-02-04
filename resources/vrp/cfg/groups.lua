@@ -11,7 +11,7 @@ local cfg = {}
 
 cfg.groups = {
   ["Developer"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"EmergeNYCRP Alpha Build 0.9.3"}) end},
+    _config = {onspawn = function(player) vRPclient.notify(player,{"Welcome back developer ;)"}) end},
     "player.group.add",
     "player.group.remove",
     "player.givemoney",
@@ -87,7 +87,7 @@ cfg.groups = {
   "emergency.paycheck"
   },
   ["superadmin"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"You are a Super Administrator. Do not abuse your perms"}) end},
+    _config = {onspawn = function(player) vRPclient.notify(player,{"You are a Super Administrator."}) end},
     "player.group.add",
     "player.group.remove",
     "player.givemoney",
@@ -174,7 +174,7 @@ cfg.groups = {
     },
   ["Airline Pilot"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are Pilot"}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are Pilot, salary : $6000."}) end
 	},
     "airlines.service",
 	"air.vehicle",
@@ -235,7 +235,7 @@ cfg.groups = {
 	"emergency.shop",
 	"player.list",
 	"police.menu_interaction",
-	"po.paycheck"
+	"police.paycheck"
   },
     ["Police Officer II"] = {
     _config = { 
@@ -276,7 +276,7 @@ cfg.groups = {
   "emergency.shop",
   "player.list",
   "police.menu_interaction",
-  "po.paycheck"
+  "police.paycheck"
   },
     ["Police Officer III"] = {
     _config = { 
@@ -317,7 +317,7 @@ cfg.groups = {
   "emergency.shop",
   "player.list",
   "police.menu_interaction",
-  "po.paycheck"
+  "police.paycheck"
   },
   ["Highway Patrol"] = {
     _config = { 
@@ -358,7 +358,7 @@ cfg.groups = {
   "emergency.shop",
   "player.list",
   "police.menu_interaction",
-  "po.paycheck"
+  "police.paycheck"
   },
   ["Probationary Police Officer"] = {
     _config = { 
@@ -399,7 +399,7 @@ cfg.groups = {
   "emergency.shop",
   "player.list",
   "police.menu_interaction",
-  "po.paycheck"
+  "police.paycheck"
   },
     ["Recruit Officer"] = {
     _config = { gtype = "job",
@@ -429,7 +429,7 @@ cfg.groups = {
   "police.loadshop",
   "nypd.whitelisted",
   "police.menu_interaction",
-  "rct.paycheck"
+  "Cadet.paycheck"
   },
       ["Recruit"] = {
     _config = { gtype = "job",
@@ -459,7 +459,7 @@ cfg.groups = {
   "police.loadshop",
   "nypd.whitelisted",
   "police.menu_interaction",
-  "rct.paycheck"
+  "Cadet.paycheck"
   },
   ["ESU"] = {
     _config = { gtype = "job",
@@ -497,7 +497,8 @@ cfg.groups = {
   "emergency.revive",
   "emergency.shop",
   "nypd.whitelisted",
-  "police.menu_interaction"
+  "police.menu_interaction",
+  "SWAT.paycheck"
   },
   ["Police Commissioner"] = {
     _config = { gtype = "job",
@@ -538,48 +539,7 @@ cfg.groups = {
   "emergency.shop",
   "nypd.whitelisted",
   "police.menu_interaction",
-  "com.paycheck"
-  },
-  ["Deputy Commissioner"] = {
-    _config = { gtype = "job",
-    onjoin = function(player) vRPclient.setCop(player,{true}) end,
-      onspawn = function(player) vRPclient.setCop(player,{true}) end,
-      onleave = function(player) vRPclient.setCop(player,{false}) end
-  },
-  "pdcmd.cloakroom",
-    "player.group.add",
-    "player.group.remove",
-    "police.pc",
-    --"police.handcuff",
-    "police.putinveh",
-    "police.getoutveh",
-    "police.service",
-  "police.drag",
-  "police.easy_cuff",
-  "police.easy_fine",
-  "police.easy_jail",
-  "police.easy_unjail",
-  "police.spikes",
-  "police.menu",
-    "police.check",
-  "toggle.service",
-  "police.freeze",
-    "police.wanted",
-    "police.seize.weapons",
-    "police.seize.items",
-    --"police.jail",
-    --"police.fine",
-    "police.announce",
-    --"-police.store_weapons",
-    "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
-  "pdcmd.vehicle",
-  "police.loadshop",
-  "emergency.market",
-  "emergency.revive",
-  "emergency.shop",
-  "nypd.whitelisted",
-  "police.menu_interaction",
-  "dc.paycheck"
+  "Chief.paycheck"
   },
         ["Captain"] = {
     _config = { gtype = "job",
@@ -619,7 +579,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "cpt.whitelisted",
   "police.menu_interaction",
-  "cpt.paycheck"
+  "Captain.paycheck"
   },
     ["Lieutenant"] = {
     _config = { gtype = "job",
@@ -659,7 +619,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "lt.whitelisted",
   "police.menu_interaction",
-  "lt.paycheck"
+  "Lieutenant.paycheck"
   },
       ["Detective 2nd Class"] = {
     _config = { gtype = "job",
@@ -700,7 +660,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "det.whitelisted",
   "police.menu_interaction",
-  "det.paycheck"
+  "Detective.paycheck"
   },  
       ["Detective 1st Class"] = {
     _config = { gtype = "job",
@@ -741,7 +701,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "det.whitelisted",
   "police.menu_interaction",
-  "det.paycheck"
+  "Detective.paycheck"
   },
     ["Sergeant"] = {
     _config = { gtype = "job",
@@ -781,7 +741,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "sgt.whitelisted",
   "police.menu_interaction",
-  "sgt.paycheck"
+  "Sergeant.paycheck"
   },
   ["Sergeant II"] = {
     _config = { gtype = "job",
@@ -821,7 +781,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "sgt.whitelisted",
   "police.menu_interaction",
-  "sgt.paycheck"
+  "Sergeant.paycheck"
   },
       ["Dispatcher"] = {
     _config = { gtype = "job",
@@ -892,7 +852,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "sup.paycheck"
+  "sergeant.paycheck"
   },
   ["Deputy Superintendent"] = {
     _config = { gtype = "job",
@@ -931,9 +891,9 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "ds.paycheck"
+  "sergeant.paycheck"
   },
-  ["Staff Inspector"] = {
+  ["Staff Insepctor"] = {
     _config = { gtype = "job",
     onjoin = function(player) vRPclient.setCop(player,{true}) end,
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
@@ -970,7 +930,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "sins.paycheck"
+  "sergeant.paycheck"
   },
   ["State Police Captain"] = {
     _config = { gtype = "job",
@@ -1009,7 +969,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "scpt.paycheck"
+  "sergeant.paycheck"
   },
   ["State Police Lieutenant"] = {
     _config = { gtype = "job",
@@ -1048,7 +1008,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "slt.paycheck"
+  "sergeant.paycheck"
   },
   ["State Police Sergeant"] = {
     _config = { gtype = "job",
@@ -1087,7 +1047,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "ssgt.paycheck"
+  "sergeant.paycheck"
   },
       ["Investigator"] = {
     _config = { gtype = "job",
@@ -1127,7 +1087,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "inv.paycheck"
+  "invest.paycheck"
   },
       ["State Trooper"] = {
     _config = { gtype = "job",
@@ -1166,7 +1126,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "trp.paycheck"
+  "Trooper.paycheck"
   },
   -- ALL COPS MUST BE ASSIGNED THE "COP" ROLE AS WELL AS THEIR RANK
     ["cop"] = {
@@ -1176,7 +1136,7 @@ cfg.groups = {
   -- START FDNY / NY EMS -----------------------------------------------------------------------------------------------------------------------------------------------------------
   ["Fire Chief"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are the Fire Chief"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are the Fire Chief, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1191,11 +1151,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "fc.paycheck"
+  "emergency.paycheck"
   },
   ["Assistant Chief"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are the Assistant Chief"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are the Assistant Chief, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1210,11 +1170,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "afc.paycheck"
+  "emergency.paycheck"
   },
   ["Batallion Chief"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are a Batallion Chief"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are a Batallion Chief, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1229,11 +1189,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "bc.paycheck"
+  "emergency.paycheck"
   },
   ["Fire Captain"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are a, Fire Captain"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are a, Fire Captain : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1247,11 +1207,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "fcpt.paycheck"
+  "emergency.paycheck"
   },
   ["Fire Lieutenant"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are a, Fire Lieutenant"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are a, Fire Lieutenant : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1265,11 +1225,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "flt.paycheck"
+  "emergency.paycheck"
   },
   ["Driver Engineer"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are a Driver Engineer"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are a Driver Engineer, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1283,11 +1243,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "de.paycheck"
+  "emergency.paycheck"
   },
   ["Firefighter"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are a Firefighter"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are a Firefighter, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1301,11 +1261,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "ff.paycheck"
+  "emergency.paycheck"
   },
   ["Probationary Firefighter"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are a Probationary Firefighter"}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are a Probationary Firefighter, salary : $1500."}) end
 	},
     "emergency.revive",
 	"police.pc",
@@ -1319,11 +1279,11 @@ cfg.groups = {
 	"ems.loadshop",
 	"player.list",
 	"police.menu_interaction",
-	"pff.paycheck"
+	"emergency.paycheck"
   },
   ["EMT"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are an EMT"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are an EMT, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1337,11 +1297,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emt.paycheck"
+  "emergency.paycheck"
   },
   ["Paramedic"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are aParamedic"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are aParamedic, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1355,11 +1315,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "pmed.paycheck"
+  "emergency.paycheck"
   },
   ["Paramedic FTO"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are a Paramedic FTO"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are a Paramedic FTO, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1374,11 +1334,11 @@ cfg.groups = {
   "ems.vehicle",
   "player.list",
   "police.menu_interaction",
-  "pft.paycheck"
+  "emergency.paycheck"
   },
   ["EMS Lieutenant"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are an EMS Lieutenant"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are an EMS Lieutenant, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1393,11 +1353,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "elt.paycheck"
+  "emergency.paycheck"
   },
   ["EMS Captain"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are an EMS Captain"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are an EMS Captain, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1411,11 +1371,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "ecpt.paycheck"
+  "emergency.paycheck"
   },
   ["EMS Assistant Batallion Chief"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are an EMS Assistant Batallion Chief"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are an EMS Assistant Batallion Chief, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1429,11 +1389,11 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "eabc.paycheck"
+  "emergency.paycheck"
   },
   ["EMS Batallion Chief"] = {
     _config = { gtype = "job",
-  onspawn = function(player) vRPclient.notify(player,{"You are an EMS Batallion Chief"}) end
+  onspawn = function(player) vRPclient.notify(player,{"You are an EMS Batallion Chief, salary : $1500."}) end
   },
     "emergency.revive",
   "police.pc",
@@ -1447,12 +1407,12 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "ebc.paycheck"
+  "emergency.paycheck"
   },
   -- END FDNY / NY EMS -----------------------------------------------------------------------------------------------------------------------------------------------------------
   ["Mechanic"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are a Mechanic"}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are a Mechanic, salary : $900."}) end
 	},
     "vehicle.repair",
     "vehicle.replace",
@@ -1466,7 +1426,7 @@ cfg.groups = {
   },
   ["Uber"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are an Uber driver"}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are an Uber driver, salary : $600."}) end
 	},
     "uber.service",
 	"uber.vehicle",
@@ -1485,7 +1445,7 @@ cfg.groups = {
   },
   ["Delivery"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are a Delivery Driver"}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are a Delivery Driver, Salary : $500."}) end
 	},
 	"mission.delivery.food",
 	"delivery.vehicle",
@@ -1493,7 +1453,7 @@ cfg.groups = {
   },
   ["Lawyer"] = {
     _config = { gtype = "job",
-	onspawn = function(player) vRPclient.notify(player,{"You are a Lawyer"}) end
+	onspawn = function(player) vRPclient.notify(player,{"You are a Lawyer, Salary : $2000."}) end
 	},
 	"Lawyer.vehicle",
 	"Lawyer.whitelisted",
