@@ -74,11 +74,11 @@ Citizen.CreateThread( function()
 	while true do
 		Citizen.Wait(1)
 		--Displays playerlist when player hold X
-		if IsControlJustPressed(1, 323) then --Start holding
+		if IsControlJustPressed(1, 11) then --Start holding
             plist = true
 --            print("sending open call")
 			TriggerServerEvent("gd_playerlist:askOpen", last_playerlist_identifier)
-		elseif IsControlJustReleased(1, 323) then --Stop holding
+		elseif IsControlJustReleased(1, 11) then --Stop holding
             plist = false
 --            print("closing call")
 			ClosePlayerList()

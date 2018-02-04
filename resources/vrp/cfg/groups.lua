@@ -11,7 +11,7 @@ local cfg = {}
 
 cfg.groups = {
   ["Developer"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"EmergeNYCRP Alpha Build 0.9.3"}) end},
+    _config = {onspawn = function(player) vRPclient.notify(player,{"EmergeNYCRP Alpha Build 0.9.4"}) end},
     "player.group.add",
     "player.group.remove",
     "player.givemoney",
