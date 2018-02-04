@@ -849,7 +849,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-
   "police.menu",
     "police.check",
   "toggle.service",

@@ -23,7 +23,7 @@ scale = 0.57
 -- Text Font --
 -- 0 - 5 possible
 -- Default: 1
-font = 2
+font = 1
 
 -- Rainbow Text --
 -- false: Turn off
