@@ -37,6 +37,7 @@ body {
 
 #playerlist .titles {
 	background-color: rgba(50,50,50,0.8);
+	font-family:'Roboto';
 	margin-bottom:0px;
 }
 
@@ -59,7 +60,7 @@ body {
     text-align: right;
 }
 #playerlist .player .title {
-    font-style: italic;
+    font-style: bold;
 }
 #playerlist .player .title, #playerlist .player .name {
     text-shadow:
