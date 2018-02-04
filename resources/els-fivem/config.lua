@@ -29,13 +29,19 @@ vcf_files = {
     "det1.xml",
     "det2.xml",
     "emsexp.xml",
+    "unmarked1.xml",
+    "unmarked2.xml",
+    "unmarked3.xml",
+    "unmarked4.xml",
+    "unmarked5.xml",
+    "unmarked6.xml",
+    "unmarked7.xml",
+    "unmarked8.xml",
+    "unmarked9.xml",
+    "unmarked10.xml",
 }
 
 pattern_files = {
-	"WIGWAG.xml",
-	"WIGWAG2.xml",
-	"WIGWAG3.xml",
-	"WIGWAG4.xml",
 	"NORWEGIAN.xml",
 	"LEFTRIGHT.xml",
 	"LEFTSWEEP.xml",
@@ -52,7 +58,6 @@ modelsWithFireSiren =
 modelsWithAmbWarnSiren =
 {   
     "AMBULANCE",
-    "simon2",
     "FIRETRUK",
 	"fdny162",
 }
@@ -90,6 +95,16 @@ vehicleStageThreeAdvisor = {
     "det1",
     "det2",
     "emsexp",
+    "unmarked1",
+    "unmarked2",
+    "unmarked3",
+    "unmarked4",
+    "unmarked5",
+    "unmarked6",
+    "unmarked7",
+    "unmarked8",
+    "unmarked9",
+    "unmarked10",
 }
 
 

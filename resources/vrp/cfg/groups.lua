@@ -235,7 +235,7 @@ cfg.groups = {
 	"emergency.shop",
 	"player.list",
 	"police.menu_interaction",
-	"police.paycheck"
+	"po.paycheck"
   },
     ["Police Officer II"] = {
     _config = { 
@@ -254,7 +254,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -276,7 +275,7 @@ cfg.groups = {
   "emergency.shop",
   "player.list",
   "police.menu_interaction",
-  "police.paycheck"
+  "po.paycheck"
   },
     ["Police Officer III"] = {
     _config = { 
@@ -295,7 +294,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -317,11 +315,10 @@ cfg.groups = {
   "emergency.shop",
   "player.list",
   "police.menu_interaction",
-  "police.paycheck"
+  "po.paycheck"
   },
   ["Highway Patrol"] = {
     _config = { 
-      gtype = "job",
       onjoin = function(player) vRPclient.setCop(player,{true}) end,
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
       onleave = function(player) vRPclient.setCop(player,{true}) end
@@ -336,7 +333,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -357,8 +353,7 @@ cfg.groups = {
   "emergency.revive",
   "emergency.shop",
   "player.list",
-  "police.menu_interaction",
-  "police.paycheck"
+  "police.menu_interaction"
   },
   ["Probationary Police Officer"] = {
     _config = { 
@@ -377,7 +372,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -399,7 +393,7 @@ cfg.groups = {
   "emergency.shop",
   "player.list",
   "police.menu_interaction",
-  "police.paycheck"
+  "po.paycheck"
   },
     ["Recruit Officer"] = {
     _config = { gtype = "job",
@@ -417,7 +411,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -429,7 +422,7 @@ cfg.groups = {
   "police.loadshop",
   "nypd.whitelisted",
   "police.menu_interaction",
-  "Cadet.paycheck"
+  "po.paycheck"
   },
       ["Recruit"] = {
     _config = { gtype = "job",
@@ -447,7 +440,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -459,10 +451,9 @@ cfg.groups = {
   "police.loadshop",
   "nypd.whitelisted",
   "police.menu_interaction",
-  "Cadet.paycheck"
+  "rct.paycheck"
   },
   ["ESU"] = {
-    _config = { gtype = "job",
     onjoin = function(player) vRPclient.setCop(player,{true}) end,
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
       onleave = function(player) vRPclient.setCop(player,{false}) end
@@ -482,7 +473,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -497,8 +487,7 @@ cfg.groups = {
   "emergency.revive",
   "emergency.shop",
   "nypd.whitelisted",
-  "police.menu_interaction",
-  "SWAT.paycheck"
+  "police.menu_interaction"
   },
   ["Police Commissioner"] = {
     _config = { gtype = "job",
@@ -519,7 +508,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -539,9 +527,49 @@ cfg.groups = {
   "emergency.shop",
   "nypd.whitelisted",
   "police.menu_interaction",
-  "Chief.paycheck"
+  "com.paycheck"
   },
-        ["Captain"] = {
+  ["Deputy Commissioner"] = {
+    _config = { gtype = "job",
+    onjoin = function(player) vRPclient.setCop(player,{true}) end,
+      onspawn = function(player) vRPclient.setCop(player,{true}) end,
+      onleave = function(player) vRPclient.setCop(player,{false}) end
+  },
+  "pdcmd.cloakroom",
+    "player.group.add",
+    "player.group.remove",
+    "police.pc",
+    --"police.handcuff",
+    "police.putinveh",
+    "police.getoutveh",
+    "police.service",
+  "police.drag",
+  "police.easy_cuff",
+  "police.easy_fine",
+  "police.easy_jail",
+  "police.easy_unjail",
+  "police.menu",
+    "police.check",
+  "toggle.service",
+  "police.freeze",
+    "police.wanted",
+    "police.seize.weapons",
+    "police.seize.items",
+    --"police.jail",
+    --"police.fine",
+    "police.announce",
+    --"-police.store_weapons",
+    "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
+  "pdcmd.vehicle",
+  "police.loadshop",
+  "emergency.market",
+  "emergency.revive",
+  "emergency.shop",
+  "nypd.whitelisted",
+  "police.menu_interaction",
+  "dc.paycheck"
+  },
+  ["Inspector"] = {
     _config = { gtype = "job",
     onjoin = function(player) vRPclient.setCop(player,{true}) end,
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
@@ -558,7 +586,7 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
+
   "police.menu",
     "police.check",
   "toggle.service",
@@ -579,7 +607,46 @@ cfg.groups = {
   "nypd.whitelisted",
   "cpt.whitelisted",
   "police.menu_interaction",
-  "Captain.paycheck"
+  "ins.paycheck"
+  },
+        ["Captain"] = {
+    _config = { gtype = "job",
+    onjoin = function(player) vRPclient.setCop(player,{true}) end,
+      onspawn = function(player) vRPclient.setCop(player,{true}) end,
+      onleave = function(player) vRPclient.setCop(player,{false}) end
+  },
+  "pdcmd.cloakroom",
+    "police.pc",
+    --"police.handcuff",
+    "police.putinveh",
+    "police.getoutveh",
+    "police.service",
+  "police.drag",
+  "police.easy_cuff",
+  "police.easy_fine",
+  "police.easy_jail",
+  "police.easy_unjail",
+  "police.menu",
+    "police.check",
+  "toggle.service",
+  "police.freeze",
+    "police.wanted",
+    "police.seize.weapons",
+    "police.seize.items",
+    --"police.jail",
+    --"police.fine",
+    "police.announce",
+   -- "-police.store_weapons",
+    "-police.seizable", -- negative permission, police can't seize itself, even if another group add the permission
+  "pdcmd.vehicle",
+  "police.loadshop",
+  "emergency.market",
+  "emergency.revive",
+  "emergency.shop",
+  "nypd.whitelisted",
+  "cpt.whitelisted",
+  "police.menu_interaction",
+  "cpt.paycheck"
   },
     ["Lieutenant"] = {
     _config = { gtype = "job",
@@ -598,7 +665,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -619,7 +685,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "lt.whitelisted",
   "police.menu_interaction",
-  "Lieutenant.paycheck"
+  "lt.paycheck"
   },
       ["Detective 2nd Class"] = {
     _config = { gtype = "job",
@@ -638,7 +704,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -679,7 +744,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -701,7 +765,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "det.whitelisted",
   "police.menu_interaction",
-  "Detective.paycheck"
+  "det.paycheck"
   },
     ["Sergeant"] = {
     _config = { gtype = "job",
@@ -721,7 +785,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -741,7 +804,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "sgt.whitelisted",
   "police.menu_interaction",
-  "Sergeant.paycheck"
+  "sgt.paycheck"
   },
   ["Sergeant II"] = {
     _config = { gtype = "job",
@@ -761,7 +824,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -781,7 +843,7 @@ cfg.groups = {
   "nypd.whitelisted",
   "sgt.whitelisted",
   "police.menu_interaction",
-  "Sergeant.paycheck"
+  "sgt.paycheck"
   },
       ["Dispatcher"] = {
     _config = { gtype = "job",
@@ -797,7 +859,7 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
+
   "police.menu",
     "police.check",
   "toggle.service",
@@ -822,6 +884,8 @@ cfg.groups = {
       onleave = function(player) vRPclient.setCop(player,{false}) end
   },
   "nysp.cloakroom",
+  "player.group.add",
+    "player.group.remove",
     "police.pc",
     --"police.handcuff",
     "police.putinveh",
@@ -833,7 +897,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -852,7 +915,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "sergeant.paycheck"
+  "sup.paycheck"
   },
   ["Deputy Superintendent"] = {
     _config = { gtype = "job",
@@ -872,7 +935,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -891,9 +953,9 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "sergeant.paycheck"
+  "ds.paycheck"
   },
-  ["Staff Insepctor"] = {
+  ["Staff Inspector"] = {
     _config = { gtype = "job",
     onjoin = function(player) vRPclient.setCop(player,{true}) end,
       onspawn = function(player) vRPclient.setCop(player,{true}) end,
@@ -911,7 +973,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -930,7 +991,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "sergeant.paycheck"
+  "sins.paycheck"
   },
   ["State Police Captain"] = {
     _config = { gtype = "job",
@@ -950,7 +1011,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -969,7 +1029,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "sergeant.paycheck"
+  "scpt.paycheck"
   },
   ["State Police Lieutenant"] = {
     _config = { gtype = "job",
@@ -989,7 +1049,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -1008,7 +1067,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "sergeant.paycheck"
+  "slt.paycheck"
   },
   ["State Police Sergeant"] = {
     _config = { gtype = "job",
@@ -1028,7 +1087,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -1047,7 +1105,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "sergeant.paycheck"
+  "ssgt.paycheck"
   },
       ["Investigator"] = {
     _config = { gtype = "job",
@@ -1068,7 +1126,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -1087,7 +1144,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "invest.paycheck"
+  "inv.paycheck"
   },
       ["State Trooper"] = {
     _config = { gtype = "job",
@@ -1107,7 +1164,6 @@ cfg.groups = {
   "police.easy_fine",
   "police.easy_jail",
   "police.easy_unjail",
-  "police.spikes",
   "police.menu",
     "police.check",
   "toggle.service",
@@ -1126,7 +1182,7 @@ cfg.groups = {
   "emergency.shop",
   "nysp.whitelisted",
   "police.menu_interaction",
-  "Trooper.paycheck"
+  "trp.paycheck"
   },
   -- ALL COPS MUST BE ASSIGNED THE "COP" ROLE AS WELL AS THEIR RANK
     ["cop"] = {
@@ -1151,7 +1207,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "fc.paycheck"
   },
   ["Assistant Chief"] = {
     _config = { gtype = "job",
@@ -1170,7 +1226,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "afc.paycheck"
   },
   ["Batallion Chief"] = {
     _config = { gtype = "job",
@@ -1189,7 +1245,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "bc.paycheck"
   },
   ["Fire Captain"] = {
     _config = { gtype = "job",
@@ -1207,7 +1263,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "fcpt.paycheck"
   },
   ["Fire Lieutenant"] = {
     _config = { gtype = "job",
@@ -1225,7 +1281,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "flt.paycheck"
   },
   ["Driver Engineer"] = {
     _config = { gtype = "job",
@@ -1243,7 +1299,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "de.paycheck"
   },
   ["Firefighter"] = {
     _config = { gtype = "job",
@@ -1261,7 +1317,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "ff.paycheck"
   },
   ["Probationary Firefighter"] = {
     _config = { gtype = "job",
@@ -1279,7 +1335,7 @@ cfg.groups = {
 	"ems.loadshop",
 	"player.list",
 	"police.menu_interaction",
-	"emergency.paycheck"
+	"pff.paycheck"
   },
   ["EMT"] = {
     _config = { gtype = "job",
@@ -1297,7 +1353,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "emt.paycheck"
   },
   ["Paramedic"] = {
     _config = { gtype = "job",
@@ -1315,7 +1371,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "pmed.paycheck"
   },
   ["Paramedic FTO"] = {
     _config = { gtype = "job",
@@ -1334,7 +1390,7 @@ cfg.groups = {
   "ems.vehicle",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "pft.paycheck"
   },
   ["EMS Lieutenant"] = {
     _config = { gtype = "job",
@@ -1353,7 +1409,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "elt.paycheck"
   },
   ["EMS Captain"] = {
     _config = { gtype = "job",
@@ -1371,7 +1427,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "ecpt.paycheck"
   },
   ["EMS Assistant Batallion Chief"] = {
     _config = { gtype = "job",
@@ -1389,7 +1445,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "eabc.paycheck"
   },
   ["EMS Batallion Chief"] = {
     _config = { gtype = "job",
@@ -1407,7 +1463,7 @@ cfg.groups = {
   "ems.loadshop",
   "player.list",
   "police.menu_interaction",
-  "emergency.paycheck"
+  "ebc.paycheck"
   },
   -- END FDNY / NY EMS -----------------------------------------------------------------------------------------------------------------------------------------------------------
   ["Mechanic"] = {

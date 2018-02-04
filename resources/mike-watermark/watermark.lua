@@ -9,11 +9,11 @@ offset = {x = 0.005, y = 0.001}
 
 -- Text RGB Color --
 -- Default: 64, 64, 64 (gray)
-rgb = {r = 255, g = 0, b = 0}
+rgb = {r = 255, g = 255, b = 255}
 
 -- Text transparency --
 -- Default: 255
-alpha = 215
+alpha = 175
 
 -- Text scale
 -- Default: 0.4
@@ -23,7 +23,7 @@ scale = 0.57
 -- Text Font --
 -- 0 - 5 possible
 -- Default: 1
-font = 1
+font = 3
 
 -- Rainbow Text --
 -- false: Turn off
