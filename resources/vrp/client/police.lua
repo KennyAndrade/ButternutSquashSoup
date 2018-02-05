@@ -169,7 +169,7 @@ function tvRP.applyWantedLevel(new_wanted)
   end)
 end
 
---[[ update wanted level
+-- update wanted level
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(2000)
@@ -187,7 +187,7 @@ Citizen.CreateThread(function()
       vRPserver.updateWantedLevel({wanted_level})
     end
   end
-end) 
+end)
 
 -- detect vehicle stealing
 Citizen.CreateThread(function()
