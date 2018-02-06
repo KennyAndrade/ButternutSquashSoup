@@ -222,7 +222,7 @@
         </Probabilities>
       </plateProbabilities>
       <lightSettings value="1" />
-      <sirenSettings value="4" />
+      <sirenSettings value="13" />
     </Item>
      <Item>
       <modelName>fbi</modelName>
