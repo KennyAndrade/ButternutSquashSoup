@@ -41,6 +41,7 @@ local emsfire = {
   ["Shoes"] = 6,
   ["Ranks/Decals"] = 10,
   ["Fire/EMS Accessories"] = 9,
+  ["Gloves"] = 5,
   ["Jacket"] = 11,
   ["Hats"] = "p0",
   ["Glasses"] = "p1",

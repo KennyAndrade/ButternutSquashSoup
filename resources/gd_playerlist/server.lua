@@ -57,12 +57,12 @@ local rank_special = {
 
     -- NYEMS
     ["EMS Batallion Chief"] =   {suffix = {x=1,y=41}, fullcolor = "red", title = "Batallion Chief"},
-    ["EMS Assistant Batallion Chief"] =   {suffix = {x=1,y=41}, fullcolor = "red", title = "Assistant Chief"},
-    ["EMS Captain"] =   {suffix = {x=1,y=41}, fullcolor = "red", title = "Batallion Chief"},
-    ["EMS Lieutenant"] =    {suffix = {x=1,y=41}, color = "red", title = "Captain"},
-    ["Paramedic FTO"] = {suffix = {x=1,y=41}, color = "red", title = "Lieutenant"},
-    ["Paramedic"] =   {suffix = {x=1,y=41}, color = "red", title = "Driver Engineer"},
-    ["EMT"] =  {suffix = {x=1,y=41}, color = "red", title = "Firefighter"},
+    ["EMS Assistant Batallion Chief"] =   {suffix = {x=1,y=41}, fullcolor = "red", title = "Assistant Batallion Chief"},
+    ["EMS Captain"] =   {suffix = {x=1,y=41}, fullcolor = "red", title = "Captain"},
+    ["EMS Lieutenant"] =    {suffix = {x=1,y=41}, color = "red", title = "Lieutenant"},
+    ["Paramedic FTO"] = {suffix = {x=1,y=41}, color = "red", title = "Paramedic FTO"},
+    ["Paramedic"] =   {suffix = {x=1,y=41}, color = "red", title = "Paramedic"},
+    ["EMT"] =  {suffix = {x=1,y=41}, color = "red", title = "EMT"},
 
 
     ["Mechanic"] =          {suffix = {x=11,y=32}, color = "white", title = "Mechanic"},
