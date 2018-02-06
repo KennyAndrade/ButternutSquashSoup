@@ -40,15 +40,19 @@ body {
 #playerlist .titles {
 	background-color: rgba(50,50,50,0.8);
 	font-family: 'Francois One', sans-serif;
+    font-style: bold;
 	margin-bottom:0px;
 }
 
 #playerlist .player {
 	background-color: rgba(0,0,0,0.8);
     font-family: 'Francois One', sans-serif;
+    font-style: bold;
 }
 #playerlist .name {
 	text-align:left;
+    font-family: 'Francois One', sans-serif;
+    font-style: bold;
 }
 #playerlist .player {
     font-size: 16px;
@@ -76,6 +80,7 @@ body {
 #playerlist .titles .title {
     text-align: center;
     font-family: 'Francois One', sans-serif;
+    font-style: bold;
 }
 #playerlist .player .icon {
     margin: auto;
