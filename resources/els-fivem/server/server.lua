@@ -1,6 +1,85 @@
 vehicleInfoTable = {}
 patternInfoTable = {}
 
+_VERSION = "1.1.2e"
+local updateAvailable = false
+
+PerformHttpRequest('https://git.mrdagree.com/mrdagree/ELS-FiveM-Info/raw/development/VERSION', function(Error, NewestVersion, Header)
+	PerformHttpRequest('https://git.mrdagree.com/mrdagree/ELS-FiveM-Info/raw/development/CHANGES', function(Error, Changes, Header)
+		print("\n---------- ELS (Dev Build) by MrDaGree ----------")
+		print('           Current Version: ' .. _VERSION)
+		print('           Newest Version: ' .. NewestVersion)
+		print('')
+		if _VERSION ~= NewestVersion then
+			print('---------- Outdated ----------\n')
+			PerformHttpRequest('https://git.mrdagree.com/mrdagree/ELS-FiveM-Info/raw/development/PERVIOUSVERSION', function(Error, PreviousVersion, Header)
+				if _VERSION == PreviousVersion then
+					UpdateAvailable = true
+				end
+				if UpdateAvailable then
+					print('\nPlease download the newest version or use "els update"')
+				end
+			end)
+			
+			print('CHANGES: \n' .. Changes)
+		else
+			UpdateAvailable = false
+			print('\n       All good! You are all up to date.')
+			print('-------------------------------------------------')
+		end
+	end)
+end)
+
+RegisterCommand("els", function(source, args, rawCommand)
+
+	if string.sub(rawCommand, 1, 3):lower() == "els" then
+		if #args == 1 then
+			if args[1]:lower() == 'update' then
+				TriggerEvent("els:update")
+			end
+		else
+			print('Argument count mismatch (Passed: ' .. #args .. ', Wanted: 1)')
+		end
+	end
+end, true)
+
+function stringsplit(input, seperator)
+	if seperator == nil then
+		seperator = '%s'
+	end
+	
+	local t={} ; i=1
+	
+	for str in string.gmatch(input, '([^'..seperator..']+)') do
+		t[i] = str
+		i = i + 1
+	end
+	
+	return t
+end
+
+RegisterServerEvent('els:update')
+AddEventHandler('els:update', function()
+	if UpdateAvailable then
+		PerformHttpRequest('https://git.mrdagree.com/mrdagree/ELS-FiveM-Info/raw/development/CHANGEDFILES', function(Error, Content, Header)
+			ContentSplitted = stringsplit(Content, '\n')
+			for k, Line in ipairs(ContentSplitted) do
+				local PreviousContent = ''
+				if Line:find('-add') then
+					Line = Line:gsub('-add')
+					PreviousContent = LoadResourceFile(GetCurrentResourceName(), Line) .. '\n'
+				end
+				PerformHttpRequest('http://git.mrdagree.com/mrdagree/ELS-FiveM/raw/development/' .. Line, function(Error, NewContent, Header)
+					SaveResourceFile(GetCurrentResourceName(), Line, PreviousContent .. NewContent, -1)
+				end)
+			end
+		end)
+		print('Update finished! Enter "restart ' .. GetCurrentResourceName() .. '" now!')
+	else
+		print('This is already the newest version! [' .. _VERSION .. ']')
+	end
+end)
+
 local function processXml(el)
     local v = {}
     local text
@@ -35,6 +114,18 @@ function parseVehData(xml, fileName)
     a.extras = {}
 
     for i=1,#xml.root.el do
+    	if(xml.root.el[i].name == "INTERFACE") then
+    		for ex=1,#xml.root.el[i].kids do
+    			if(xml.root.el[i].kids[ex].name== "LstgActivationType") then
+    				local elem = xml.root.el[i].kids[ex]
+    				if elem.kids[1].value == "manual" or elem.kids[1].value == "auto" then
+    					a.activateUp = true
+    				else
+    					a.activateUp = false
+    				end
+    			end
+    		end
+    	end
     	if(xml.root.el[i].name == "EOVERRIDE") then
     		a.advisor = false
     		for ex=1,#xml.root.el[i].kids do
@@ -72,6 +163,10 @@ function parseVehData(xml, fileName)
 		                    a.extras[extra].env_color['r'] = 0
 		                    a.extras[extra].env_color['g'] = 0
 		                    a.extras[extra].env_color['b'] = 255
+		                elseif string.upper(elem.attr['Color']) == "GREEN" then
+		                    a.extras[extra].env_color['r'] = 0
+		                    a.extras[extra].env_color['g'] = 255
+		                    a.extras[extra].env_color['b'] = 0
 		                elseif string.upper(elem.attr['Color']) == "AMBER" then
 		                    a.extras[extra].env_color['r'] = 255
 		                    a.extras[extra].env_color['g'] = 194
@@ -95,76 +190,251 @@ end
 
 function parsePatternData(xml, fileName)
 
-    local a = {}
+    local primary = {}
+    local secondary = {}
+    local advisor = {}
+
     fileName = string.sub(fileName, 1, -5)
 
     for i=1,#xml.root.el do
     	if(xml.root.el[i].name == "PRIMARY") then
-    		a.primary = {}
-    		a.primary.stages = {}
-    		a.primary.speed = tonumber(xml.root.el[i].attr["speed"])
+    		primary.stages = {}
+    		primary.speed = tonumber(xml.root.el[i].attr["speed"])
     		for ex=1,#xml.root.el[i].kids do
     			if(string.upper(string.sub(xml.root.el[i].kids[ex].name, 1, -3)) == "STATE") then
     				local spot = tonumber(string.sub(xml.root.el[i].kids[ex].name, 6))
     				local elem = xml.root.el[i].kids[ex]
-    				a.primary.stages[spot] = {}
+    				primary.stages[spot] = {}
 	    			if elem.attr['Extra1'] == "true" then
-	    				a.primary.stages[spot][1] = 0
+	    				primary.stages[spot][1] = 0
 	    			elseif elem.attr['Extra1'] == "false" then
-	    				a.primary.stages[spot][1] = 1
+	    				primary.stages[spot][1] = 1
 	    			end
 	    			if elem.attr['Extra2'] == "true" then
-	    				a.primary.stages[spot][2] = 0
+	    				primary.stages[spot][2] = 0
 	    			elseif elem.attr['Extra2'] == "false" then
-	    				a.primary.stages[spot][2] = 1
+	    				primary.stages[spot][2] = 1
 	    			end
 	    			if elem.attr['Extra3'] == "true" then
-	    				a.primary.stages[spot][3] = 0
+	    				primary.stages[spot][3] = 0
 	    			elseif elem.attr['Extra3'] == "false" then
-	    				a.primary.stages[spot][3] = 1
+	    				primary.stages[spot][3] = 1
 	    			end
 	    			if elem.attr['Extra4'] == "true" then
-	    				a.primary.stages[spot][4] = 0
+	    				primary.stages[spot][4] = 0
 	    			elseif elem.attr['Extra4'] == "false" then
-	    				a.primary.stages[spot][4] = 1
+	    				primary.stages[spot][4] = 1
+	    			end
+	    			if elem.attr['Extra5'] == "true" then
+	    				primary.stages[spot][5] = 0
+	    			elseif elem.attr['Extra5'] == "false" then
+	    				primary.stages[spot][5] = 1
+	    			end
+	    			if elem.attr['Extra6'] == "true" then
+	    				primary.stages[spot][6] = 0
+	    			elseif elem.attr['Extra6'] == "false" then
+	    				primary.stages[spot][6] = 1
+	    			end
+	    			if elem.attr['Extra7'] == "true" then
+	    				primary.stages[spot][7] = 0
+	    			elseif elem.attr['Extra7'] == "false" then
+	    				primary.stages[spot][7] = 1
+	    			end
+	    			if elem.attr['Extra8'] == "true" then
+	    				primary.stages[spot][8] = 0
+	    			elseif elem.attr['Extra8'] == "false" then
+	    				primary.stages[spot][8] = 1
+	    			end
+	    			if elem.attr['Extra9'] == "true" then
+	    				primary.stages[spot][9] = 0
+	    			elseif elem.attr['Extra9'] == "false" then
+	    				primary.stages[spot][9] = 1
+	    			end
+	    			if elem.attr['Extra10'] == "true" then
+	    				primary.stages[spot][10] = 0
+	    			elseif elem.attr['Extra10'] == "false" then
+	    				primary.stages[spot][10] = 1
+	    			end
+	    			if elem.attr['Extra11'] == "true" then
+	    				primary.stages[spot][11] = 0
+	    			elseif elem.attr['Extra11'] == "false" then
+	    				primary.stages[spot][11] = 1
+	    			end
+	    			if elem.attr['Extra12'] == "true" then
+	    				primary.stages[spot][12] = 0
+	    			elseif elem.attr['Extra12'] == "false" then
+	    				primary.stages[spot][12] = 1
+	    			end
+
+	    			if elem.attr['Speed'] ~= nil then
+	    				primary.stages[spot].speed = tonumber(elem.attr['Speed'])
 	    			end
     			end
     		end
     	end
     	if(xml.root.el[i].name == "SECONDARY") then
-    		a.secondary = {}
-    		a.secondary.stages = {}
-    		a.secondary.speed = tonumber(xml.root.el[i].attr["speed"])
+    		secondary.stages = {}
+    		secondary.speed = tonumber(xml.root.el[i].attr["speed"])
     		for ex=1,#xml.root.el[i].kids do
     			if(string.upper(string.sub(xml.root.el[i].kids[ex].name, 1, -3)) == "STATE") then
     				local spot = tonumber(string.sub(xml.root.el[i].kids[ex].name, 6))
     				local elem = xml.root.el[i].kids[ex]
-    				a.secondary.stages[spot] = {}
+    				secondary.stages[spot] = {}
+    				if elem.attr['Extra1'] == "true" then
+	    				secondary.stages[spot][1] = 0
+	    			elseif elem.attr['Extra1'] == "false" then
+	    				secondary.stages[spot][1] = 1
+	    			end
+	    			if elem.attr['Extra2'] == "true" then
+	    				secondary.stages[spot][2] = 0
+	    			elseif elem.attr['Extra2'] == "false" then
+	    				secondary.stages[spot][2] = 1
+	    			end
+	    			if elem.attr['Extra3'] == "true" then
+	    				secondary.stages[spot][3] = 0
+	    			elseif elem.attr['Extra3'] == "false" then
+	    				secondary.stages[spot][3] = 1
+	    			end
+	    			if elem.attr['Extra4'] == "true" then
+	    				secondary.stages[spot][4] = 0
+	    			elseif elem.attr['Extra4'] == "false" then
+	    				secondary.stages[spot][4] = 1
+	    			end
 	    			if elem.attr['Extra5'] == "true" then
-	    				a.secondary.stages[spot][1] = 0
+	    				secondary.stages[spot][5] = 0
 	    			elseif elem.attr['Extra5'] == "false" then
-	    				a.secondary.stages[spot][1] = 1
+	    				secondary.stages[spot][5] = 1
 	    			end
 	    			if elem.attr['Extra6'] == "true" then
-	    				a.secondary.stages[spot][2] = 0
+	    				secondary.stages[spot][6] = 0
 	    			elseif elem.attr['Extra6'] == "false" then
-	    				a.secondary.stages[spot][2] = 1
+	    				secondary.stages[spot][6] = 1
 	    			end
 	    			if elem.attr['Extra7'] == "true" then
-	    				a.secondary.stages[spot][3] = 0
+	    				secondary.stages[spot][7] = 0
 	    			elseif elem.attr['Extra7'] == "false" then
-	    				a.secondary.stages[spot][3] = 1
+	    				secondary.stages[spot][7] = 1
+	    			end
+	    			if elem.attr['Extra8'] == "true" then
+	    				secondary.stages[spot][8] = 0
+	    			elseif elem.attr['Extra8'] == "false" then
+	    				secondary.stages[spot][8] = 1
 	    			end
 	    			if elem.attr['Extra9'] == "true" then
-	    				a.secondary.stages[spot][4] = 0
+	    				secondary.stages[spot][9] = 0
 	    			elseif elem.attr['Extra9'] == "false" then
-	    				a.secondary.stages[spot][4] = 1
+	    				secondary.stages[spot][9] = 1
+	    			end
+	    			if elem.attr['Extra10'] == "true" then
+	    				secondary.stages[spot][10] = 0
+	    			elseif elem.attr['Extra10'] == "false" then
+	    				secondary.stages[spot][10] = 1
+	    			end
+	    			if elem.attr['Extra11'] == "true" then
+	    				secondary.stages[spot][11] = 0
+	    			elseif elem.attr['Extra11'] == "false" then
+	    				secondary.stages[spot][11] = 1
+	    			end
+	    			if elem.attr['Extra12'] == "true" then
+	    				secondary.stages[spot][12] = 0
+	    			elseif elem.attr['Extra12'] == "false" then
+	    				secondary.stages[spot][12] = 1
+	    			end
+
+	    			if elem.attr['Speed'] ~= nil then
+	    				secondary.stages[spot].speed = tonumber(elem.attr['Speed'])
 	    			end
     			end
     		end
     	end
+    	if(xml.root.el[i].name == "ADVISOR") then
+    		advisor = {}
+    		advisor.stages = {}
+    		advisor.speed = tonumber(xml.root.el[i].attr["speed"])
+    		for ex=1,#xml.root.el[i].kids do
+    			if(string.upper(string.sub(xml.root.el[i].kids[ex].name, 1, -3)) == "STATE") then
+    				local spot = tonumber(string.sub(xml.root.el[i].kids[ex].name, 6))
+    				local elem = xml.root.el[i].kids[ex]
+
+    				advisor.stages[spot] = {}
+    				if elem.attr['Extra1'] == "true" then
+	    				advisor.stages[spot][1] = 0
+	    			elseif elem.attr['Extra1'] == "false" then
+	    				advisor.stages[spot][1] = 1
+	    			end
+	    			if elem.attr['Extra2'] == "true" then
+	    				advisor.stages[spot][2] = 0
+	    			elseif elem.attr['Extra2'] == "false" then
+	    				advisor.stages[spot][2] = 1
+	    			end
+	    			if elem.attr['Extra3'] == "true" then
+	    				advisor.stages[spot][3] = 0
+	    			elseif elem.attr['Extra3'] == "false" then
+	    				advisor.stages[spot][3] = 1
+	    			end
+	    			if elem.attr['Extra4'] == "true" then
+	    				advisor.stages[spot][4] = 0
+	    			elseif elem.attr['Extra4'] == "false" then
+	    				advisor.stages[spot][4] = 1
+	    			end
+	    			if elem.attr['Extra5'] == "true" then
+	    				advisor.stages[spot][5] = 0
+	    			elseif elem.attr['Extra5'] == "false" then
+	    				advisor.stages[spot][5] = 1
+	    			end
+	    			if elem.attr['Extra6'] == "true" then
+	    				advisor.stages[spot][6] = 0
+	    			elseif elem.attr['Extra6'] == "false" then
+	    				advisor.stages[spot][6] = 1
+	    			end
+	    			if elem.attr['Extra7'] == "true" then
+	    				advisor.stages[spot][7] = 0
+	    			elseif elem.attr['Extra7'] == "false" then
+	    				advisor.stages[spot][7] = 1
+	    			end
+	    			if elem.attr['Extra8'] == "true" then
+	    				advisor.stages[spot][8] = 0
+	    			elseif elem.attr['Extra8'] == "false" then
+	    				advisor.stages[spot][8] = 1
+	    			end
+	    			if elem.attr['Extra9'] == "true" then
+	    				advisor.stages[spot][9] = 0
+	    			elseif elem.attr['Extra9'] == "false" then
+	    				advisor.stages[spot][9] = 1
+	    			end
+	    			if elem.attr['Extra10'] == "true" then
+	    				advisor.stages[spot][10] = 0
+	    			elseif elem.attr['Extra10'] == "false" then
+	    				advisor.stages[spot][10] = 1
+	    			end
+	    			if elem.attr['Extra11'] == "true" then
+	    				advisor.stages[spot][11] = 0
+	    			elseif elem.attr['Extra11'] == "false" then
+	    				advisor.stages[spot][11] = 1
+	    			end
+	    			if elem.attr['Extra12'] == "true" then
+	    				advisor.stages[spot][12] = 0
+	    			elseif elem.attr['Extra12'] == "false" then
+	    				advisor.stages[spot][12] = 1
+	    			end
+
+	    			if elem.attr['Speed'] ~= nil then
+	    				advisor.stages[spot].speed = tonumber(elem.attr['Speed'])
+	    			end
+	    		end
+    		end
+    	end
     end
 
+    if primary.stages ~= nil then
+    	patternInfoTable.primarys[#patternInfoTable.primarys + 1] = primary
+    end
+    if secondary.stages ~= nil then
+    	patternInfoTable.secondarys[#patternInfoTable.secondarys + 1] = secondary
+    end
+    if advisor.stages ~= nil then
+    	patternInfoTable.advisors[#patternInfoTable.advisors + 1] = advisor
+    end
     patternInfoTable[#patternInfoTable + 1] = a
 
     print("Done with pattern: " .. fileName)
@@ -184,7 +454,10 @@ function parseObjSet(data, fileName)
 end
 
 AddEventHandler('onResourceStart', function(name)
-	if name == "els-fivem" then
+	if name:lower() == GetCurrentResourceName():lower() then
+		patternInfoTable.primarys = {}
+		patternInfoTable.secondarys = {}
+		patternInfoTable.advisors = {}
 	    for i=1,#vcf_files do
 	    	local data = LoadResourceFile(GetCurrentResourceName(), "vcf/" .. vcf_files[i])
 
