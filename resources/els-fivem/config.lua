@@ -1,3 +1,6 @@
+
+canaryClient = true
+
 vcf_files = {
 	"FBI.xml",
 	"police.xml",
@@ -42,15 +45,34 @@ vcf_files = {
 }
 
 pattern_files = {
-	"WIGWAG4.xml",
-	"LEFTSWEEP.xml",
-	"RIGHTSWEEP.xml",
+	"WIGWAG.xml",
+	"WIGWAG3.xml",
+	"FAST.xml",
+	"COMPLEX.xml",
+	"BACKFOURTH.xml",
+	"BACKFOURTH2.xml",
+	"T_ADVIS_RIGHT_LEFT.xml",
+	"T_ADVIS_LEFT_RIGHT.xml",
+	"T_ADVIS_BACKFOURTH.xml"
+}
+
+modelsWithTrafficAdvisor = {
+	"FBI2",
+	"state1",
+    "state2",
+    "state3",
+    "state4",
+    "state5",
+    "state6",
+    "state7",
+    "unmarked2",
+    "unmarked3",
+    "unmarked4"
 }
 
 modelsWithFireSiren =
 {
     "FIRETRUK",
-	"fdny162",
 }
 
 
@@ -58,10 +80,10 @@ modelsWithAmbWarnSiren =
 {   
     "AMBULANCE",
     "FIRETRUK",
-	"fdny162",
+    "LGUARD",
 }
 
-stagethreewithsiren = true
+stagethreewithsiren = false
 playButtonPressSounds = true
 vehicleStageThreeAdvisor = {
     "FBI",
@@ -106,6 +128,9 @@ vehicleStageThreeAdvisor = {
     "unmarked10",
 }
 
+
+vehicleSyncDistance = 150
+envirementLightBrightness = 0.2
 
 shared = {
 	horn = 108,
