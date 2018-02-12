@@ -47,6 +47,7 @@ vcf_files = {
 pattern_files = {
 	"WIGWAG.xml",
 	"WIGWAG3.xml",
+	"WIGWAG4.xml",
 	"FAST.xml",
 	"COMPLEX.xml",
 	"BACKFOURTH.xml",
@@ -57,17 +58,7 @@ pattern_files = {
 }
 
 modelsWithTrafficAdvisor = {
-	"FBI2",
-	"state1",
-    "state2",
-    "state3",
-    "state4",
-    "state5",
-    "state6",
-    "state7",
-    "unmarked2",
-    "unmarked3",
-    "unmarked4"
+
 }
 
 modelsWithFireSiren =
