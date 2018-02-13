@@ -82,7 +82,7 @@ var config =
         "Generating proof of Flat Earth &#x1F30E;",
         "Nullifying Quantum Loops &#x1F6E0;",
         "Eating the last donut... &#x1F369;",
-		"Looking for a Tesla Roadster in space...&#x1F52D;&#x1F3CE;"
+		"Looking for a Tesla Roadster in space...&#x1F52D;&#x1F3CE;",
         "Ignoring Bug Reports &#x1F41B;",
 		"Spinning the hamster...&#x1F439;",
 		"Mining bitcoins from your computer... &#x1F5A5;&#xFE0F;",
