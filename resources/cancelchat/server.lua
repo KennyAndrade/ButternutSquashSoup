@@ -13,7 +13,6 @@ AddEventHandler('chatMessage', function(source, name, message)
     CancelEvent()
   else
     if cchat then
-      TriggerClientEvent('chatMessage', source, 'Cancel Chat', {255, 255, 255}, .. ' ')
       CancelEvent()
     end
   end

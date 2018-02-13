@@ -47,3 +47,4 @@ steam.dll
 profiles.dll
 libuv.dll
 gtavmm52103.sql
+resources/mike-watermark/watermark.lua

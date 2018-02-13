@@ -3,7 +3,7 @@ server_scripts{
   "deletepoliceweapons-server.lua",
   "me-server.lua",
   "ooc-server.lua",
-  "deathmessages-server.lua",
+  --"deathmessages-server.lua",
   "weathersync-server.lua",
   "dispatch-server.lua"
 }
@@ -15,7 +15,7 @@ client_scripts{
   "handsup-client.lua",
   "stopwanted-client.lua",
   "deletepoliceweapons-client.lua",
-  "deathmessages-client.lua",
+  --"deathmessages-client.lua",
   --"names-client.lua",
   "weathersync-client.lua",
   "missiontext-client.lua",
