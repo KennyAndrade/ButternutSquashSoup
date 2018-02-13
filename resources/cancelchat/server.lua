@@ -12,5 +12,4 @@ AddEventHandler('chatMessage', function(source, name, message)
     end
     CancelEvent()
     end
-  end
-end)
+  end)
