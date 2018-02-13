@@ -1,7 +1,7 @@
 -- CONFIG --
 
 -- The watermark text --
-servername = "EmergeNYC RP Alpha"
+servername = "EmergeNYC RP Open Beta"
 
 -- The x and y offset (starting at the top left corner) --
 -- Default: 0.005, 0.001
