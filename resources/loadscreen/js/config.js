@@ -68,10 +68,12 @@ var config =
         "Planting evidence... &#x1F44C;",
         "Mentioning Kenny on Discord... &#x1F92C;",
         "Prank calling 911... &#x1F692; &#x1F691; &#x1F693;",
-        "Stealing the homeless guy's box. &#x1FE0F;",
+        "Stealing the homeless guy's box. &#xFE0F;",
         "Falsifying Records... &#x1F47B;",
         "Processing Whitelist Requests... &#x1F4C2;",
         "Generating proof of Flat Earth &#x1F30E;",
+        "Nullifying Quantum Loops &#x1F6E0;",
+        "Eating the last donut... &#x1F369;",
         "Ignoring Bug Reports &#x1F41B;",
     ],
 
@@ -128,6 +130,7 @@ var config =
         "img/bg1.jpg",
         "img/bg2.jpg",
         "img/bg3.jpg",
+        "img/bg4.jpg",
     ],
 
     /*
