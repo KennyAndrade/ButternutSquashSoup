@@ -12,7 +12,7 @@ AddEventHandler('Cuff_close:getcuff', function()
 	if(distance ~= -1 and distance < 3) then
 		TriggerServerEvent("Cuff_close:getCuffServer", GetPlayerServerId(t))
 	else
-		drawNotification("no ped close on you")
+		drawNotification("No Ped close to you")
 	end
 end)
 
@@ -23,7 +23,7 @@ AddEventHandler('Cuff_close:getDrag', function()
 	if(distance ~= -1 and distance < 3) then
 		TriggerServerEvent("Cuff_close:getDragServer", GetPlayerServerId(t))
 	else
-		 drawNotification("no ped close on you")
+		 drawNotification("No Ped close to you")
 	end
 
 end)
@@ -34,7 +34,7 @@ AddEventHandler('Cuff_close:getUnseatVehicle', function()
 	if(distance ~= -1 and distance < 3) then
 		TriggerServerEvent("Cuff_close:getUnseatServer", GetPlayerServerId(t))
 	else
-		drawNotification("no ped close on you")
+		drawNotification("No Ped close to you")
 	end
 end)
 
@@ -45,7 +45,7 @@ AddEventHandler('Cuff_close:getSeatedVehicle', function()
 		local v = GetVehiclePedIsIn(GetPlayerPed(-1), true)
 		TriggerServerEvent("Cuff_close:getSeatedServer", GetPlayerServerId(t), v)
 	else
-		drawNotification("no ped close on you")
+		drawNotification("No Ped close to you")
 	end
 end)
 
@@ -57,9 +57,9 @@ RegisterNetEvent('Cuff_close:getArrested')
 AddEventHandler('Cuff_close:getArrested', function()
 	handCuffed = not handCuffed
 	if(handCuffed) then
-		drawNotification("you are been cuffed")
+		drawNotification("You have been handcuffed")
 	else
-		drawNotification("you are been uncuffed")
+		drawNotification("You have been unhandcuffed")
 	end
 end)
 

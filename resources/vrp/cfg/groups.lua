@@ -11,7 +11,7 @@ local cfg = {}
 
 cfg.groups = {
   ["Developer"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"EmergeNYCRP Alpha Build 0.9.4"}) end},
+    _config = {onspawn = function(player) vRPclient.notify(player,{"Bug Reports Deleted"}) end},
     "player.group.add",
     "player.group.remove",
     "player.givemoney",
@@ -45,22 +45,19 @@ cfg.groups = {
   },
     ["Kim Jong Simon"] = {
     _config = {onspawn = function(player) vRPclient.notify(player,{"Your subjects will kneel before you Lord Simon"}) end},
-    "emergency.revive",
-  "police.pc",
-  --"police.wanted",
-    "emergency.shop",
-    "emergency.service",
-  "emergency.cloakroom",
-  "fire.vehicle",
-  "emergency.market",
-  "ems.whitelisted",
-  "ems.vehicle",
-  "ems.pilot",
-  "pdcmd.vehicle",
-  "ems.loadshop",
-  "player.list",
-  "police.menu_interaction",
-  "emergency.paycheck"
+    "player.phone",
+    "player.calladmin",
+  "player.fix_haircut",
+  "player.check",
+  --"mugger.mug",
+    "police.askid",
+    "police.store_weapons",
+  "player.store_money",
+  "player.check",
+  "player.loot",
+  "player.player_menu",
+  "player.userlist",
+    "police.seizable"  -- can be seized
   },
     ["Beta Tester"] = {
     _config = {onspawn = function(player) vRPclient.notify(player,{"Thanks for testing!"}) end},
@@ -141,6 +138,7 @@ cfg.groups = {
   },
   -- the group user is auto added to all logged players
   ["user"] = {
+  _config = {onspawn = function(player) vRPclient.notify(player,{"EmergeNYCRP Open Beta Build 1.0"}) end},
     "player.phone",
     "player.calladmin",
 	"player.fix_haircut",
