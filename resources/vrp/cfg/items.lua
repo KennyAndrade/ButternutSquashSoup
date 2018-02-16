@@ -11,8 +11,8 @@ cfg.items = {
   ["AK47"] = {"AK47", "A Russian masterpeice.", nil, 0.01}, -- no choices
   ["M4A1"] = {"M4A1", "Helps give non-Americans freedom.", nil, 0.01}, -- no choices
   ["credit"] = {"Credit Card", "Credit card.", nil, 0.01}, -- no choices
-  ["driver"] = {"Driver license Card", "license card.", nil, 0.01}, -- no choices
-  ["bank_money"] = {"Money of bank", "$.", nil, 0} -- no choices
+  ["driver"] = {"Driver's license", "license card.", nil, 0.01}, -- no choices
+  ["bank_money"] = {"Money Transport", "$.", nil, 0} -- no choices
 }
 
 -- load more items function
