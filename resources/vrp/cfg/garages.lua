@@ -577,8 +577,9 @@ cfg.garage_types = {
   },  
   ["repair"] = {
     _config = {vtype="car",blipid=50,blipcolor=31,permissions={"repair.vehicle"}},
-    ["towtruck2"] = {"AAA Towing Service",0, "AAA Towing Service"},
-    ["utillitruck3"] = {"Casey's Highway Clearance Maintenance Truck",0,"Casey's Highway Clearance Maintenance Truck"},
+    ["towtruck"] = {"AAA Towing Service",0, "AAA Towing Service"},
+    ["nydot"] = {"New York DOT Truck",0,"New York DOT Truck"},
+    ["flatbed2"] = {"Ford F-550 Flatbed",0,"New York DOT Truck"},
 	["flatbed"] = {"Kenworth Flatbed Towtruck",0, "utillitruck3"}
   },
   ["bankdriver"] = {

@@ -111,6 +111,7 @@ vehicleStageThreeAdvisor = {
     "det1",
     "det2",
     "emsexp",
+    "towtruck",
     "unmarked1",
     "unmarked2",
     "unmarked3",
