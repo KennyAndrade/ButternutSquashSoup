@@ -129,7 +129,7 @@ cfg.groups = {
 	"player.check",
 	--"mugger.mug",
     "police.askid",
-    "police.store_weapons",
+    --"police.store_weapons",
 	"player.store_money",
 	"player.check",
 	"player.loot",

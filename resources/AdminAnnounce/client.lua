@@ -37,7 +37,7 @@ AddEventHandler('DisplayAA',function(inputText)
 
 SetNotificationTextEntry("STRING");
 AddTextComponentString(inputText);
-SetNotificationMessage("CHAR_CHAT_CALL", "CHAR_CHAT_CALL", true, 1, "~y~Admin Announcement:~s~", "");
+SetNotificationMessage("CHAR_MP_STRIPCLUB_PR", "CHAR_MP_STRIPCLUB_PR", true, 1, "~y~Admin Announcement:~s~", "");
 DrawNotification(false, true);
 
 end)
