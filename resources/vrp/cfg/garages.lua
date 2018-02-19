@@ -579,6 +579,8 @@ cfg.garage_types = {
     _config = {vtype="car",blipid=50,blipcolor=31,permissions={"repair.vehicle"}},
     ["towtruck"] = {"AAA Towing Service",0, "AAA Towing Service"},
     ["nydot"] = {"New York DOT Truck",0,"New York DOT Truck"},
+    ["utillitruck3"] = {"New York DOT Truck",0,"New York DOT Truck"},
+    ["utillitruck2"] = {"New York DOT Van",0,"New York DOT Truck"},
     ["flatbed2"] = {"Ford F-550 Flatbed",0,"New York DOT Truck"},
 	["flatbed"] = {"Kenworth Flatbed Towtruck",0, "utillitruck3"}
   },
