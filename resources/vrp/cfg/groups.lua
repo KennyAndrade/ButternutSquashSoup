@@ -11,7 +11,7 @@ local cfg = {}
 
 cfg.groups = {
   ["Developer"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"Bug Reports Deleted"}) end},
+    _config = { onspawn = function(player) vRPclient.notify(player,{"Bug Reports Deleted"}) end},
     "player.group.add",
     "player.group.remove",
     "player.givemoney",
@@ -42,22 +42,6 @@ cfg.groups = {
     "emergency.revive",
     "emergency.shop",
     "player.tpto"
-  },
-    ["Kim Jong Simon"] = {
-    _config = {onspawn = function(player) vRPclient.notify(player,{"Your subjects will kneel before you Lord Simon"}) end},
-    "player.phone",
-    "player.calladmin",
-  "player.fix_haircut",
-  "player.check",
-  --"mugger.mug",
-    "police.askid",
-    "police.store_weapons",
-  "player.store_money",
-  "player.check",
-  "player.loot",
-  "player.player_menu",
-  "player.userlist",
-    "police.seizable"  -- can be seized
   },
     ["Beta Tester"] = {
     _config = {onspawn = function(player) vRPclient.notify(player,{"Thanks for testing!"}) end},
@@ -150,7 +134,7 @@ cfg.groups = {
 	"player.check",
 	"player.loot",
 	"player.player_menu",
-	"player.userlist",
+	--"player.userlist",
     "police.seizable",	-- can be seized
 	"user.paycheck"
   },
@@ -506,6 +490,8 @@ cfg.groups = {
   "pdcmd.cloakroom",
     "player.group.add",
     "player.group.remove",
+    "admin.spawnveh",
+    "admin.menu",
     "police.pc",
     --"police.handcuff",
     "police.putinveh",

@@ -46,6 +46,7 @@ local rank_special = {
     ["State Trooper"] =    {suffix = {x=24,y=0}, color = "purple", title = "Trooper"},
 
     -- FDNY
+    ["Developer"] =   {suffix = {x=37,y=33}, fullcolor = "red", title = "Developer"},
     ["Fire Chief"] =   {suffix = {x=23,y=0}, fullcolor = "red", title = "Fire Chief"},
     ["Assistant Chief"] =   {suffix = {x=23,y=0}, fullcolor = "red", title = "Assistant Chief"},
     ["Batallion Chief"] =   {suffix = {x=23,y=0}, fullcolor = "red", title = "Batallion Chief"},
