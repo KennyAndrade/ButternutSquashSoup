@@ -13,9 +13,7 @@ local parts = {
   ["Hats"] = "p0",
   ["Glasses"] = "p1",
   ["Ears"] = "p2",
-  ["Watches"] = "p6",
-  ["Extras 1"] = 9,
-  ["Extras2"] = 10
+  ["Watches"] = "p6"
 }
 
 local police = {

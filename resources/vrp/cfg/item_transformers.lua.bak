@@ -35,26 +35,6 @@ cfg.item_transformers = {
       }
     }
   },
-	{
-    name="Trash Collector", -- menu name
-    permissions = {"mission.collect.trash"}, -- you can add permissions
-    r=0,g=125,b=255, -- color
-    max_units=100000,
-    units_per_minute=100000,
-    x=805.77130126953,y=-1078.0639648438,z=28.55744934082,
-    radius=3, height=1.5, -- area
-    recipes = {
-      ["Gather Trash"] = { -- action name
-        description="Gathering Trash...", -- action description
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={}, -- items taken per unit
-        products={ -- items given per unit
-          ["trash"] = 1
-        }
-      }
-    }
-  },
       {
     name="Weapons Smuggler", -- menu name
     permissions = {"mission.weapons.smuggler"}, -- you can add permissions
@@ -201,29 +181,6 @@ cfg.item_transformers = {
     }
   },
   {
-	name="Forger", -- menu name
-	permissions = {"fraud.credit_cards"}, -- you can add permissions
-    r=255,g=125,b=0, -- color
-    max_units=100000,
-    units_per_minute=100000,
-    x=1272.7305908203,y=-1711.9899902344,z=54.771453857422,
-    radius=2, height=1.0, -- area
-    recipes = {
-      ["Forging"] = { -- action name
-        description="Forging fake ID's", -- action description
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={
-		["credit"] = 1
-		}, -- items taken per unit
-        products={
-		["fake_id"] = 1
-		}, -- items given per unit
-        aptitudes={}
-      }
-    }
-  },
-  {
     name="Driver License", -- menu name
     r=255,g=125,b=0, -- color
     max_units=1,
@@ -259,27 +216,6 @@ cfg.item_transformers = {
         reagents={}, -- items taken per unit
         products={
 		["bank_money"] = 500000
-		}, -- items given per unit
-        aptitudes={} -- optional
-      }
-    }
-  },
-  {
-    name="Collect Cargo", -- menu name
-	permissions = {"mission.pilot.cargo"}, -- you can add permissions
-    r=255,g=125,b=0, -- color
-    max_units=100000,
-    units_per_minute=100000,
-    x=1618.9204101563,y=3227.7058105469,z=40.411529541016,
-    radius=2, height=1.0, -- area
-    recipes = {
-      ["Cargo"] = { -- action name
-       description="Collecting Cargo...", -- action description
-        in_money=0, -- money taken per unit
-        out_money=0, -- money earned per unit
-        reagents={}, -- items taken per unit
-        products={
-		["cargo"] = 1
 		}, -- items given per unit
         aptitudes={} -- optional
       }
@@ -438,108 +374,6 @@ cfg.hidden_transformers = {
     },
     positions = {
       {1992.5993652344,3044.1806640625,47.215068817139}
-}
-  },
-  ["police1"] = {
-    def = {
-      name="Police Report", -- menu name
-      permissions = {"police.mission"}, -- you can add permissions
-      r=0,g=200,b=0, -- color
-      max_units=100000,
-      units_per_minute=100000,
-      x=0,y=0,z=0, -- pos
-      radius=5, height=1.5, -- area
-      recipes = {
-        ["Write Report"] = { -- action name
-          description="Writing Report...", -- action description
-          in_money=0, -- money taken per unit
-          out_money=0, -- money earned per unit
-          reagents={}, -- items taken per unit
-          products={ -- items given per unit
-            ["police_report"] = 1
-          }
-        }
-      }
-    },
-    positions = {
-      {439.57083129883,-995.072265625,30.689596176147} -- Mission Row
-    }
-  },
-  ["police2"] = {
-    def = {
-      name="Police Report", -- menu name
-      permissions = {"police.mission"}, -- you can add permissions
-      r=0,g=200,b=0, -- color
-      max_units=100000,
-      units_per_minute=100000,
-      x=0,y=0,z=0, -- pos
-      radius=5, height=1.5, -- area
-      recipes = {
-        ["Write Report"] = { -- action name
-          description="Writing Report...", -- action description
-          in_money=0, -- money taken per unit
-          out_money=0, -- money earned per unit
-          reagents={}, -- items taken per unit
-          products={ -- items given per unit
-            ["police_report"] = 1
-          }
-        }
-      }
-    },
-    positions = {
-      {1851.6605224609,3690.6713867188,34.267044067383} -- Sandy Shores
-    }
-  },
-  ["police3"] = {
-    def = {
-      name="Police Report", -- menu name
-      permissions = {"police.mission"}, -- you can add permissions
-      r=0,g=200,b=0, -- color
-      max_units=100000,
-      units_per_minute=100000,
-      x=0,y=0,z=0, -- pos
-      radius=5, height=1.5, -- area
-      recipes = {
-        ["Write Report"] = { -- action name
-          description="Writing Report...", -- action description
-          in_money=0, -- money taken per unit
-          out_money=0, -- money earned per unit
-          reagents={}, -- items taken per unit
-          products={ -- items given per unit
-            ["police_report"] = 1
-          }
-        }
-      }
-    },
-    positions = {
-      {-449.43395996094,6010.796875,31.716377258301} -- Paleto
-    }
-  },
-  ["ems"] = {
-    def = {
-      name="Medical Report", -- menu name
-      permissions = {"ems.mission"}, -- you can add permissions
-      r=0,g=200,b=0, -- color
-      max_units=100000,
-      units_per_minute=100000,
-      x=0,y=0,z=0, -- pos
-      radius=5, height=1.5, -- area
-      recipes = {
-        ["Write Report"] = { -- action name
-          description="Writing Report...", -- action description
-          in_money=0, -- money taken per unit
-          out_money=0, -- money earned per unit
-          reagents={}, -- items taken per unit
-          products={ -- items given per unit
-            ["ems_report"] = 1
-          }
-        }
-      }
-    },
-    positions = {
-      {-272.08700561523,27.639623641968,54.752536773682},
-      {465.04064941406,3569.1174316406,33.238555908203},
-      {-1145.8566894531,4939.5083007813,222.2686920166}
     }
   }
 }
