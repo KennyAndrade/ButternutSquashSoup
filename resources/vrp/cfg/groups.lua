@@ -122,7 +122,7 @@ cfg.groups = {
   },
   -- the group user is auto added to all logged players
   ["user"] = {
-  _config = {onspawn = function(player) vRPclient.notify(player,{"Empire State RP Open Beta Build 1.0"}) end},
+  _config = {onspawn = function(player) vRPclient.notify(player,{"Empire State RP Open Beta Build 1.1"}) end},
     "player.phone",
     "player.calladmin",
 	"player.fix_haircut",
