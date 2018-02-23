@@ -25,8 +25,8 @@ cfg.controls = {
     open = {3,311}, -- K to open the menu
   },
   request = {
-    yes = {1,166}, -- Michael, F5
-    no = {1,167} -- Franklin, F6
+    yes = {1,96}, -- Michael, F5
+    no = {1,97} -- Franklin, F6
   }
 }
 

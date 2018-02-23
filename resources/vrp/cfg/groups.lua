@@ -138,6 +138,21 @@ cfg.groups = {
     "police.seizable",	-- can be seized
 	"user.paycheck"
   },
+  ["Trash Collector"] = {
+    _config = {x = 750.05029296875, y = -1402.9224853516, z = 26.549806594849,blipid = 318, blipcolor = 2}, -- Job starts here
+  "Trash Collector",
+    "Unemployed"
+  },
+  ["Judge"] = {
+    _config = {x = -59.127178192139, y = 359.25082397461, z = 113.05643463135, blipid = 351, blipcolor = 7, permissions = {"Judge.whitelisted"} },
+    "Judge",
+  "Unemployed"
+  },
+  ["Forger"] = {
+    _config = {x = 388.61703491211, y = 3587.1179199219, z = 33.292263031006, blipid = 472, blipcolor = 4},
+    "Forger",
+  "Unemployed"
+  },
   ["Fisher"] = {
     _config = { gtype = "job",
 	onspawn = function(player) vRPclient.notify(player,{"You are a Fisherman."}) end

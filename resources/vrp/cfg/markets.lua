@@ -38,10 +38,6 @@ cfg.market_types = {
     ["medkit"] = 0,
     ["pills"] = 0
   },
-  ["Cargo Pickup"] = {
-    _config = {blipid=51, blipcolor=68, permissions={"cargo.market"}},
-    ["cargo"] = 10,
-  },
   ["plantation"] = {
     _config = {blipid=473, blipcolor=4, permissions={"drugseller.market"}},
     ["seeds"] = 500,
@@ -60,7 +56,6 @@ cfg.markets = {
   --{"drugstore",356.5361328125,-593.474304199219,28.7820014953613},
   {"EMS Supplies",358.65,-590.288,28.7893}, -- Pillbox Hill
   {"food",288.29354858398,-1266.8481445313,29.440759658813},
-  {"Cargo Pickup",-1295.5307617188,-3356.8701171875,13.94015789032},
   {"food",-340.99633789063,-1483.1530761719,30.65620803833},
   {"food",1163.1896972656,-323.14196777344,69.205055236816},
   {"food",1211.4064941406,-1390.1058349609,35.376602172852},

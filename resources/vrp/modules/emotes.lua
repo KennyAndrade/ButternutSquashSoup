@@ -1,4 +1,4 @@
---[[]
+
 -- this module define the emotes menu
 
 local cfg = module("cfg/emotes")
