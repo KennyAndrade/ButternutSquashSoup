@@ -6677,8 +6677,7 @@
 			</models>
 			<flags>POPGROUP_AMBIENT POPGROUP_SCENARIO</flags>
 		</Item>
-		<Item>
-	</vehGroups>
+		</vehGroups>
 	<wildlifeHabitats>
 		<Item>SAND_LOOSE</Item>
 		<Item>SAND_COMPACT</Item>
