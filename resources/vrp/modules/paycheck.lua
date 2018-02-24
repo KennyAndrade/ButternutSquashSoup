@@ -123,6 +123,10 @@ AddEventHandler('paycheck:salary', function()
 		vRP.giveMoney(user_id,700)
 		vRPclient.notify(source,{"Paycheck received: $700"})
 	end
+	if vRP.hasPermission(user_id,"trash.paycheck") then
+		vRP.giveMoney(user_id,500)
+		vRPclient.notify(source,{"Paycheck received: $500"})
+	end
 	if vRP.hasPermission(user_id,"det.paycheck") then
 		vRP.giveMoney(user_id,650)
 		vRPclient.notify(source,{"Paycheck received: $650"})
